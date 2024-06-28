@@ -51,3 +51,5 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 45. [Biohazard - Heavenly Island](https://truyenqqviet.com/truyen-tranh/tham-hoa-sinh-hoc-1351)
 46. [Delicious in Dungeon]
 47. [Radiation House](https://truyenqqviet.com/truyen-tranh/radiation-house-7452)
+48. [I Got Married to the Girl I Hate Most in Class](https://truyenqqviet.com/truyen-tranh/ket-hon-voi-nguoi-ma-toi-ghet-nhat-11569)
+
