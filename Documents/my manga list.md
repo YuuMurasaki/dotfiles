@@ -55,3 +55,4 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 49. [Shinju No Nectar](https://truyenqqviet.com/truyen-tranh/shinju-no-nectar-2765)
 50. [Henna Ie](https://truyenqqviet.com/truyen-tranh/henna-ie-ngoi-nha-ki-quai-15413)
 51. [Aitsu no Kanojo](https://mangadex.org/title/f4247b21-e8ff-46ae-9f92-fc04f6641188/aitsu-no-kanojo)
+52. [Aekanaru](https://mangadex.org/title/8c21fe3b-4fe6-4f11-b51b-ced00d8aec60/aekanaru)
