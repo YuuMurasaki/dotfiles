@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+long long eulerPhi(long long n)
+{
+    if (n == 0)
+        return 0;
+
+    long long ans = n;
+    for (long long x = 2; x * x <= n; x++)
+        if (n % x == 0)
+        {
+            while (n % x == 0)
+                n /= x;
+            ans -= ans / x;
+        }
+
+    if (n > 1)
+        ans -= ans / n;
+
+    return ans;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eulerPhi</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

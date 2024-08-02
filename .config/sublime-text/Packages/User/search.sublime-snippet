@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+int Find(long long a[], int left, int right, long long value)
+{
+    int d = left, c = right, g, j = -1;
+    while(d <= c)
+    {
+        g = (d + c) / 2;
+        if(a[g] <= value)
+        {
+            j = g;
+            d = g + 1;
+        }
+        else
+            c = g - 1;
+    }
+    return j;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>search</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

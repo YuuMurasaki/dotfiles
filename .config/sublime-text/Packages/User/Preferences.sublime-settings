@@ -1,0 +1,18 @@
+{
+	"indent_guide_options":
+    [
+    	"draw_normal",
+    	"draw_active"
+	],
+    "word_wrap": true, //nếu một dòng quá dài sẽ tự ngắt để xuống dòng mới
+	"font_size": 8,
+	"caret_style": "phase", //Thay đổi kiểu con trỏ || "smooth", "phase", "blink", "solid"
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"theme": "Default Dark.sublime-theme",
+	"font_face": "FiraMono Nerd Font",
+	"index_files": true,
+}

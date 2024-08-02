@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+string NumtoStr(long long num)
+{
+    stringstream ss;
+    ss << num;
+    return ss.str();
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>num_to_string</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>
