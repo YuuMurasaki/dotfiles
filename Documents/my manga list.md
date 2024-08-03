@@ -44,7 +44,6 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 38. [Fechippuru ~ bokura no junsuina koi](https://mangadex.org/title/edf99f42-a1a2-458f-b482-7799872ec984/fechippuru-bokura-no-innocent-love)
 39. [Reincarnation Coliseum](https://www.mangaread.org/manga/reincarnation-colosseum-using-the-weakest-skills-in-order-to-defeat-the-strongest-women-and-create-a-slave-harem/)
 40. [R15+ Ja Dame Desuka?](https://mangadex.org/title/cb98bd40-a903-4416-bdd0-dab93d8f36ad/r15-ja-dame-desu-ka)
-41. [Excuse Me Dentist, It's Touching Me!](https://truyenqqviet.com/truyen-tranh/excuse-me-dentist-its-touching-me-11993)
 42. [Scum's Wish](https://truyenqqviet.com/truyen-tranh/uoc-mo-cua-can-ba-9299)
 43. [Akuru No Shima]
 44. [I Want to See You Embarrassed](https://mangadex.org/title/05bd710c-d94a-45eb-be99-2109d58f1006/hajirau-kimi-ga-mitainda?tab=chapters)
@@ -56,3 +55,8 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 50. [Henna Ie](https://truyenqqviet.com/truyen-tranh/henna-ie-ngoi-nha-ki-quai-15413)
 51. [Aitsu no Kanojo](https://mangadex.org/title/f4247b21-e8ff-46ae-9f92-fc04f6641188/aitsu-no-kanojo)
 52. [Aekanaru](https://mangadex.org/title/8c21fe3b-4fe6-4f11-b51b-ced00d8aec60/aekanaru)
+53. [Hell's Paradise: Jigokuraku](https://mangadex.org/title/cb77e4a6-3921-43b9-9d64-7d78cd3205ce/jigokuraku)
+54. [Claymore](https://mangadex.org/title/be8fe64b-37da-4fba-b14d-603aba19be1f/claymore)
+55. [Mashle: Magic and Muscles](https://mangadex.org/title/558c2122-7342-4649-85e9-a866727bb2e8/mashle-magic-and-muscles?tab=art)
+56. [Rebuild World](https://mangadex.org/title/99182618-ae92-4aec-a5df-518659b7b613/rebuild-world)
+57. [Shadow House](https://mangadex.org/title/733fc3ac-deca-444e-bb79-14186e00ccf1/shadows-house?tab=art)
