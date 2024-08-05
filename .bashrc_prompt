@@ -165,7 +165,7 @@ function __setprompt
 	PS1+="\n"
 
 	# GIT support:
-	PS1+="\[${DARKGRAY}${GITCOLOR}\]`git_branch`\[${NOCOLOR}\] "
+	#PS1+="\[${DARKGRAY}${GITCOLOR}\]`git_branch`\[${NOCOLOR}\] "
 
 	if [[ $EUID -ne 0 ]]; then
 		PS1+="\[${GREEN}\]>\[${NOCOLOR}\] " # Normal user
