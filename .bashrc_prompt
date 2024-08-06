@@ -168,13 +168,13 @@ function __setprompt
 	#PS1+="\[${DARKGRAY}${GITCOLOR}\]`git_branch`\[${NOCOLOR}\] "
 
 	if [[ $EUID -ne 0 ]]; then
-		PS1+="\[${GREEN}\]>\[${NOCOLOR}\] " # Normal user
+		PS1+="\[${LIGHTGREEN}\]~>\[${NOCOLOR}\] " # Normal user
 	else
-		PS1+="\[${RED}\]>\[${NOCOLOR}\] " # Root user
+		PS1+="\[${LIGHTRED}\]~>\[${NOCOLOR}\] " # Root user
 	fi
 
 	# PS2 is used to continue a command using the \ character
-	PS2="\[${DARKGRAY}\]>\[${NOCOLOR}\] "
+	PS2="\[${DARKGRAY}\]~>\[${NOCOLOR}\] "
 
 	# PS3 is used to enter a number choice in a script
 	PS3='Please enter a number from above list: '
