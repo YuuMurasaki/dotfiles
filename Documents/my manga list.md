@@ -60,3 +60,4 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 55. [Mashle: Magic and Muscles](https://mangadex.org/title/558c2122-7342-4649-85e9-a866727bb2e8/mashle-magic-and-muscles?tab=art)
 56. [Rebuild World](https://mangadex.org/title/99182618-ae92-4aec-a5df-518659b7b613/rebuild-world)
 57. [Shadow House](https://mangadex.org/title/733fc3ac-deca-444e-bb79-14186e00ccf1/shadows-house?tab=art)
+58. [Issho ni Kurashite ii desu ka?](https://mangadex.org/title/4509fd84-c003-4c57-ab07-e207e6999dab/issho-ni-kurashite-ii-desu-ka)
