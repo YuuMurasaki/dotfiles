@@ -63,3 +63,4 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 58. [Issho ni Kurashite ii desu ka?](https://mangadex.org/title/4509fd84-c003-4c57-ab07-e207e6999dab/issho-ni-kurashite-ii-desu-ka)
 59. [Suupaa No Ura Yani Suu Hanashi](https://truyenqqviet.com/truyen-tranh/suupaa-no-ura-yani-suu-hanashi-12323)
 60. [You and I are Polar Opposites](https://mangadex.org/title/eb95c066-5f46-483a-af69-a83b5cf324ee/seihantaina-kimi-to-boku)
+61. [Kimi Wa Yakamashi Tojite Yo Kuchi Wo!](https://truyenqqto.com/truyen-tranh/kimi-wa-yakamashi-tojite-yo-kuchi-wo-14463)
