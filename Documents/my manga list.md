@@ -64,3 +64,7 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 59. [Suupaa No Ura Yani Suu Hanashi](https://truyenqqviet.com/truyen-tranh/suupaa-no-ura-yani-suu-hanashi-12323)
 60. [You and I are Polar Opposites](https://mangadex.org/title/eb95c066-5f46-483a-af69-a83b5cf324ee/seihantaina-kimi-to-boku)
 61. [Kimi Wa Yakamashi Tojite Yo Kuchi Wo!](https://truyenqqto.com/truyen-tranh/kimi-wa-yakamashi-tojite-yo-kuchi-wo-14463)
+62. [A Suffocatingly Lonely Death](https://blogtruyenvn.com/31376/furitsumore-kodoku-na-shi-yo)
+63. [Somali to Mori no Kami-sama]
+64. [Innocent](https://truyenqqto.com/truyen-tranh/innocent-2181)
+65. [Witch Hat Atelier](https://truyenqqto.com/truyen-tranh/cong-xuong-phep-thuat-5538)
