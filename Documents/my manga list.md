@@ -68,3 +68,8 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 63. [Somali to Mori no Kami-sama]
 64. [Innocent](https://truyenqqto.com/truyen-tranh/innocent-2181)
 65. [Witch Hat Atelier](https://truyenqqto.com/truyen-tranh/cong-xuong-phep-thuat-5538)
+66. [The Fragrant Flower Blooms With Dignity](https://mangadex.org/title/418791c0-35cf-4f87-936b-acd9cddf0989/the-fragrant-flower-blooms-with-dignity?tab=chapters)
+67. [Aku No Higan](https://truyenqqto.com/truyen-tranh/aku-no-higan-409)
+68. [Edogawa Ranpo Ijinkan](https://mangadex.org/title/785bdfd2-b1cc-4941-9646-74e54c149b84/edogawa-ranpo-ijinkan)
+69. [Coffee wo Shizuka ni](https://mangadex.org/title/983fb5f1-3555-4769-b8f1-2d857499d3cd/coffee-wo-shizuka-ni)
+
