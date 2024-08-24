@@ -72,4 +72,4 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 67. [Aku No Higan](https://truyenqqto.com/truyen-tranh/aku-no-higan-409)
 68. [Edogawa Ranpo Ijinkan](https://mangadex.org/title/785bdfd2-b1cc-4941-9646-74e54c149b84/edogawa-ranpo-ijinkan)
 69. [Coffee wo Shizuka ni](https://mangadex.org/title/983fb5f1-3555-4769-b8f1-2d857499d3cd/coffee-wo-shizuka-ni)
-
+70. [Ayashimon](https://mangadex.org/title/28e35701-de99-4f42-bd2c-2e9f9e43fe4e/ayashimon?tab=art)
