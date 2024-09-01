@@ -74,3 +74,7 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 69. [Coffee wo Shizuka ni](https://mangadex.org/title/983fb5f1-3555-4769-b8f1-2d857499d3cd/coffee-wo-shizuka-ni)
 70. [Ayashimon](https://mangadex.org/title/28e35701-de99-4f42-bd2c-2e9f9e43fe4e/ayashimon?tab=art)
 71. [Tsugihagi Darake no Saikyou Yuusha](https://mangadex.org/title/39aa3af8-490b-4642-be07-669251a0a06b/tsugihagi-darake-no-saikyou-yuusha)
+72. [I Fell in Love, so I Tried Livestreaming.](https://mangadex.org/title/1cebf72e-d402-4ac3-9341-dd9d1d5f5147)
+73. [The Eminence In Shadow](https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a/kage-no-jitsuryokusha-ni-naritakute?tab=chapters)
+74. [Sakamoto Days](https://mangadex.org/title/9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0/sakamoto-days?order=asc)
+
