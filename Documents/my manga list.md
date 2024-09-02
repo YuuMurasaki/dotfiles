@@ -77,4 +77,5 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 72. [I Fell in Love, so I Tried Livestreaming.](https://mangadex.org/title/1cebf72e-d402-4ac3-9341-dd9d1d5f5147)
 73. [The Eminence In Shadow](https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a/kage-no-jitsuryokusha-ni-naritakute?tab=chapters)
 74. [Sakamoto Days](https://mangadex.org/title/9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0/sakamoto-days?order=asc)
+75. [Battle in 5 Seconds After Meeting](https://mangadex.org/title/6f084aaa-ab29-40f8-82a9-b7586b260182/battle-in-5-seconds-after-meeting)
 
