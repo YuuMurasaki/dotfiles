@@ -78,4 +78,7 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 73. [The Eminence In Shadow](https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a/kage-no-jitsuryokusha-ni-naritakute?tab=chapters)
 74. [Sakamoto Days](https://mangadex.org/title/9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0/sakamoto-days?order=asc)
 75. [Battle in 5 Seconds After Meeting](https://mangadex.org/title/6f084aaa-ab29-40f8-82a9-b7586b260182/battle-in-5-seconds-after-meeting)
+76. [That Dragon (Exchange) Student Stands Out More Than Me](https://mangadex.org/title/6ab4c34c-a4e5-4be2-9803-cd979ef376cb/that-dragonstudent-stands-out-more-than-me)
+77. [Tayutau Kemuri wa Tsukamenai](https://mangadex.org/title/061ef842-fc90-49c1-bf1c-9106b8660dfb/tayutau-kemuri-wa-tsukamenai)
+78. [Hope You're Happy, Lemon](https://mangadex.org/title/b65fbf0e-6768-407d-ba79-fa9fcb319155/kuso-onna-ni-sachiare?tab=chapters)
 
