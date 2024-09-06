@@ -8,19 +8,20 @@
 + My laptop birthday is 23/08/2012 so it is kinda old, but I love it. Just put here to remind me about its birthday.
 
 # 🗿 Softwares that I use
-+ 🐧 Operating System : [Linux Mint](https://www.linuxmint.com/)
++ 🐧 Operating System : [Arch Linux](https://www.archlinux.org/)
++ Window Manager : [Sway](https://swaywm.org/)
++ Bar : [Waybar](https://github.com/Alexays/Waybar)
 + 📂 File Manager :
   + GUI : [Nemo](https://github.com/linuxmint/nemo)
-  + UI : [Ranger](https://github.com/ranger/ranger)
+  + UI : [lf](https://github.com/gokcehan/lf)
 + 🌐 Brower : [Betterfox](https://github.com/yokoffing/Betterfox)
 + 👾 Code Editors & IDEs : [Sublime text 4](https://www.sublimetext.com/)
 + 🐚 CLI Tools :
   + [bash](https://www.gnu.org/software/bash/)
   + [btop++](https://github.com/aristocratos/btop)
   + [htop](https://github.com/htop-dev/htop)
-+ 🌱 Terminals : [gnome terminal](https://github.com/kovidgoyal/kitty)
-+ 💡 Application Launchers : [Ulauncher](https://ulauncher.io/) for Mint or [tofi](https://github.com/philj56/tofi) for Arch
-+ 📝 Note Taking : [Obsidian](https://obsidian.md/)
++ 🌱 Terminals : [foot](https://github.com/DanteAlighierin/foot)
++ 💡 Application Launchers : [tofi](https://github.com/philj56/tofi)
 + 🎧 Audio Playback : [Audacious](https://audacious-media-player.org/)
 
 # 🛠️ Setup
@@ -58,19 +59,6 @@ sudo apt install build-essential git neofetch ranger btop htop cmatrix -y
 ```
 curl -sS https://starship.rs/install.sh | sh
 ```
-
-### 6. Ulauncher
-+ Keep track of latest releases [here](https://github.com/Ulauncher/Ulauncher/releases)
-+ Run this command line one-by-one
-```
-wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
-sudo apt install ./ulauncher_5.15.7_all.deb
-```
-To get catppuccin themes for Ulauncher, run this command
-```
-python3 <(curl https://raw.githubusercontent.com/catppuccin/ulauncher/main/install.py -fsSL) -f all -a all
-```
-
 ### 7. Firefox 🦊
 *Setup Betterfox*
 1) Open Firefox. In the URL bar, type `about:profiles` and press **Enter**.
@@ -92,7 +80,7 @@ click [here](https://github.com/FirefoxCSS-Store/FirefoxCSS-Store.github.io) and
 git clone https://github.com/YuuMurasaki/dotfiles.git
 ```
 + For more cursors, click [here](https://github.com/catppuccin/cursors)
-+ Fonts : Roboto and Firacode Nerd Font
++ Fonts : Roboto and Hack Nerd Font
 + Also remember to change **wallpaper** 👍
 + Go to `system setting` and set your cinnamon desktop the best look.
 
