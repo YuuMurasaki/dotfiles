@@ -81,4 +81,5 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 76. [That Dragon (Exchange) Student Stands Out More Than Me](https://mangadex.org/title/6ab4c34c-a4e5-4be2-9803-cd979ef376cb/that-dragonstudent-stands-out-more-than-me)
 77. [Tayutau Kemuri wa Tsukamenai](https://mangadex.org/title/061ef842-fc90-49c1-bf1c-9106b8660dfb/tayutau-kemuri-wa-tsukamenai)
 78. [Hope You're Happy, Lemon](https://mangadex.org/title/b65fbf0e-6768-407d-ba79-fa9fcb319155/kuso-onna-ni-sachiare?tab=chapters)
-
+79. [Terra Formars](https://en.wikipedia.org/wiki/Terra_Formars)
+80. [Monster Stein](https://mangadex.org/title/39e49c00-1022-4dfc-a4bf-0a995d07d194/monster-stein)
