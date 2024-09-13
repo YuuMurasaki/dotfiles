@@ -83,3 +83,6 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 78. [Hope You're Happy, Lemon](https://mangadex.org/title/b65fbf0e-6768-407d-ba79-fa9fcb319155/kuso-onna-ni-sachiare?tab=chapters)
 79. [Terra Formars](https://en.wikipedia.org/wiki/Terra_Formars)
 80. [Monster Stein](https://mangadex.org/title/39e49c00-1022-4dfc-a4bf-0a995d07d194/monster-stein)
+81. [Isekai Ojisan](https://mangadex.org/title/d8f1d7da-8bb1-407b-8be3-10ac2894d3c6/isekai-ojisan)
+82. [The Elusive Samurai](https://mangadex.org/title/b6a5d154-7845-4129-b473-ba0aec3deffd/the-elusive-samurai)
+
