@@ -12,16 +12,16 @@ keymap.set('n', '<leader>se', '<C-w>=', { desc = "Make splits equal size" })
 keymap.set('n', '<leader>sx', ':close<CR>', { desc = "Close current split" })
 
 --  tabs management
-keymap.set('n', '<C-t>', ':tabnew<CR>', { desc = "Open new tab" })
-keymap.set('n', '<C-w>', ':tabclose<CR>', { desc = "Close current tab" })
-keymap.set('n', '<C-h>', ':tabp<CR>', { desc = "Go to previous tab" })
-keymap.set('n', '<C-l>', ':tabn<CR>', { desc = "Go to next tab" })
+keymap.set('n', '<leader>tt', ':tabnew<CR>', { desc = "Open new tab" })
+keymap.set('n', '<leader>tw', ':tabclose<CR>', { desc = "Close current tab" })
+keymap.set('n', '<Tab>', ':tabn<CR>', { desc = "Go to previous tab" })
+keymap.set('n', '<S-Tab>', ':tabp<CR>', { desc = "Go to next tab" })
 
 -- Neo-tree
 keymap.set('n', '`', ':Neotree filesystem reveal left toggle<CR>', { desc = "Open file tree" })
 
 -- Telescope
-keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = "Find files" })
-keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = "Find recent files" })
-keymap.set('n', '<leader>fs', '<cmd>Telescope live_grep<CR>', { desc = "Find string" })
-keymap.set('n', '<leader>fc', '<cmd>Telescope grep_string<CR>', { desc = "Find string under cursor" })
+keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', { desc = "Find files" })
+keymap.set('n', '<leader>fr', ':Telescope oldfiles<CR>', { desc = "Find recent files" })
+keymap.set('n', '<leader>fs', ':Telescope live_grep<CR>', { desc = "Find string" })
+keymap.set('n', '<leader>fc', ':Telescope grep_string<CR>', { desc = "Find string under cursor" })
