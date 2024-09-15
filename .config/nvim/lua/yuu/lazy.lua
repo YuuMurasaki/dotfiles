@@ -20,4 +20,8 @@ require("lazy").setup("yuu.plugins", {
         enabled = true,
         notify = false,
     },
+
+    change_detection = {
+        notify = false,
+    },
 })
