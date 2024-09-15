@@ -6,6 +6,8 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 opt.wrap = false
+vim.g.autopairs_enabled = true
+vim.g.mapleader = " "
 
 -- tab && indentaion
 opt.tabstop = 4
