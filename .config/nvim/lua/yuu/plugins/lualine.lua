@@ -59,18 +59,18 @@ return {
             },
         }
     
-        -- configuration lualine
+        -- configure lualine with modified theme
         lualine.setup({
             options = {
                 theme = my_lualine_theme,
             },
-            
+         
             sections = {
                 lualine_x = {
                     {
-                      lazy_status.updates,
-                      cond = function() return lazy_status.has_updates end,
-                      color = { fg = "#ffb86c" },
+                        lazy_status.updates,
+                        cond = lazy_status.has_updates,
+                        color = { fg = "#ffb68c" },
                     },
                 
                     { "encoding" },
@@ -78,8 +78,8 @@ return {
                     { "filetype" },
                 },
             },
-        })    
-    end,
+        })
+  end,
 }
 
 

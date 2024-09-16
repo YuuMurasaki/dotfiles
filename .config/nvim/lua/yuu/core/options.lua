@@ -6,6 +6,7 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 opt.wrap = false
+opt.swapfile = false
 vim.g.autopairs_enabled = true
 vim.g.mapleader = " "
 
