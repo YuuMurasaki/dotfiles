@@ -11,9 +11,9 @@ keymap.set('n', '<leader>sh', '<C-w>s', { desc = "Split horizontally" })
 keymap.set('n', '<leader>se', '<C-w>=', { desc = "Make splits equal size" })
 keymap.set('n', '<leader>sw', '<C-w>q', { desc = "Close current split" })
 keymap.set('n', '<C-k>', '<C-w>k', { desc = "Move to the upper split"})
-keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to the upper split"})
-keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to the upper split"})
-keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to the upper split"})
+keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to the lower split"})
+keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to the left split"})
+keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to the right split"})
 
 --  tabs management
 keymap.set('n', '<leader>tt', ':tabnew<CR>', { desc = "Open new tab" })
@@ -22,7 +22,8 @@ keymap.set('n', '<Tab>', ':tabn<CR>', { desc = "Go to previous tab" })
 keymap.set('n', '<S-Tab>', ':tabp<CR>', { desc = "Go to next tab" })
 
 -- Neo-tree
-keymap.set('n', '`', ':Neotree filesystem reveal left toggle<CR>', { desc = "Open file tree" })
+keymap.set("n", "<leader>ee", ":Neotree toggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+keymap.set("n", "<leader>ef", ":Neotree focus<CR>", { desc = "Focus file explorer" }) -- focus file explorer
 
 -- Telescope
 keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', { desc = "Find files" })
@@ -31,6 +32,6 @@ keymap.set('n', '<leader>fs', ':Telescope live_grep<CR>', { desc = "Find string"
 keymap.set('n', '<leader>fc', ':Telescope grep_string<CR>', { desc = "Find string under cursor" })
 
 -- Auto-session
-keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
-keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
+keymap.set("n", "<leader>wr", ":SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+keymap.set("n", "<leader>ws", ":SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
     
