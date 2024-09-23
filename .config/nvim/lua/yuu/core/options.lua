@@ -1,36 +1,44 @@
-vim.cmd("let g:netrw_liststyle = 3")
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
-local opt = vim.opt
+-- Enable relative line numbers
+vim.opt.relativenumber = true
+vim.opt.number = true
 
--- general settings
-opt.relativenumber = true
-opt.number = true
-opt.wrap = false
-opt.swapfile = false
-vim.g.autopairs_enabled = true
+-- Disable showing the mode below the statusline
+vim.opt.showmode = false
+
+-- Disable wrap && swapfile
+vim.opt.wrap = false
+vim.opt.swapfile = false
+
+-- Set leader key to space
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Enable autopairs_enabled
+vim.g.autopairs_enabled = true
 
 -- tab && indentaion
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.autoindent = true
-opt.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 -- search settings
-opt.ignorecase = true
-opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- colorscheme
-opt.termguicolors = true
-opt.background = "dark"
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
 
 -- backspace
-opt.backspace = "indent,eol,start"
+vim.opt.backspace = "indent,eol,start"
 
 -- clipboard
-opt.clipboard:append("unnamedplus")
+vim.opt.clipboard:append("unnamedplus")
 
 -- split windows
-opt.splitright = true
-opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true

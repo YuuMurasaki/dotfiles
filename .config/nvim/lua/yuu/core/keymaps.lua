@@ -1,37 +1,40 @@
-local keymap = vim.keymap
-
 ---- USER KEYMAPS ----
 -- General
-keymap.set('n', '<C-b>', ':source %<CR>', { desc = "Source code" })
-keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = "Clear highlights" })
+vim.keymap.set('n', '<C-b>', '<cmd>source %<CR>', { desc = "Source code" })
+vim.keymap.set('n', '<leader>nh', '<cmd>nohl<CR>', { desc = "Clear highlights" })
 
 -- windows management
-keymap.set('n', '<leader>sv', '<C-w>v', { desc = "Split vertically" })
-keymap.set('n', '<leader>sh', '<C-w>s', { desc = "Split horizontally" })
-keymap.set('n', '<leader>se', '<C-w>=', { desc = "Make splits equal size" })
-keymap.set('n', '<leader>sw', '<C-w>q', { desc = "Close current split" })
-keymap.set('n', '<C-k>', '<C-w>k', { desc = "Move to the upper split"})
-keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to the lower split"})
-keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to the left split"})
-keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to the right split"})
+vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = "Split vertically" })
+vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = "Split horizontally" })
+vim.keymap.set('n', '<leader>se', '<C-w>=', { desc = "Make splits equal size" })
+vim.keymap.set('n', '<leader>sw', '<C-w>q', { desc = "Close current split" })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = "Move to the upper split"})
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to the lower split"})
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to the left split"})
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to the right split"})
 
 --  tabs management
-keymap.set('n', '<leader>tt', ':tabnew<CR>', { desc = "Open new tab" })
-keymap.set('n', '<leader>tw', ':tabclose<CR>', { desc = "Close current tab" })
-keymap.set('n', '<Tab>', ':tabn<CR>', { desc = "Go to previous tab" })
-keymap.set('n', '<S-Tab>', ':tabp<CR>', { desc = "Go to next tab" })
+vim.keymap.set('n', '<leader>tt', '<cmd>tabnew<CR>', { desc = "Open new tab" })
+vim.keymap.set('n', '<leader>tw', '<cmd>tabclose<CR>', { desc = "Close current tab" })
+
+-- buffers management
+vim.keymap.set('n', '<leader>bt', '<cmd>enew<CR>', { desc = "Open new buffer" })
+vim.keymap.set('n', '<leader>bw', '<cmd>bdelete<CR>', { desc = "Delete current buffer" })
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = "Switch to the next bufferr" })
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>', { desc = "Switch to the previous bufferr" })
 
 -- Neo-tree
-keymap.set("n", "<leader>ee", ":Neotree toggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
-keymap.set("n", "<leader>ef", ":Neotree focus<CR>", { desc = "Focus file explorer" }) -- focus file explorer
+vim.keymap.set("n", "<leader>ee", "<cmd>Neotree toggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+vim.keymap.set("n", "<leader>ef", "<cmd>Neotree focus<CR>", { desc = "Focus file explorer" }) -- focus file explorer
 
 -- Telescope
-keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', { desc = "Find files" })
-keymap.set('n', '<leader>fr', ':Telescope oldfiles<CR>', { desc = "Find recent files" })
-keymap.set('n', '<leader>fs', ':Telescope live_grep<CR>', { desc = "Find string" })
-keymap.set('n', '<leader>fc', ':Telescope grep_string<CR>', { desc = "Find string under cursor" })
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = "Find files" })
+vim.keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = "Find recent files" })
+vim.keymap.set('n', '<leader>fs', '<cmd>Telescope live_grep<CR>', { desc = "Find string" })
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = "Find buffers" })
+vim.keymap.set('n', '<leader>fc', '<cmd>Telescope grep_string<CR>', { desc = "Find string under cursor" })
 
 -- Auto-session
-keymap.set("n", "<leader>wr", ":SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
-keymap.set("n", "<leader>ws", ":SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
+vim.keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+vim.keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
     
