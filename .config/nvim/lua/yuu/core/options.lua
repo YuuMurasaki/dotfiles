@@ -1,5 +1,8 @@
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
+-- Netrw settings
+vim.cmd("let g:netrw_liststyle = 3")
+
 -- Enable relative line numbers
 vim.opt.relativenumber = true
 vim.opt.number = true
