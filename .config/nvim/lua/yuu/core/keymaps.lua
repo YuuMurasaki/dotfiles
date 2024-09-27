@@ -14,8 +14,9 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = "Move to the lower split"})
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move to the left split"})
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move to the right split"})
 
---  Netrw
-vim.keymap.set('n', '<leader>ee', '<cmd>Explore<CR>', { desc = "Open file explorer "})
+-- Neo-tree 
+vim.keymap.set('n', '`', '<cmd>Neotree toggle<CR>', { desc = "Open file explorer "})
+
 --  tabs management
 vim.keymap.set('n', '<leader>tt', '<cmd>tabnew<CR>', { desc = "Open new tab" })
 vim.keymap.set('n', '<leader>tw', '<cmd>tabclose<CR>', { desc = "Close current tab" })
