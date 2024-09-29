@@ -23,12 +23,35 @@
     "For Loop": {
         "prefix": "for",
         "body": [
-            "for (int ${1:i} = ${2:0}; ${1:i} <= ${3:n}; ${1:i}${4:++})",
+            "for (int ${1:i} = ${2:0}; ${1:i} ${3:<=} ${4:n}; ${1:i}${5:++})",
             "{",
-            "    ${5:// TODO: add your code here}",
+            "    ${6:// TODO: add your code here}",
             "}"
         ],
         "description": "A basic for loop structure in C++.",
+        "scope": "cpp"
+    },
+
+    "Input and output": {
+        "prefix": "freopen",
+        "body": [
+            "freopen(\"$1.inp\", \"r\", stdin);",
+            "freopen(\"$1.out\", \"w\", stdout);",
+            "",
+            "$0",
+        ],
+        "description": "Input and output to a file",
+        "scope": "cpp"
+    },
+
+    "Fast I/O": {
+        "prefix": "ios_base",
+        "body": [
+            "ios_base::sync_with_stdio(false);",
+            "cin.tie(nullptr); cout.tie(nullptr);",
+            "$0",
+        ],
+        "description": "Fast I/O",
         "scope": "cpp"
     },
 
@@ -86,7 +109,7 @@
     "Power Function": {
         "prefix": "power",
         "body": [
-            "long long Pow(long long a, long long b)",
+            "long long Power(long long a, long long b)",
             "{",
             "    long long res = 1;",
             "",
@@ -104,4 +127,70 @@
         "description": "A function to compute power using exponentiation by squaring.",
         "scope": "cpp"
     },
+
+    "Fast multiply": {
+        "prefix": "multiply",
+        "body": [
+            "long long Multiply(long long a, long long b, long long mod)",
+            "{",
+            "    long long res = 0;",
+            "",
+            "    while (b > 0)",
+            "    {",
+            "        if (b & 1)",
+            "            res = (res + a) % mod;",
+            "        a = (a + a) % mod;",
+            "        b >>= 1;",
+            "    }",
+            "",
+            "    return res;",
+            "}"
+        ],
+        "description": "Fast multiply",
+        "scope": "cpp"
+    },
+
+    "Greatest common divisor": {
+        "prefix": "gcd",
+        "body": [
+            "long long gcd(long long x, long long y) {",
+            "    x = abs(x), y = abs(y);",
+            "    while(x ^= y ^= x ^= y %= x);",
+            "    return y;",
+            "}"
+        ],
+        "description": "Greatest common divisor",
+        "scope": "cpp"
+    },
+
+    "Least Common Multiple": {
+        "prefix": "lcm",
+        "body": [
+            "long long lcm(long long a, long long b) {",
+            "    return a / gcd(a, b) * b;",
+            "}"
+        ],
+        "description": "Least Common Multiple",
+        "scope": "cpp"
+    },
+
+    "Sum of digits": {
+        "prefix": "sum_digits",
+        "body": [
+            "int sumOfDigits(long long number) {",
+            "    int sum = 0;",
+            "    number = abs(number);",
+            "",
+            "    while (number > 0) {",
+            "        sum += number % 10;",
+            "        number /= 10;",
+            "    }",
+            "",
+            "    return sum;",
+            "}"
+        ],
+        "description": "Sum of digits",
+        "scope": "cpp"
+    },
+
 }
