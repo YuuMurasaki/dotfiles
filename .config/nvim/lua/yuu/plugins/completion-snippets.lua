@@ -1,19 +1,19 @@
 return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
+
     dependencies = {
         "hrsh7th/cmp-buffer", -- source for text in buffer
         "hrsh7th/cmp-path", -- source for file system paths
         
         {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*", 
-        -- install jsregexp (optional!).
-        build = "make install_jsregexp",
+            "L3MON4D3/LuaSnip",
+            version = "v2.*", 
+            -- install jsregexp (optional!).
+            build = "make install_jsregexp",
         },
     
         "saadparwaiz1/cmp_luasnip", -- for autocompletion
-        "rafamadriz/friendly-snippets", -- useful snippets
         "onsails/lspkind.nvim", -- vs-code like pictograms
     },
     
@@ -23,7 +23,7 @@ return {
         local lspkind = require("lspkind")
 
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-        require("luasnip.loaders.from_vscode").lazy_load()
+        require("luasnip.loaders.from_vscode").load_standalone({path = "~/.config/nvim/lua/yuu/core/code.code-snippets"})
 
         cmp.setup({
             completion = {
@@ -36,12 +36,41 @@ return {
                 end,
             },
       
-            mapping = cmp.mapping.preset.insert({
-                ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-                ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
-                ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-                ["<CR>"] = cmp.mapping.confirm({ select = false }),
-            }),
+            mapping = {
+                ['<CR>'] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        if luasnip.expandable() then
+                            luasnip.expand()
+                        else
+                            cmp.confirm({
+                                select = true,
+                            })
+                        end
+                    else
+                        fallback()
+                    end
+                end),
+
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                  if cmp.visible() then
+                    cmp.select_next_item()
+                  elseif luasnip.locally_jumpable(1) then
+                    luasnip.jump(1)
+                  else
+                    fallback()
+                  end
+                end, { "i", "s" }),
+
+                ["<S-Tab>"] = cmp.mapping(function(fallback)
+                  if cmp.visible() then
+                    cmp.select_prev_item()
+                  elseif luasnip.locally_jumpable(-1) then
+                    luasnip.jump(-1)
+                  else
+                    fallback()
+                  end
+                end, { "i", "s" }),
+            },
 
             -- sources for autocompletion
             sources = cmp.config.sources({

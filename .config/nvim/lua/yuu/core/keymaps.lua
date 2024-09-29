@@ -1,8 +1,6 @@
 ---- USER KEYMAPS ----
 -- General
-vim.keymap.set('n', '<C-b>', '<cmd>source %<CR>', { desc = "Source code" })
 vim.keymap.set('n', '<leader>nh', '<cmd>nohl<CR>', { desc = "Clear highlights" })
-vim.keymap.set('n', '<leader>vi', '<cmd>cd ~/.config/nvim<CR>', { desc = "Neovim config"})
 
 -- windows management
 vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = "Split vertically" })
