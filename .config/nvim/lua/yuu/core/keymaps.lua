@@ -21,6 +21,7 @@ vim.keymap.set('n', '<leader>tw', '<cmd>tabclose<CR>', { desc = "Close current t
 
 -- buffers management
 vim.keymap.set('n', '<leader>bt', '<cmd>enew<CR>', { desc = "Open new buffer" })
+vim.keymap.set('n', '<leader>bd', '<cmd>%bd<CR>', { desc = "Delete all buffers" })
 vim.keymap.set('n', '<leader>bw', '<cmd>bdelete<CR>', { desc = "Delete current buffer" })
 vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = "Switch to the next bufferr" })
 vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>', { desc = "Switch to the previous bufferr" })

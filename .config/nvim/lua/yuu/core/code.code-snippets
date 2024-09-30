@@ -1,7 +1,7 @@
 {
     "cout": {
         "prefix": "cout",
-        "body": ["cout << ${1:message};"],
+        "body": ["cout << $1;"],
         "description": "Code snippet for printing to std::cout, provided the header is set",
         "scope": "cpp"
     },
@@ -19,16 +19,37 @@
         "description": "Code snippet for #include < >",
         "scope": "cpp"
     },
-    
-    "For Loop": {
-        "prefix": "for",
+
+    "If statement": {
+        "prefix": "if",
         "body": [
-            "for (int ${1:i} = ${2:0}; ${1:i} ${3:<=} ${4:n}; ${1:i}${5:++})",
-            "{",
-            "    ${6:// TODO: add your code here}",
+            "if ($1) {",
+            "\t$0",
             "}"
         ],
-        "description": "A basic for loop structure in C++.",
+        "description": "If statement",
+        "scope": "cpp"
+    },
+
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for (${1:int} ${2:i} = ${3:0}; $2 <= ${4:length}; $2++) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Code snippet for 'for' loop",
+        "scope": "cpp"
+    },
+
+    "forr": {
+        "prefix": "forr",
+        "body": [
+            "for (${1:int} ${2:i} = ${3:length}; $2 >= ${4:0}; $2--) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Code snippet for reverse 'for' loop",
         "scope": "cpp"
     },
 
@@ -62,90 +83,86 @@
             "",
             "using namespace std;",
             "",
-            "int main()",
-            "{",
+            "int main() {",
             "    ios_base::sync_with_stdio(false);",
             "    cin.tie(nullptr); cout.tie(nullptr);",
             "",
             "    freopen(\"input.inp\", \"r\", stdin);",
             "    freopen(\"output.out\", \"w\", stdout);",
             "",
-            "    ${1:// Your code here}",
+            "\t${1:// Your code here}",
             "",
-            "    return 0;",
+            "\treturn 0;",
             "}"
         ],
         "description": "C++ Main Function Template",
         "scope": "cpp"
     },
     
-    "Find Function": {
-        "prefix": "find",
+    "Binary search": {
+        "prefix": "binary",
         "body": [
-            "int binary_search(long long a[], int left, int right, long long value)",
-            "{",
-            "    int d = left, c = right, g, j = -1;",
+            "int BinarySearch(long long a[], int left, int right, long long value) {",
+            "    int low = left;",
+            "    int high = right;",
+            "    int index = -1;",
             "",
-            "    while(d <= c)",
-            "    {",
-            "        g = (d + c) / 2;",
+            "    while (low <= high) {",
+            "        int mid = (low + high) / 2;",
             "",
-            "        if(a[g] <= value)",
-            "        {",
-            "            j = g;",
-            "            d = g + 1;",
+            "        if (a[mid] <= value) {",
+            "            index = mid;",
+            "            low = mid + 1;",
+            "        } else {",
+            "            high = mid - 1;",
             "        }",
-            "        else",
-            "            c = g - 1;",
             "    }",
             "",
-            "    return j;",
+            "    return index;",
             "}"
-        ],
-        "description": "Binary search function to find the upper bound index.",
+          ],
+        "description": "Binary search",
         "scope": "cpp"
     },
 
-    "Power Function": {
+    "Power function": {
         "prefix": "power",
         "body": [
-            "long long Power(long long a, long long b)",
-            "{",
-            "    long long res = 1;",
+            "long long Power(long long a, long long b) {",
+            "    long long result = 1;",
             "",
-            "    while (b > 0)",
-            "    {",
-            "        if (b & 1)",
-            "            res = res * a;",
-            "        a = a * a;",
+            "    while (b > 0) {",
+            "        if (b & 1) {",
+            "            result *= a;",
+            "        }",
+            "        a *= a;",
             "        b >>= 1;",
             "    }",
             "",
-            "    return res;",
-            "}",
+            "    return result;",
+            "}"
         ],
-        "description": "A function to compute power using exponentiation by squaring.",
+        "description": "Power function",
         "scope": "cpp"
     },
 
     "Fast multiply": {
         "prefix": "multiply",
         "body": [
-            "long long Multiply(long long a, long long b, long long mod)",
-            "{",
-            "    long long res = 0;",
+            "long long Multiply(long long a, long long b, long long mod) {",
+            "    long long result = 0;",
             "",
-            "    while (b > 0)",
-            "    {",
-            "        if (b & 1)",
-            "            res = (res + a) % mod;",
+            "    while (b > 0) {",
+            "        if (b & 1) {",
+            "            result = (result + a) % mod;",
+            "        }",
             "        a = (a + a) % mod;",
             "        b >>= 1;",
             "    }",
             "",
-            "    return res;",
+            "    return result;",
             "}"
-        ],
+            ],
         "description": "Fast multiply",
         "scope": "cpp"
     },
@@ -153,9 +170,9 @@
     "Greatest common divisor": {
         "prefix": "gcd",
         "body": [
-            "long long gcd(long long x, long long y) {",
+            "long long Gcd(long long x, long long y) {",
             "    x = abs(x), y = abs(y);",
-            "    while(x ^= y ^= x ^= y %= x);",
+            "    while (x ^= y ^= x ^= y %= x);",
             "    return y;",
             "}"
         ],
@@ -166,8 +183,8 @@
     "Least Common Multiple": {
         "prefix": "lcm",
         "body": [
-            "long long lcm(long long a, long long b) {",
-            "    return a / gcd(a, b) * b;",
+            "long long Lcm(long long a, long long b) {",
+            "    return a / Gcd(a, b) * b;",
             "}"
         ],
         "description": "Least Common Multiple",

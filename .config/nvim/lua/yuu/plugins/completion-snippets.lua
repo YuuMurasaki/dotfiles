@@ -12,7 +12,7 @@ return {
             -- install jsregexp (optional!).
             build = "make install_jsregexp",
         },
-    
+
         "saadparwaiz1/cmp_luasnip", -- for autocompletion
         "onsails/lspkind.nvim", -- vs-code like pictograms
     },
@@ -29,13 +29,13 @@ return {
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
-      
+
             snippet = { -- configure how nvim-cmp interacts with snippet engine
                 expand = function(args)
                 luasnip.lsp_expand(args.body)
                 end,
             },
-      
+
             mapping = {
                 ['<CR>'] = cmp.mapping(function(fallback)
                     if cmp.visible() then
