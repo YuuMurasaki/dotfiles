@@ -1,5 +1,6 @@
 return {
     "nvim-neo-tree/neo-tree.nvim",
+    even = "VeryLazy",
     branch = "v3.x",
     
     dependencies = {

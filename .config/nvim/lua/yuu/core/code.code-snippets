@@ -20,14 +20,17 @@
         "scope": "cpp"
     },
 
-    "If statement": {
+    "if": {
         "prefix": "if",
-        "body": [
-            "if ($1) {",
-            "\t$0",
-            "}"
-        ],
-        "description": "If statement",
+        "body": ["if ($1) {", "\t$0", "}"],
+        "description": "Code snippet for if statement",
+        "scope": "cpp"
+    },
+
+    "else": {
+        "prefix": "else",
+        "body": ["else {", "\t$0", "}"],
+        "description": "Code snippet for else statement",
         "scope": "cpp"
     },
 
