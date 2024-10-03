@@ -56,6 +56,13 @@
         "scope": "cpp"
     },
 
+    "while": {
+        "prefix": "while",
+        "body": ["while ($1) {", "\t$2", "}"],
+        "description": "Code snippet for 'while' loop",
+        "scope": "cpp"
+    },
+
     "Input and output": {
         "prefix": "freopen",
         "body": [
