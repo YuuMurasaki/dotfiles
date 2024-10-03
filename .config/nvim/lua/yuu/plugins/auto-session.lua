@@ -1,5 +1,6 @@
 return {
     "rmagatti/auto-session",
+    event = "VeryLazy",
     
     config = function()
         local auto_session = require("auto-session")
@@ -9,5 +10,5 @@ return {
             auto_save = true,
             suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop/" },
         })
-   end,
+    end,
 }
