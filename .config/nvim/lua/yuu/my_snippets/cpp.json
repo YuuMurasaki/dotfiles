@@ -1,37 +1,18 @@
 {
-    "cout": {
-        "prefix": "cout",
-        "body": ["cout << $1;"],
-        "description": "Code snippet for printing to std::cout, provided the header is set",
-        "scope": "cpp"
-    },
-
-    "cin": {
-        "prefix": "cin",
-        "body": ["cin >> $1;"],
-        "description": "Code snippet for std::cin, provided the header is set",
-        "scope": "cpp"
-    },
-
-    "#inc<": {
-        "prefix": "#inc<",
-        "body": ["#include <$1>"],
-        "description": "Code snippet for #include < >",
-        "scope": "cpp"
-    },
-
-    "if": {
-        "prefix": "if",
-        "body": ["if ($1) {", "\t$0", "}"],
-        "description": "Code snippet for if statement",
-        "scope": "cpp"
-    },
-
-    "else": {
-        "prefix": "else",
-        "body": ["else {", "\t$0", "}"],
-        "description": "Code snippet for else statement",
-        "scope": "cpp"
+    "Starter Template": {
+        "prefix": "new",
+        "body": [
+            "#include <iostream>",
+            "",
+            "using namespace std;",
+            "",
+            "int main () {",
+                "\t$1",
+                "",
+                "\treturn 0;",
+            "}"
+        ],
+        "description": "Standard starter template for a tiny C++ program"
     },
 
     "for": {
@@ -41,8 +22,7 @@
             "\t$0",
             "}"
         ],
-        "description": "Code snippet for 'for' loop",
-        "scope": "cpp"
+        "description": "Code snippet for 'for' loop"
     },
 
     "forr": {
@@ -52,63 +32,69 @@
             "\t$0",
             "}"
         ],
-        "description": "Code snippet for reverse 'for' loop",
-        "scope": "cpp"
+        "description": "Code snippet for reverse 'for' loop"
     },
 
     "while": {
         "prefix": "while",
         "body": ["while ($1) {", "\t$2", "}"],
-        "description": "Code snippet for 'while' loop",
-        "scope": "cpp"
+        "description": "Code snippet for 'while' loop"
     },
 
-    "Input and output": {
-        "prefix": "freopen",
-        "body": [
-            "freopen(\"$1.inp\", \"r\", stdin);",
-            "freopen(\"$1.out\", \"w\", stdout);",
-            "",
-            "$0",
-        ],
-        "description": "Input and output to a file",
-        "scope": "cpp"
+    "if": {
+        "prefix": "if",
+        "body": ["if ($1) {", "\t$0", "}"],
+        "description": "Code snippet for if statement"
+    },
+
+    "else": {
+        "prefix": "else",
+        "body": ["else {", "\t$0", "}"],
+        "description": "Code snippet for else statement"
+    },
+
+    "else if": {
+        "prefix": "else if",
+        "body": ["else if ($1) {", "\t$0", "}"],
+        "description": "Code snippet for else-if statement"
+    },
+
+    "cout": {
+        "prefix": "cout",
+        "body": ["cout << ${1:message};"],
+        "description": "Code snippet for printing to std::cout, provided the header is set"
+    },
+
+    "cin": {
+        "prefix": "cin",
+        "body": ["cin >> $1;"],
+        "description": "Code snippet for std::cin, provided the header is set"
+    },
+
+    "#inc<": {
+        "prefix": "#inc<",
+        "body": ["#include <$1>$2"],
+        "description": "Code snippet for #include < >"
     },
 
     "Fast I/O": {
         "prefix": "ios_base",
         "body": [
             "ios_base::sync_with_stdio(false);",
-            "cin.tie(nullptr); cout.tie(nullptr);",
-            "$0",
+            "cin.tie(nullptr); cout.tie(nullptr);"
         ],
-        "description": "Fast I/O",
-        "scope": "cpp"
+        "description": "Fast I/O"
     },
 
-    "C++ Main Template": {
-        "prefix": "new",
+    "Input and output": {
+        "prefix": "freopen",
         "body": [
-            "#include <iostream>",
-            "",
-            "using namespace std;",
-            "",
-            "int main() {",
-            "    ios_base::sync_with_stdio(false);",
-            "    cin.tie(nullptr); cout.tie(nullptr);",
-            "",
-            "    freopen(\"input.inp\", \"r\", stdin);",
-            "    freopen(\"output.out\", \"w\", stdout);",
-            "",
-            "\t${1:// Your code here}",
-            "",
-            "\treturn 0;",
-            "}"
+            "freopen(\"$1.inp\", \"r\", stdin);",
+            "freopen(\"$1.out\", \"w\", stdout);"
         ],
-        "description": "C++ Main Function Template",
-        "scope": "cpp"
+        "description": "Input and output to a file"
     },
-    
+
     "Binary search": {
         "prefix": "binary",
         "body": [
@@ -130,9 +116,8 @@
             "",
             "    return index;",
             "}"
-          ],
-        "description": "Binary search",
-        "scope": "cpp"
+        ],
+        "description": "Binary search"
     },
 
     "Power function": {
@@ -152,8 +137,7 @@
             "    return result;",
             "}"
         ],
-        "description": "Power function",
-        "scope": "cpp"
+        "description": "Power function"
     },
 
     "Fast multiply": {
@@ -173,8 +157,7 @@
             "    return result;",
             "}"
             ],
-        "description": "Fast multiply",
-        "scope": "cpp"
+        "description": "Fast multiply"
     },
 
     "Greatest common divisor": {
@@ -186,8 +169,7 @@
             "    return y;",
             "}"
         ],
-        "description": "Greatest common divisor",
-        "scope": "cpp"
+        "description": "Greatest common divisor"
     },
 
     "Least Common Multiple": {
@@ -197,8 +179,7 @@
             "    return a / Gcd(a, b) * b;",
             "}"
         ],
-        "description": "Least Common Multiple",
-        "scope": "cpp"
+        "description": "Least Common Multiple"
     },
 
     "Sum of digits": {
@@ -216,8 +197,6 @@
             "    return sum;",
             "}"
         ],
-        "description": "Sum of digits",
-        "scope": "cpp"
-    },
-
+        "description": "Sum of digits"
+    }
 }

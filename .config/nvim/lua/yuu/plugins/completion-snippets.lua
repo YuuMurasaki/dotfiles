@@ -23,7 +23,7 @@ return {
         local lspkind = require("lspkind")
 
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-        require("luasnip.loaders.from_vscode").load_standalone({path = "~/.config/nvim/lua/yuu/core/code.code-snippets"})
+        require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/lua/yuu/my_snippets/" })
 
         cmp.setup({
             completion = {
