@@ -1,6 +1,6 @@
 {
     "Starter Template": {
-        "prefix": "new",
+        "prefix": "cpp",
         "body": [
             "#include <iostream>",
             "",
@@ -96,7 +96,7 @@
     },
 
     "Binary search": {
-        "prefix": "binary",
+        "prefix": "binary_search",
         "body": [
             "int BinarySearch(long long a[], int left, int right, long long value) {",
             "    int low = left;",
@@ -137,7 +137,7 @@
             "    return result;",
             "}"
         ],
-        "description": "Power function"
+        "description": "calculates a^b"
     },
 
     "Fast multiply": {
@@ -157,7 +157,7 @@
             "    return result;",
             "}"
             ],
-        "description": "Fast multiply"
+        "description": "calculates a * b"
     },
 
     "Greatest common divisor": {
@@ -198,5 +198,80 @@
             "}"
         ],
         "description": "Sum of digits"
+    },
+
+    "Prime number check": {
+        "prefix": "isprime",
+        "body": [
+            "bool isPrime(long long num) {",
+            "    if (num < 2 || num % 2 == 0 || num % 3 == 0) {",
+            "        return false;",
+            "    }",
+            "",
+            "    if (num == 2 || num == 3) {",
+            "        return true;",
+            "    }",
+            "",
+            "    for (long long i = 5; i * i <= num; i += 6) {",
+            "        if (num % i == 0 || num % (i + 2) == 0) {",
+            "            return false;",
+            "        }",
+            "    }",
+            "",
+            "    return true;",
+            "}"
+        ],
+        "description": "Prime number check"
+    },
+
+    "Euler Phi": {
+        "prefix": "eulerphi",
+        "body": [
+            "int EulerPhi(long long n) {",
+            "    if (n == 0) {",
+            "        return 0;",
+            "    }",
+            "",
+            "    long long result = n;",
+            "    for (long long x = 2; x * x <= n; ++x) {",
+            "        if (n % x == 0) {",
+            "            while (n % x == 0) {",
+            "                n /= x;",
+            "            }",
+            "            result -= result / x;",
+            "        }",
+            "    }",
+            "",
+            "    if (n > 1) {",
+            "        result -= result / n;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+        ],
+        "description": "counts the number of integers from 1 to n that are relatively prime to n"
+    },
+
+    "Divisors": {
+        "prefix": "count_divisors",
+        "body": [
+            "long long countDivisors(long long n) {",
+            "    long long count = 1;",
+            "",
+            "    for (long long i = 2; i * i <= n && n > 1; ++i) {",
+            "        long long cnt = 0;",
+            "",
+            "        while (n % i == 0) {",
+            "            n /= i;",
+            "            ++cnt;",
+            "        }",
+            "",
+            "        count *= (cnt + 1);",
+            "    }",
+            "",
+            "    return n > 1 ? count << 1 : count;",
+            "}"
+        ],
+        "description": "calculates the number of positive divisors of a given integer n"
     }
 }
