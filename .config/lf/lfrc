@@ -52,8 +52,6 @@ set hidden false
 set ignorecase true
 set period 1
 set drawbox true
-set info size
-set dircounts
 set scrolloff 10
 
 # Mapping
