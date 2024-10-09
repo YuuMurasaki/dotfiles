@@ -2,6 +2,9 @@
 -- General
 vim.keymap.set('n', '<leader>nh', '<cmd>nohl<CR>', { desc = "Clear highlights" })
 
+-- Compile
+vim.keymap.set('n', '<leader>gc', '<cmd>RunCpp<CR>', { desc = "Compile and run C++" })
+
 -- windows management
 vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = "Split vertically" })
 vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = "Split horizontally" })
