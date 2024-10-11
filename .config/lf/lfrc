@@ -45,7 +45,6 @@ set shell sh
 set shellopts '-eu'
 set ifs "\n"
 set cursorpreviewfmt ""
-set hidden false
 set ignorecase true
 set period 1
 set drawbox true
@@ -56,7 +55,6 @@ map i
 map e
 map c
 map w
-map n
 
 # Mapping
 map r push :rename<space>
@@ -64,8 +62,6 @@ map on $nvim $fx
 map x %trash-put $fx
 map <delete> %rm -rf $fx
 map <enter> shell
-map d cut
-map y copy
 map p :paste; clear
 map an push %touch<space>
 map aa push %mkdir<space>
