@@ -9,9 +9,6 @@ cmd open &{{
 # Rename function
 cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
-# Trash bindings
-cmd trash %trash-put $fx
-
 # extract the current file with the right command
 cmd extract ${{
     set -f
@@ -54,16 +51,23 @@ set period 1
 set drawbox true
 set scrolloff 10
 
+# Un-map some keys
+map i
+map e
+map c
+map w
+
 # Mapping
 map r push :rename<space>
-map x trash
+map on $nvim $fx
+map x %trash-put $fx
 map <delete> %rm -rf $fx
 map <enter> shell
 map d cut
 map y copy
 map p :paste; clear
-map n push %touch<space>
-map a push %mkdir<space>
+map an push %touch<space>
+map aa push %mkdir<space>
 
 # Movement
 map gc cd ~/.config
