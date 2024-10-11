@@ -56,6 +56,7 @@ map i
 map e
 map c
 map w
+map n
 
 # Mapping
 map r push :rename<space>
