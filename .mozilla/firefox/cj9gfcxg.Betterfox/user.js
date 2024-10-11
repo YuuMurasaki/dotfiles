@@ -286,9 +286,6 @@ user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // DE
 // such as form content, scrollbar positions, and POST data
 user_pref("browser.sessionstore.privacy_level", 2);
 
-// PREF: disable all DRM content
-user_pref("media.eme.enabled", false);
-
 // PREF: hide the UI setting; this also disables the DRM prompt (optional)
 user_pref("browser.eme.ui.enabled", false);
 /****************************************************************************
