@@ -55,6 +55,7 @@ map i
 map e
 map c
 map w
+map p
 
 # Mapping
 map r push :rename<space>
@@ -62,9 +63,10 @@ map on $nvim $fx
 map x %trash-put $fx
 map <delete> %rm -rf $fx
 map <enter> shell
-map p :paste; clear
 map an push %touch<space>
 map aa push %mkdir<space>
+map y %cp -ri -- $fs .
+map d %mv -i -- $fs .
 
 # Movement
 map gc cd ~/.config
