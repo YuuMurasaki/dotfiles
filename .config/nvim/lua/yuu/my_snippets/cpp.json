@@ -1,0 +1,278 @@
+{
+    "Starter Template": {
+        "prefix": "cpp",
+        "body": [
+            "#include <iostream>",
+            "",
+            "using namespace std;",
+            "",
+            "int main () {",
+                "\t$1",
+                "",
+                "\treturn 0;",
+            "}"
+        ],
+        "description": "Standard starter template for a tiny C++ program"
+    },
+
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for (${1:int} ${2:i} = ${3:0}; $2 <= ${4:length}; $2++) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Code snippet for 'for' loop"
+    },
+
+    "forr": {
+        "prefix": "forr",
+        "body": [
+            "for (${1:int} ${2:i} = ${3:length}; $2 >= ${4:0}; $2--) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Code snippet for reverse 'for' loop"
+    },
+
+    "while": {
+        "prefix": "while",
+        "body": ["while ($1) {", "\t$2", "}"],
+        "description": "Code snippet for 'while' loop"
+    },
+
+    "if": {
+        "prefix": "if",
+        "body": ["if ($1) {", "\t$0", "}"],
+        "description": "Code snippet for if statement"
+    },
+
+    "else": {
+        "prefix": "else",
+        "body": ["else {", "\t$0", "}"],
+        "description": "Code snippet for else statement"
+    },
+
+    "else if": {
+        "prefix": "else if",
+        "body": ["else if ($1) {", "\t$0", "}"],
+        "description": "Code snippet for else-if statement"
+    },
+
+    "cout": {
+        "prefix": "cout",
+        "body": ["cout << ${1:message};"],
+        "description": "Code snippet for printing to std::cout, provided the header is set"
+    },
+
+    "cin": {
+        "prefix": "cin",
+        "body": ["cin >> $1;"],
+        "description": "Code snippet for std::cin, provided the header is set"
+    },
+
+    "#inc<": {
+        "prefix": "#inc<",
+        "body": ["#include <$1>$2"],
+        "description": "Code snippet for #include < >"
+    },
+
+    "Fast I/O": {
+        "prefix": "ios_base",
+        "body": [
+            "ios_base::sync_with_stdio(false);",
+            "cin.tie(nullptr); cout.tie(nullptr);"
+        ],
+        "description": "Fast I/O"
+    },
+
+    "Input and output": {
+        "prefix": "freopen",
+        "body": [
+            "freopen(\"$1.inp\", \"r\", stdin);",
+            "freopen(\"$1.out\", \"w\", stdout);"
+        ],
+        "description": "Input and output to a file"
+    },
+
+    "Binary search": {
+        "prefix": "binary_search",
+        "body": [
+            "int BinarySearch(long long a[], int left, int right, long long value) {",
+            "    int low = left;",
+            "    int high = right;",
+            "    int index = -1;",
+            "",
+            "    while (low <= high) {",
+            "        int mid = (low + high) / 2;",
+            "",
+            "        if (a[mid] <= value) {",
+            "            index = mid;",
+            "            low = mid + 1;",
+            "        } else {",
+            "            high = mid - 1;",
+            "        }",
+            "    }",
+            "",
+            "    return index;",
+            "}"
+        ],
+        "description": "Binary search"
+    },
+
+    "Power function": {
+        "prefix": "power",
+        "body": [
+            "long long Power(long long a, long long b, long long mod) {",
+            "    long long result = 1;",
+            "    a = a % mod;",
+            "",
+            "    while (b > 0) {",
+            "        if (b & 1) {",
+            "            result = (result * a) % mod;",
+            "        }",
+            "        a = (a * a) % mod;",
+            "        b >>= 1;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+        ],
+        "description": "calculates a^b"
+    },
+
+    "Fast multiply": {
+        "prefix": "multiply",
+        "body": [
+            "long long Multiply(long long a, long long b, long long mod) {",
+            "    long long result = 0;",
+            "",
+            "    while (b > 0) {",
+            "        if (b & 1) {",
+            "            result = (result + a) % mod;",
+            "        }",
+            "        a = (a + a) % mod;",
+            "        b >>= 1;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+            ],
+        "description": "calculates a * b"
+    },
+
+    "Greatest common divisor": {
+        "prefix": "gcd",
+        "body": [
+            "long long Gcd(long long x, long long y) {",
+            "    x = abs(x), y = abs(y);",
+            "    while (x ^= y ^= x ^= y %= x);",
+            "    return y;",
+            "}"
+        ],
+        "description": "Greatest common divisor"
+    },
+
+    "Least Common Multiple": {
+        "prefix": "lcm",
+        "body": [
+            "long long Lcm(long long a, long long b) {",
+            "    return a / Gcd(a, b) * b;",
+            "}"
+        ],
+        "description": "Least Common Multiple"
+    },
+
+    "Sum of digits": {
+        "prefix": "sum_digits",
+        "body": [
+            "int sumOfDigits(long long number) {",
+            "    int sum = 0;",
+            "    number = abs(number);",
+            "",
+            "    while (number > 0) {",
+            "        sum += number % 10;",
+            "        number /= 10;",
+            "    }",
+            "",
+            "    return sum;",
+            "}"
+        ],
+        "description": "Sum of digits"
+    },
+
+    "Prime number check": {
+        "prefix": "isprime",
+        "body": [
+            "bool isPrime(long long num) {",
+            "    if (num == 2 || num == 3) {",
+            "        return true;",
+            "    }",
+            "",
+            "    if (num < 2 || num % 2 == 0 || num % 3 == 0) {",
+            "        return false;",
+            "    }",
+            "",
+            "    for (long long i = 5; i * i <= num; i += 6) {",
+            "        if (num % i == 0 || num % (i + 2) == 0) {",
+            "            return false;",
+            "        }",
+            "    }",
+            "",
+            "    return true;",
+            "}"
+        ],
+        "description": "Prime number check"
+    },
+
+    "Euler Phi": {
+        "prefix": "eulerphi",
+        "body": [
+            "int EulerPhi(long long n) {",
+            "    if (n == 0) {",
+            "        return 0;",
+            "    }",
+            "",
+            "    long long result = n;",
+            "    for (long long x = 2; x * x <= n; ++x) {",
+            "        if (n % x == 0) {",
+            "            while (n % x == 0) {",
+            "                n /= x;",
+            "            }",
+            "            result -= result / x;",
+            "        }",
+            "    }",
+            "",
+            "    if (n > 1) {",
+            "        result -= result / n;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+        ],
+        "description": "counts the number of integers from 1 to n that are relatively prime to n"
+    },
+
+    "Divisors": {
+        "prefix": "count_divisors",
+        "body": [
+            "long long countDivisors(long long n) {",
+            "    long long count = 1;",
+            "",
+            "    for (long long i = 2; i * i <= n && n > 1; ++i) {",
+            "        long long cnt = 0;",
+            "",
+            "        while (n % i == 0) {",
+            "            n /= i;",
+            "            ++cnt;",
+            "        }",
+            "",
+            "        count *= (cnt + 1);",
+            "    }",
+            "",
+            "    return n > 1 ? count << 1 : count;",
+            "}"
+        ],
+        "description": "calculates the number of positive divisors of a given integer n"
+    }
+}

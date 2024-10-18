@@ -1,0 +1,69 @@
+# Rename function
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+
+# extract the current file with the right command
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+# compress current file or selected files with tar and gunzip
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# compress current file or selected files with zip
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+# Basic Settings
+set shell sh
+set shellopts '-eu'
+set ifs "\n"
+set cursorpreviewfmt ""
+set ignorecase true
+set period 1
+set drawbox true
+set scrolloff 10
+
+# Un-map some keys
+map i
+map e
+map c
+map w
+map p
+
+# Mapping
+map r push :rename<space>
+map e $nvim $fx
+map i $less $fx
+map x %trash-put $fx
+map <delete> %rm -rf $fx
+map <enter> shell
+map an push %touch<space>
+map aa push %mkdir<space>
+map y %cp -ri -- $fs .
+map d %mv -i -- $fs .
+
+# Movement
+map gc cd ~/.config
+map gd cd ~/Documents
+map gt cd ~/.local/share/Trash/files/
+map gw cd ~/Workspace/
+map gm cd /media/yuu/
