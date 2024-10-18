@@ -1,0 +1,88 @@
+# A few words
+This is my collection of manga that I like.
+After my favourite website shutdown and I lost all my list, I decided to store them by myself.
+It may not be your cup of tea but I really enjoy reading those, so if you are interested in my taste, feel free to take a look.
+
+# List
+1. [Grand blue](https://truyenqqviet.com/truyen-tranh/grand-blue-1742)
+2. [Rosen Garten Saga](https://truyenqqviet.com/truyen-tranh/rosen-garten-saga-10936)
+3. [A Bride's Story](https://manga4life.com/manga/Otoyomegatari)
+4. [Fuufu Ijou, Koibito Miman.](https://truyenqqviet.com/truyen-tranh/fuufu-ijou-koibito-miman-6690)
+5. [Love and lies]
+6. [TenPuru](https://www.mangaread.org/manga/temple/)
+7. [Helck manga](https://helck-manga.com/)
+8. [verndio - surreal sword saga](https://www.mangaread.org/manga/verndio-surreal-sword-saga/)
+9. [Firepunch](https://mangafirepunch.com/)
+10. [Kouga san no kamiguse](https://mangadex.org/title/def0adc9-0a65-4051-9494-8be4ab13f92d/kouga-san-no-kamiguse)
+11. [Namae no Nai Kaibutsu](https://truyenqqviet.com/truyen-tranh/quai-vat-khong-ten-8083)
+12. [Diner](https://truyenqqviet.com/truyen-tranh/diner-5758)
+13. [Slave game](https://truyenqqviet.com/truyen-tranh/slave-game-8672)
+14. [The illidan girl](https://otakusan.net/chapter/1848283/the-illidan-girl-chap-1)
+15. [Jirai Nandesuka? Chihara-san](https://otakusan.net/chapter/1360408/jirai-nandesuka-chihara-san)
+16. [Mikadono Sanshimai wa Angai, Choroi](https://kunmanga.to/read/mikadono-sanshimai-wa-angai-choroi-7qv82o/chapter-1-orygn1.html)
+17. [Dungeon Ni Hisomu Yandere Na Kanojo Ni Ore Wa Nando Mo Korosareru](https://truyenqqviet.com/truyen-tranh/dungeon-ni-hisomu-yandere-na-kanojo-ni-ore-wa-nando-mo-korosareru-14704)
+18. [the apothecary diaries](https://truyenqqviet.com/truyen-tranh/doc-thoai-cua-nguoi-duoc-si-14939)
+19. [Mitsuishi-San Wa Doko Ka Okashii](https://truyenqqviet.com/truyen-tranh/mitsuishi-san-wa-doko-ka-okashii-12395)
+20. [Kimi ga Bokura wo Akuma to Yonda Koro](https://truyenqqviet.com/truyen-tranh/ngay-ay-cac-nguoi-goi-chung-toi-la-quy-du-13743)
+21. [Jaa, Kimi no Kawari ni Korosou ka?]
+22. [Mijuku Na Futari De Gozaimasu Ga](https://mangadex.org/title/6c00ba6a-0240-47bd-9fb4-b01d2fd69ce7/mijuku-na-futari-de-gozaimasu-ga)
+23. [Amagami-San Chi No Enmusubi!](https://truyenqqviet.com/truyen-tranh/amagami-san-chi-no-enmusubi-11324)
+24. [Damedol: The Useless Idol and Her Only Fan in the World]
+25. [Demon Slave]
+26. [Akame Ga Kiru](https://www.mangaread.org/manga/akame-ga-kill/)
+27. [Tsuihousareru Tabi Ni Skill Wo Te Ni Ireta Ore Ga, 100 No Isekai De 2-Shuume Musou]
+28. [Dosanko Gyaru Is Mega Cute](https://www.mangaread.org/manga/dosanko-gyaru-is-mega-cute/)
+29. [Yukionna To Kani Wo Kuu](https://mangadex.org/title/b7b52147-4636-4d43-ae9b-28a67d376cfb/yukionna-to-kani-wo-kuu)
+30. [Tomorrow, I Will Be Someone's Girlfriend]
+31. [Imada Nakunatte Inai Hito](https://mangadex.org/title/23d49e6b-73b8-4d91-9544-1292a4ce68f8/imada-nakunatte-inai-hito)
+32. [Serial Killer Isekai ni Oritatsu](https://mangadex.org/title/3eaabe03-d2bd-43f3-af71-bd1db4ab564a/serial-killer-isekai-ni-oritatsu)
+33. [Excuse Me Dentist, It's Touching Me!](https://mangadex.org/title/88d61a01-f389-4643-b1a8-557975bb4618/haisha-san-atattemasu)
+34. [Tsumugi Sakura (Mr. Mallow Blue)]
+35. [Musubu, the Girl Working There](https://mangadex.org/title/de2c8252-d340-4f8f-a071-0ca69e145c1d/asoko-de-hataraku-musubu-san)
+36. [I Like You Who Can Have Sex With Anyone](https://mangadex.org/title/a08d63ba-c412-4a7b-94b8-ef65bf2e2a30/dare-demo-dakeru-kimi-ga-suki)
+37. [Blood-Crawling Princess Of A Ruined Country](https://mangadex.org/title/e22f6d24-b054-461e-90e5-3646b2985469/blood-crawling-princess-of-a-ruined-country?tab=chapters)
+38. [Fechippuru ~ bokura no junsuina koi](https://mangadex.org/title/edf99f42-a1a2-458f-b482-7799872ec984/fechippuru-bokura-no-innocent-love)
+39. [Reincarnation Coliseum](https://www.mangaread.org/manga/reincarnation-colosseum-using-the-weakest-skills-in-order-to-defeat-the-strongest-women-and-create-a-slave-harem/)
+40. [R15+ Ja Dame Desuka?](https://mangadex.org/title/cb98bd40-a903-4416-bdd0-dab93d8f36ad/r15-ja-dame-desu-ka)
+42. [Scum's Wish](https://truyenqqviet.com/truyen-tranh/uoc-mo-cua-can-ba-9299)
+43. [Akuru No Shima]
+44. [I Want to See You Embarrassed](https://mangadex.org/title/05bd710c-d94a-45eb-be99-2109d58f1006/hajirau-kimi-ga-mitainda?tab=chapters)
+45. [Biohazard - Heavenly Island](https://truyenqqviet.com/truyen-tranh/tham-hoa-sinh-hoc-1351)
+46. [Delicious in Dungeon]
+47. [Radiation House](https://truyenqqviet.com/truyen-tranh/radiation-house-7452)
+48. [I Got Married to the Girl I Hate Most in Class](https://truyenqqviet.com/truyen-tranh/ket-hon-voi-nguoi-ma-toi-ghet-nhat-11569)
+49. [Shinju No Nectar](https://truyenqqviet.com/truyen-tranh/shinju-no-nectar-2765)
+50. [Henna Ie](https://truyenqqviet.com/truyen-tranh/henna-ie-ngoi-nha-ki-quai-15413)
+51. [Aitsu no Kanojo](https://mangadex.org/title/f4247b21-e8ff-46ae-9f92-fc04f6641188/aitsu-no-kanojo)
+52. [Aekanaru](https://mangadex.org/title/8c21fe3b-4fe6-4f11-b51b-ced00d8aec60/aekanaru)
+53. [Hell's Paradise: Jigokuraku](https://mangadex.org/title/cb77e4a6-3921-43b9-9d64-7d78cd3205ce/jigokuraku)
+54. [Claymore](https://mangadex.org/title/be8fe64b-37da-4fba-b14d-603aba19be1f/claymore)
+55. [Mashle: Magic and Muscles](https://mangadex.org/title/558c2122-7342-4649-85e9-a866727bb2e8/mashle-magic-and-muscles?tab=art)
+56. [Rebuild World](https://mangadex.org/title/99182618-ae92-4aec-a5df-518659b7b613/rebuild-world)
+57. [Shadow House](https://mangadex.org/title/733fc3ac-deca-444e-bb79-14186e00ccf1/shadows-house?tab=art)
+58. [Issho ni Kurashite ii desu ka?](https://mangadex.org/title/4509fd84-c003-4c57-ab07-e207e6999dab/issho-ni-kurashite-ii-desu-ka)
+59. [Suupaa No Ura Yani Suu Hanashi](https://truyenqqviet.com/truyen-tranh/suupaa-no-ura-yani-suu-hanashi-12323)
+60. [You and I are Polar Opposites](https://mangadex.org/title/eb95c066-5f46-483a-af69-a83b5cf324ee/seihantaina-kimi-to-boku)
+61. [Kimi Wa Yakamashi Tojite Yo Kuchi Wo!](https://truyenqqto.com/truyen-tranh/kimi-wa-yakamashi-tojite-yo-kuchi-wo-14463)
+62. [A Suffocatingly Lonely Death](https://blogtruyenvn.com/31376/furitsumore-kodoku-na-shi-yo)
+63. [Somali to Mori no Kami-sama]
+64. [Innocent](https://truyenqqto.com/truyen-tranh/innocent-2181)
+65. [Witch Hat Atelier](https://truyenqqto.com/truyen-tranh/cong-xuong-phep-thuat-5538)
+66. [The Fragrant Flower Blooms With Dignity](https://mangadex.org/title/418791c0-35cf-4f87-936b-acd9cddf0989/the-fragrant-flower-blooms-with-dignity?tab=chapters)
+67. [Aku No Higan](https://truyenqqto.com/truyen-tranh/aku-no-higan-409)
+68. [Edogawa Ranpo Ijinkan](https://mangadex.org/title/785bdfd2-b1cc-4941-9646-74e54c149b84/edogawa-ranpo-ijinkan)
+69. [Coffee wo Shizuka ni](https://mangadex.org/title/983fb5f1-3555-4769-b8f1-2d857499d3cd/coffee-wo-shizuka-ni)
+70. [Ayashimon](https://mangadex.org/title/28e35701-de99-4f42-bd2c-2e9f9e43fe4e/ayashimon?tab=art)
+71. [Tsugihagi Darake no Saikyou Yuusha](https://mangadex.org/title/39aa3af8-490b-4642-be07-669251a0a06b/tsugihagi-darake-no-saikyou-yuusha)
+72. [I Fell in Love, so I Tried Livestreaming.](https://mangadex.org/title/1cebf72e-d402-4ac3-9341-dd9d1d5f5147)
+73. [The Eminence In Shadow](https://mangadex.org/title/77bee52c-d2d6-44ad-a33a-1734c1fe696a/kage-no-jitsuryokusha-ni-naritakute?tab=chapters)
+74. [Sakamoto Days](https://mangadex.org/title/9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0/sakamoto-days?order=asc)
+75. [Battle in 5 Seconds After Meeting](https://mangadex.org/title/6f084aaa-ab29-40f8-82a9-b7586b260182/battle-in-5-seconds-after-meeting)
+76. [That Dragon (Exchange) Student Stands Out More Than Me](https://mangadex.org/title/6ab4c34c-a4e5-4be2-9803-cd979ef376cb/that-dragonstudent-stands-out-more-than-me)
+77. [Tayutau Kemuri wa Tsukamenai](https://mangadex.org/title/061ef842-fc90-49c1-bf1c-9106b8660dfb/tayutau-kemuri-wa-tsukamenai)
+78. [Hope You're Happy, Lemon](https://mangadex.org/title/b65fbf0e-6768-407d-ba79-fa9fcb319155/kuso-onna-ni-sachiare?tab=chapters)
+79. [Terra Formars](https://en.wikipedia.org/wiki/Terra_Formars)
+80. [Monster Stein](https://mangadex.org/title/39e49c00-1022-4dfc-a4bf-0a995d07d194/monster-stein)
+81. [Isekai Ojisan](https://mangadex.org/title/d8f1d7da-8bb1-407b-8be3-10ac2894d3c6/isekai-ojisan)
+82. [The Elusive Samurai](https://mangadex.org/title/b6a5d154-7845-4129-b473-ba0aec3deffd/the-elusive-samurai)
+83. [Meika-san wa Oshikorosenai](https://mangadex.org/title/f67c73a1-09ba-4047-8771-5299ae71f750/meika-san-wa-oshikorosenai)
