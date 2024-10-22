@@ -14,8 +14,8 @@ decorations = "None"
 decorations_theme_variant = "Dark"
 
 [scrolling]
-history = 1000
-multiplier = 5
+history = 3000
+multiplier = 8
 
 [font]
 normal.family = "Hack Nerd Font Mono"
