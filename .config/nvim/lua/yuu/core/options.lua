@@ -19,6 +19,7 @@ vim.opt.showmode = false
 -- Disable wrap && swapfile
 vim.opt.wrap = false
 vim.opt.swapfile = false
+vim.opt.backup = false
 
 -- Set leader key to space
 vim.g.mapleader = " "
