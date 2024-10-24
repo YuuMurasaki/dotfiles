@@ -1,5 +1,9 @@
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
+-- Set leader key to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- disable netrw 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -17,10 +21,6 @@ vim.opt.showmode = false
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
-
--- Set leader key to space
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- Enable autopairs_enabled
 vim.g.autopairs_enabled = true
