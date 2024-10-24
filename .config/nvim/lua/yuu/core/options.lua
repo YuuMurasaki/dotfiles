@@ -1,8 +1,5 @@
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
--- User define commands
-vim.api.nvim_create_user_command('RunCpp', '!g++ % -o %< && ./%<', {})
-
 -- disable netrw 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
