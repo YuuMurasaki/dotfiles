@@ -46,6 +46,9 @@ vim.opt.backspace = "indent,eol,start"
 -- clipboard
 vim.opt.clipboard:append("unnamedplus")
 
+-- Vim scrolloff
+vim.opt.scrolloff = 5
+
 -- split windows
 vim.opt.splitright = true
 vim.opt.splitbelow = true
