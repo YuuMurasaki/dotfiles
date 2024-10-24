@@ -265,7 +265,7 @@ user_pref("network.trr.mode", 3);
 user_pref("browser.cache.disk.enable", false);
 
 // PREF: ask where to save every file
-user_pref("browser.download.useDownloadDir", false);
+user_pref("browser.download.useDownloadDir", true);
 
 // PREF: ask whether to open or save new file types
 user_pref("browser.download.always_ask_before_handling_new_types", true);
