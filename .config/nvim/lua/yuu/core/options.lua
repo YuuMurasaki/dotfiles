@@ -49,6 +49,9 @@ vim.opt.clipboard:append("unnamedplus")
 -- Vim scrolloff
 vim.opt.scrolloff = 5
 
+-- Status line
+vim.o.laststatus = 2 -- set to 0 to disable status line
+
 -- split windows
 vim.opt.splitright = true
 vim.opt.splitbelow = true
