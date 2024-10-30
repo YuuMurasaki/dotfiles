@@ -86,3 +86,4 @@ It may not be your cup of tea but I really enjoy reading those, so if you are in
 81. [Isekai Ojisan](https://mangadex.org/title/d8f1d7da-8bb1-407b-8be3-10ac2894d3c6/isekai-ojisan)
 82. [The Elusive Samurai](https://mangadex.org/title/b6a5d154-7845-4129-b473-ba0aec3deffd/the-elusive-samurai)
 83. [Meika-san wa Oshikorosenai](https://mangadex.org/title/f67c73a1-09ba-4047-8771-5299ae71f750/meika-san-wa-oshikorosenai)
+84. [Italiajin no Onnanoko ga Isourou Suru Koto ni Natta](https://mangadex.org/title/3ee24c64-1289-41b2-8100-74f0cdd7f1d8/italiajin-no-onnanoko-ga-isourou-suru-koto-ni-natta)
