@@ -1,11 +1,12 @@
 return {
     "hrsh7th/nvim-cmp",
+    version = false, -- last release is way too old
     event = "InsertEnter",
 
     dependencies = {
         "hrsh7th/cmp-buffer", -- source for text in buffer
         "hrsh7th/cmp-path", -- source for file system paths
-        
+
         {
             "L3MON4D3/LuaSnip",
             version = "v2.*", 

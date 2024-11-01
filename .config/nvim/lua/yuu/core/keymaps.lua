@@ -1,5 +1,8 @@
--- Clear search highlights
-vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights", silent = true })
+-- Clear search highlights and notifications
+vim.keymap.set("n", "<Esc>", function()
+    vim.cmd("NoiceDismiss")
+    vim.cmd("noh")
+end, { desc = "Dismiss Noice Message and clear highlights", silent = true })
 
 -- Select all
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select whole buffer", silent = true })
@@ -20,6 +23,10 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 vim.keymap.set("n", "n", "nzzzv", { silent = true })
 vim.keymap.set("n", "N", "Nzzzv", { silent = true })
+
+-- Stay in indent mode
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- Get out Q
 vim.keymap.set("n", "Q", "<nop>")
