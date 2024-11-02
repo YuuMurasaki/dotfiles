@@ -35,7 +35,8 @@ return {
 
         mason_tool_installer.setup({
             ensure_installed = {
-
+                lua = "stylua",
+                cpp = "clang-format",
             },
         })
     end,
