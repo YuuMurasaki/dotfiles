@@ -7,7 +7,21 @@ return {
         "rcarriga/nvim-notify",
     },
 
-    opts = {
-        -- add any options here
-    }
+    config = function()
+        require("notify").setup({
+            render = "simple",
+            stages = "fade",
+            timeout = 2000,
+        })
+
+        require("noice").setup({
+            lsp = {
+                override = {
+                    ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+                    ["vim.lsp.util.stylize_markdown"] = true,
+                    ["cmp.entry.get_documentation"] = true,
+                },
+            },
+        })
+    end,
 }
