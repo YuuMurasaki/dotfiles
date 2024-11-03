@@ -1,0 +1,10 @@
+//Mô tả: lấy đầu vào từ file "input.inp" và cho đầu ra file "output.out"
+{
+    "cmd": ["g++.exe", "-std=c++17", "${file}",
+            "-o", "${file_base_name}.exe",
+            "&&", "${file_base_name}.exe<input.inp>output.out"],
+    "shell":true,
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",  //highlight khi có lỗi trong code
+    "working_dir":"$file_path",
+    "selector":"source.cpp, source.c, source.c++"
+}

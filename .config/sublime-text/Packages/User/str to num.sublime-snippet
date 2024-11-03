@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+long long StrtoNum(const string& str)
+{
+	if(str == "" || str.size() > 18)
+		return 0;
+    stringstream ss(str);
+    long long num;
+    ss >> num;
+    return num;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>string_to_num</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>
