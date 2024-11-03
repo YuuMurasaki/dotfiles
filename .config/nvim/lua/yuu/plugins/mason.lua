@@ -7,36 +7,21 @@ return {
     },
 
     config = function()
-        -- import mason
-        local mason = require("mason")
-
-        -- import mason-lspconfig
-        local mason_lspconfig = require("mason-lspconfig")
-
-        local mason_tool_installer = require("mason-tool-installer")
-
         -- enable mason and configure icons
-        mason.setup({
-            ui = {
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗",
-                },
-            },
-        })
+        require("mason").setup()
 
-        mason_lspconfig.setup({
+        require("mason-lspconfig").setup({
             ensure_installed = {
                 "clangd",
                 "lua_ls",
             },
         })
 
-        mason_tool_installer.setup({
+        require("mason-tool-installer").setup({
             ensure_installed = {
-                lua = "stylua",
-                cpp = "clang-format",
+                "stylua",
+                "clang-format",
+                "cpplint",
             },
         })
     end,
