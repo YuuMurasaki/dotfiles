@@ -8,6 +8,11 @@
             },
             
             {
+                "language": "cpp",
+                "path": "./functions.json"
+            },
+
+            {
                 "language": "lua",
                 "path": "./lua.json"
             }
