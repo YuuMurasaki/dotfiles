@@ -9,8 +9,8 @@ return {
 
     config = function()
         require("notify").setup({
-            render = "simple",
-            stages = "fade",
+            render = "minimal",
+            stages = "no_animation",
             timeout = 2000,
         })
 

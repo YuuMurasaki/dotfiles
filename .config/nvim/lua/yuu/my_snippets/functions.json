@@ -6,7 +6,7 @@
             "    int32_t count = 1;",
             "",
             "    for (int64_t i = 2; i * i <= n && n > 1; ++i) {",
-            "        int64_t cnt = 0;",
+            "        int32_t cnt = 0;",
             "",
             "        while (n % i == 0) {",
             "            n /= i;",
@@ -19,7 +19,7 @@
             "    return n > 1 ? count << 1 : count;",
             "}"
         ],
-        "description": "calculates the number of positive divisors of a given integer n"
+        "description": "Calculates the number of positive divisors of a given integer n"
     },
 
     "Euler Phi": {
@@ -47,7 +47,7 @@
             "    return result;",
             "}"
         ],
-        "description": "counts the number of integers from 1 to n that are relatively prime to n"
+        "description": "Counts the number of integers from 1 to n that are relatively prime to n"
     },
 
     "Prime number check": {
