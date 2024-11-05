@@ -7,7 +7,6 @@ return {
     },
 
     config = function()
-        -- enable mason and configure icons
         require("mason").setup()
 
         require("mason-lspconfig").setup({
