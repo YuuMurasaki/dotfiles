@@ -5,7 +5,7 @@
         "//COPYRIGHT [2024] <Yuu Murasaki>",
         "#include <iostream>",
         "",
-        "int main (int argc, char *argv[]) {",
+        "int main () {",
             "\t$1",
             "",
             "\treturn 0;",
