@@ -1,6 +1,6 @@
 {
     "Starter Template": {
-    "prefix": "st",
+    "prefix": "cpp",
     "body": [
         "//COPYRIGHT [2024] <Yuu Murasaki>",
         "#include <iostream>",

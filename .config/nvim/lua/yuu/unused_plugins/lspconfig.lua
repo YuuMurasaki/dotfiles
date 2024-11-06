@@ -48,10 +48,34 @@ return {
         end
 
         require("mason-lspconfig").setup_handlers({
-            -- default handler for installed servers
+            -- Default handler for all installed LSP servers
             function(server_name)
                 lspconfig[server_name].setup({
                     capabilities = capabilities,
+                })
+            end,
+
+            -- Custom handler for clangd
+            ["clangd"] = function()
+                lspconfig.clangd.setup({
+                    capabilities = capabilities,
+
+                    -- Clangd-specific settings
+                    cmd = { "clangd", "--background-index", "--clang-tidy" },  -- Use clang-tidy for diagnostics
+                    filetypes = { "c", "cpp", "objc", "objcpp" },  -- Supported filetypes
+                    settings = {
+                        clangd = {
+                            -- Enable clang-tidy checks through clangd
+                            diagnostic = {
+                                clangTidy = true,  -- Enable clang-tidy diagnostics
+                            },
+                            -- Enable auto-formatting on save
+                            format = {
+                                enable = true,
+                            },
+                            -- You can set additional clangd settings here
+                        },
+                    },
                 })
             end,
         })
