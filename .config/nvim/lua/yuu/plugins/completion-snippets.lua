@@ -37,6 +37,7 @@ return {
             },
 
             mapping = {
+                -- Super Tab function
                 ['<CR>'] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         if luasnip.expandable() then
@@ -70,6 +71,8 @@ return {
                         fallback()
                     end
                 end, { "i", "s" }),
+
+                ["<C-e>"] = cmp.mapping.abort(), -- close completion window
             },
 
             -- sources for autocompletion
