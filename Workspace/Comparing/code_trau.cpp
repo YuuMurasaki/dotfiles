@@ -1,32 +1,36 @@
-#include <bits/stdc++.h>
-#define ll long long
-#define TIME (1.0 * clock() / CLOCKS_PER_SEC)
-using namespace std;
-const int N = 1e6 + 1;
-int n,x,dp[N],i,j,ans;
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(0); cout.tie(0);
-    freopen("test.inp", "r", stdin);
-    //freopen("test.out", "w", stdout);
-    freopen("test.ans", "w", stdout);
-    cin>>n;
+//COPYRIGHT [2024] <Yuu Murasaki>
+#include <iostream>
 
-    dp[0] = -1;
-    for(i=1; i<=n; i++)
-    {
-        cin>>x;
-        if(x > dp[ans])
-            dp[++ans] = x;
-        else
-        {
-            int idx = lower_bound(dp + 1, dp + ans + 1, x) - dp;
-            dp[idx] = x;
+bool isPrime(int64_t num) {
+    if (num == 2 || num == 3) {
+        return true;
+    }
+
+    if (num < 2 || num % 2 == 0 || num % 3 == 0) {
+        return false;
+    }
+
+    for (int64_t i = 5; i * i <= num; i += 6) {
+        if (num % i == 0 || num % (i + 2) == 0) {
+            return false;
         }
     }
 
-    cout<<ans;
-    //cout << "\n" << "Time elapsed: " << TIME << "s.\n";
+    return true;
+}
+
+int main () {
+    freopen("test.inp", "r", stdin);
+    freopen("test.out", "w", stdout);
+
+    int32_t n;
+    std::cin >> n;
+
+    if (isPrime(n) == true) {
+        std::cout << "YES";
+    } else {
+        std::cout << "NO";
+    }
+
     return 0;
 }

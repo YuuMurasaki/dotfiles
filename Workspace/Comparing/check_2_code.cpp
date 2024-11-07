@@ -17,10 +17,8 @@ void MakeTest() //sinh test
     ofstream cout("test.inp");
     ll n, a, b, s, x, y, z, i, j, l = 0, r = 0, q;
     string ss[6] = {"a", "b", "c", "d", "e", "f"};
-    n = Rand(10, 1e2);
-    cout << n << "\n";
-    for (i = 1; i <= n; i++)
-        cout << Rand(1, 1e4) << " ";
+    n = Rand(10, 100);
+    cout << n;
 }
 ///////////////////////////////////////////////////////////////////
 int main()
@@ -29,12 +27,10 @@ int main()
     {
         MakeTest();
         
-        // Run the programs
-        system("./code_trau");      // Run the first program (no .exe on Linux)
-        system("./code_toi_uu");    // Run the second program (no .exe on Linux)
+        system("./code_trau");
+        system("./code_toi_uu");
 
-        // Compare the output files using 'diff' on Linux
-        if (system("diff test.out test.ans") != 0)  // diff returns non-zero if files are different
+        if (system("diff test.out test.ans") != 0)
         {
             cout << "Test " << iTest << ": WRONG!\n";
             return 0;
