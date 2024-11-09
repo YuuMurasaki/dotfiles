@@ -6,12 +6,10 @@
                 "language": "cpp",
                 "path": "./cpp.json"
             },
-            
             {
                 "language": "cpp",
                 "path": "./functions.json"
             },
-
             {
                 "language": "lua",
                 "path": "./lua.json"
