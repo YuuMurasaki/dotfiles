@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
-#define ll long long
 using namespace std;
 
-///////////////////////////////////////////////////////////////////
 mt19937 rd(chrono::steady_clock::now().time_since_epoch().count());
 long long Rand(long long l, long long h)
 {
@@ -11,16 +9,18 @@ long long Rand(long long l, long long h)
                 (long long)rand() * (RAND_MAX + 1) +
                 rand()) % (h - l + 1);
 }
-//////////////////////////////////////////////////////////////////
-void MakeTest() //sinh test
+
+void MakeTest()
 {
-    ofstream cout("test.inp");
-    ll n, a, b, s, x, y, z, i, j, l = 0, r = 0, q;
-    string ss[6] = {"a", "b", "c", "d", "e", "f"};
+    ofstream output("test.inp");
+    long long n;
     n = Rand(10, 100);
-    cout << n;
+    output << n << "\n";
+    for (int32_t i = 1; i <= n; i++) {
+        output << Rand(1, 10000) << " ";
+    }
 }
-///////////////////////////////////////////////////////////////////
+
 int main()
 {
     for (int iTest = 1; iTest <= 100000; iTest++)
