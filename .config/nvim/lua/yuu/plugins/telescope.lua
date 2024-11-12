@@ -35,5 +35,6 @@ return {
         vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd", silent = true })
         vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = "Find buffers", silent = true })
         vim.keymap.set('n', '<leader>fm', '<cmd>Telescope marks<CR>', { desc = "Find marks", silent = true })
+        vim.keymap.set('n', '<leader>fn', '<cmd>Telescope notify<CR>', { desc = "Find recent notifications", silent = true })
     end,
 }
