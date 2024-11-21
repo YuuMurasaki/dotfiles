@@ -1,8 +1,5 @@
--- Clear search highlights and notifications
-vim.keymap.set("n", "<Esc>", function()
-    vim.cmd("NoiceDismiss")
-    vim.cmd("noh")
-end, { desc = "Dismiss Noice Message and clear highlights", silent = true })
+-- Clear highlighted text
+vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights", silent = true })
 
 -- Select all
 vim.keymap.set("n", "<leader>a", "ggVG", { desc = "Select whole buffer", silent = true })
