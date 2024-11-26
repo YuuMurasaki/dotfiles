@@ -1,37 +1,29 @@
-#include <cmath>
 #include <cstdint>
 #include <iostream>
-#include <vector>
 
-std::string Solve() {
-    int32_t n;
-    std::cin >> n;
-
-    std::vector<int32_t> a(n + 1);
-
-    for (int32_t i = 1; i <= n; i++) {
-        std::cin >> a[i];
+bool isPrime(int64_t num) {
+    if (num == 2 || num == 3) {
+        return true;
     }
 
-    for (int32_t i = 2; i <= n; i++) {
-        if (std::abs(a[i] - a[i - 1]) != 5 && std::abs(a[i] - a[i - 1]) != 7) {
-            return "NO\n";
+    if (num <= 1 || num % 2 == 0 || num % 3 == 0) {
+        return false;
+    }
+
+    for (int64_t i = 5; i * i <= num; i += 6) {
+        if (num % i == 0 || num % (i + 2) == 0) {
+            return false;
         }
     }
 
-    return "YES\n";
+    return true;
 }
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
-
-    int32_t tests;
-    std::cin >> tests;
-
-    while (tests--) {
-        std::cout << Solve();
+    for (int64_t i = 2; i <= 100; i++) {
+        if (isPrime(i)) {
+            std::cout << i << "\n";
+        }
     }
 
     return 0;

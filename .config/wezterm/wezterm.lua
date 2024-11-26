@@ -6,16 +6,13 @@ local config = wezterm.config_builder()
 
 wezterm.on("update-right-status", function(window, pane)
     -- Get the current date and time
-    local date = wezterm.strftime("%H:%M:%S")
+    local date = wezterm.strftime("%H:%M")
 
     -- Set the right status to display time
     window:set_right_status(wezterm.format({
         { Text = date },
     }))
 end)
-
--- Define the default program to run (bash)
-config.default_prog = { "/bin/bash" }
 
 -- Set the color scheme
 config.color_scheme = "Catppuccin Mocha" -- Choose from: Catppuccin Mocha, Macchiato, Frappe, Latte
