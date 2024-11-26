@@ -9,14 +9,14 @@ return {
 
         {
             "L3MON4D3/LuaSnip",
-            version = "v2.*", 
+            version = "v2.*",
             build = "make install_jsregexp",
         },
 
         "saadparwaiz1/cmp_luasnip", -- for autocompletion
         "onsails/lspkind.nvim", -- vs-code like pictograms
     },
-    
+
     config = function()
         local cmp = require("cmp")
         local luasnip = require("luasnip")
@@ -32,13 +32,13 @@ return {
 
             snippet = { -- configure how nvim-cmp interacts with snippet engine
                 expand = function(args)
-                luasnip.lsp_expand(args.body)
+                    luasnip.lsp_expand(args.body)
                 end,
             },
 
             mapping = {
                 -- Super Tab function
-                ['<CR>'] = cmp.mapping(function(fallback)
+                ["<CR>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         if luasnip.expandable() then
                             luasnip.expand()
@@ -77,7 +77,7 @@ return {
 
             -- sources for autocompletion
             sources = cmp.config.sources({
-                { name = "nvim_lsp"}, -- LSP suggestions
+                { name = "nvim_lsp" }, -- LSP suggestions
                 { name = "luasnip" }, -- snippets
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths

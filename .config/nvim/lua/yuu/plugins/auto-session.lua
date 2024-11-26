@@ -4,7 +4,7 @@ return {
     keys = {
         { "<leader>wr", "<cmd>SessionRestore<CR>", desc = "Restore session" },
         { "<leader>ws", "<cmd>SessionSave<CR>", desc = "Save session" },
-        { '<leader>wf', '<cmd>SessionSearch<CR>', desc = "Session search" },
+        { "<leader>wf", "<cmd>SessionSearch<CR>", desc = "Session search" },
     },
 
     config = function()

@@ -9,9 +9,9 @@ return {
             "CompilerStop",
         },
 
-        dependencies = { 
+        dependencies = {
             "stevearc/overseer.nvim",
-            "nvim-telescope/telescope.nvim" 
+            "nvim-telescope/telescope.nvim",
         },
 
         opts = {},

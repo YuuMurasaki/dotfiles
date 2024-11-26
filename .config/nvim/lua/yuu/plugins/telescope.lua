@@ -29,11 +29,11 @@ return {
         telescope.load_extension("fzf")
 
         -- set keymaps
-        vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = "Find files", silent = true })
-        vim.keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = "Find recent files", silent = true })
-        vim.keymap.set('n', '<leader>fs', '<cmd>Telescope live_grep<CR>', { desc = "Find string", silent = true })
-        vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd", silent = true })
-        vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = "Find buffers", silent = true })
-        vim.keymap.set('n', '<leader>fm', '<cmd>Telescope marks<CR>', { desc = "Find marks", silent = true })
+        vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files", silent = true })
+        vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Find recent files", silent = true })
+        vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Find string", silent = true })
+        vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor", silent = true })
+        vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers", silent = true })
+        vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "Find marks", silent = true })
     end,
 }

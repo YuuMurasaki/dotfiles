@@ -10,5 +10,5 @@ return {
 
     config = function()
         require("zen-mode").setup()
-    end
+    end,
 }

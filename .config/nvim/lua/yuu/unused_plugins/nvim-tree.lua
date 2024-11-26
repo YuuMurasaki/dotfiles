@@ -10,7 +10,7 @@ return {
             view = {
                 width = 30,
             },
-            
+
             filters = {
                 custom = { ".DS_Store" },
             },
@@ -27,5 +27,5 @@ return {
                 ignore = false,
             },
         })
-    end
+    end,
 }
