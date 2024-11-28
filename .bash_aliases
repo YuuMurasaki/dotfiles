@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # System
-alias sleep="systemctl suspend"
 alias shutdown='sudo shutdown -h now'
-alias update='sudo apt install && apt update -y'
+alias update='sudo apt update && apt upgrade -y'
 
 # Change directory aliases
 alias home='cd $HOME'

@@ -8,14 +8,12 @@ return {
         local treesitter = require("nvim-treesitter.configs")
 
         -- configure treesitter
-        treesitter.setup({ -- enable syntax highlighting
+        treesitter.setup({
+            -- enable syntax highlighting
             highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = false,
             },
-
-            -- enable indentation
-            indent = { enable = true },
 
             -- ensure these language parsers are installed
             ensure_installed = {

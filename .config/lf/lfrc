@@ -53,7 +53,7 @@ map n
 # Mapping
 map r push :rename<space>
 map e $nvim $fx
-map i $nvim -M $fx
+map i $nvim -M -R $fx
 map x %trash-put $fx
 map <delete> %rm -rf $fx
 map <enter> shell

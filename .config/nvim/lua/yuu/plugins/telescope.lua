@@ -5,7 +5,10 @@ return {
 
     dependencies = {
         "nvim-lua/plenary.nvim",
-        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+        {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+        },
         "nvim-tree/nvim-web-devicons",
     },
 
@@ -20,7 +23,6 @@ return {
                     i = {
                         ["<C-k>"] = actions.move_selection_previous, --move the prev result
                         ["<C-j>"] = actions.move_selection_next, --move the next result
-                        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
                     },
                 },
             },
