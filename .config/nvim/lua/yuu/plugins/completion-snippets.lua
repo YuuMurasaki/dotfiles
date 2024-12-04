@@ -1,13 +1,13 @@
 return {
     "hrsh7th/nvim-cmp",
     version = false,
-    event = "InsertEnter",
+    event = { "InsertEnter" },
 
     dependencies = {
         "hrsh7th/cmp-buffer", -- source for text in buffer
         "hrsh7th/cmp-path", -- source for file system paths
 
-        { -- for snippets
+        { -- snippets engine
             "L3MON4D3/LuaSnip",
             version = "v2.*",
             build = "make install_jsregexp",

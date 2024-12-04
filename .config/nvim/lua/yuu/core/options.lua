@@ -1,24 +1,18 @@
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
--- Set leader key to space
+-- Set leader key to < space >
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Enable relative line numbers
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.number = true
-vim.opt.numberwidth = 2
-
--- Disable the current line number and column number
-vim.opt.ruler = false
+vim.opt.numberwidth = 1
 
 -- Disable wrap && swapfile
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
-
--- Enable autopairs_enabled
-vim.g.autopairs_enabled = true
 
 -- Tab && indentaion
 vim.opt.tabstop = 4
@@ -46,6 +40,9 @@ vim.opt.scrolloff = 5
 
 -- Status line
 vim.o.laststatus = 0 -- set to 0 to disable status line
+
+-- Disable the current line number and column number
+vim.opt.ruler = false
 
 -- Disable showing the mode below the statusline
 vim.opt.showmode = false
