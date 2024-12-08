@@ -67,10 +67,9 @@ map n
 # Mapping
 map r push :rename<space>
 map e open_files
-map i $nvim -M -R $fx
 map E extract
 map x %trash-put $fx
-map <delete> %rm -rf $fx
+map <delete> %rm -rfv $fx
 map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>

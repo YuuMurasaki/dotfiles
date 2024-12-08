@@ -36,4 +36,7 @@ alias ltree='eza --icons=auto --all --group-directories-first --header --tree'
 # Enviroment variables
 export EDITOR=nvim
 export PAGER=less
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Starship
 eval "$(starship init bash)"

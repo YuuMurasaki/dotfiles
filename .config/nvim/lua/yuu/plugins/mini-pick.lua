@@ -14,8 +14,8 @@ return {
 
         -- Keep window centered
         local win_config = function()
-            local height = math.floor(0.6 * vim.o.lines) -- Define the size of pick window
-            local width = math.floor(0.6 * vim.o.columns)
+            local height = math.floor(0.7 * vim.o.lines) -- Define the size of pick window
+            local width = math.floor(0.7 * vim.o.columns)
             return {
                 anchor = "NW",
                 height = height,
