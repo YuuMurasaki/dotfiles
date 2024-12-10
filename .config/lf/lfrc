@@ -73,8 +73,8 @@ map <delete> %rm -rfv $fx
 map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>
-map y %cp -ri -- $fs .
-map d %mv -i -- $fs .
+map y %cp -riv -- $fs .
+map d %mv -iv -- $fs .
 
 # Movement
 map gc cd ~/.config
