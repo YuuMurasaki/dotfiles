@@ -5,11 +5,15 @@ cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 cmd open_files ${{
     set -f
     case $f in
-        *.jpg|*.jpeg|*.png|*.gif|*.bmp|*.tiff|*.webp|*.svg|*.ico) nsxiv -b -f -p $f ;;
+        *.jpg|*.jpeg|*.png|*.gif|*.bmp|*.tiff|*.webp|*.svg|*.ico) 
+            nsxiv --no-bar --fullscreen --private $f 
+            ;;
         *.mp4|*.mkv|*.webm|*.avi|*.mov|*.flv|*.mpeg|*.mpg|*.3gp|*.ogv|*.wmv)
             mpv --fullscreen --loop --hwdec=no $f
             ;;
-        *.pdf|*.xps|*.epub|*.xhtml|*.cbz) mupdf $f ;;
+        *.pdf|*.xps|*.epub|*.xhtml|*.cbz) 
+            zathura $f 
+            ;;
         *) nvim $f ;;
     esac
 }}
