@@ -1,0 +1,20 @@
+# Disable ctrl+s
+stty stop undef
+
+# Load the common customization script
+. --autoload --no-alias initialization/common
+
+# Load custom alias
+. "$HOME/.config/shell/alias"
+
+# Load custom profile
+#. "$HOME/.config/shell/profile"
+
+# Custom prompt
+HOSTNAME=${HOSTNAME:=$(uname -n)}
+LOGNAME=${LOGNAME:=$(whoami)}
+YASH_PS1='\fo.\fr.[\fy.${HOSTNAME}\fg.@\fb.${LOGNAME} '\
+'\fm.$(echo $PWD | sed "s|$HOME|~|")\fr.]\fD.\$ '
+PS1P='\fi.'
+
+# vim: set et sw=2 sts=2 tw=78 ft=sh:

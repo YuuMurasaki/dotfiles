@@ -9,24 +9,6 @@ return {
         end,
     },
     {
-        "echasnovski/mini.ai",
-        version = false,
-        event = { "BufReadPre", "BufNewFile" },
-
-        config = function()
-            require("mini.ai").setup()
-        end,
-    },
-    {
-        "echasnovski/mini.jump",
-        version = false,
-        event = { "BufReadPre", "BufNewFile" },
-
-        config = function()
-            require("mini.jump").setup()
-        end,
-    },
-    {
         "echasnovski/mini.surround",
         version = false,
         event = { "BufReadPre", "BufNewFile" },

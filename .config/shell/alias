@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Packages
+alias install='doas apt install'
+alias remove='doas apt remove'
+alias installed='apt list'
+alias update='doas apt update && apt upgrade -y'
+
+# System
+alias top='htop'
+alias cpu='ps aux | sort -r -nk +4 | head | $PAGER'
+alias cpuinfo='lscpu | $PAGER'
+
+# Change directory aliases
+alias home='cd $HOME'
+alias config='cd $HOME/.config'
+alias docs='cd $HOME/Documents'
+alias down='cd $HOME/Downloads'
+alias wallpapers='cd $HOME/.local/share/wallpapers'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# Better ls
+alias ls='ls --all --classify --color=auto --group-directories-first'
+alias ll='ls --all --classify --color=auto --group-directories-first -l'
+alias lr='ls --all --classify --color=auto --group-directories-first --recursive'
+
+# Git
+alias ggg='git status --untracked-files=no'
+alias gall='git add --update'

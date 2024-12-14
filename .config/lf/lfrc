@@ -72,7 +72,7 @@ map n
 map r push :rename<space>
 map e open_files
 map E extract
-map x %trash-put $fx
+map x %trash-put -- $fx
 map <delete> %rm -rfv $fx
 map <enter> shell
 map an push %touch<space>
