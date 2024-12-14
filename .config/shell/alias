@@ -8,6 +8,8 @@ alias update='doas apt update && apt upgrade -y'
 
 # System
 alias top='htop'
+alias free='free -h'
+alias df='df -h'
 alias cpu='ps aux | sort -r -nk +4 | head | $PAGER'
 alias cpuinfo='lscpu | $PAGER'
 
@@ -24,10 +26,11 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 # Better ls
-alias ls='ls --all --classify --color=auto --group-directories-first'
-alias ll='ls --all --classify --color=auto --group-directories-first -l'
-alias lr='ls --all --classify --color=auto --group-directories-first --recursive'
+alias ls='ls --almost-all --classify --color=auto --group-directories-first'
+alias ll='ls --almost-all --classify --color=auto --group-directories-first --human-readable -l'
+alias lr='ls --almost-all --classify --color=auto --group-directories-first --recursive'
 
 # Git
 alias ggg='git status --untracked-files=no'
 alias gall='git add --update'
+alias commit='git commit -m'

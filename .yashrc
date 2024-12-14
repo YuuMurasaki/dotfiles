@@ -8,7 +8,10 @@ stty stop undef
 . "$HOME/.config/shell/alias"
 
 # Load custom profile
-#. "$HOME/.config/shell/profile"
+. "$HOME/.config/shell/profile"
+
+# Yash history
+HISTSIZE=250
 
 # Custom prompt
 HOSTNAME=${HOSTNAME:=$(uname -n)}
