@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# This file runs when a DM logs you into a graphical session.
+
+# Set wallpaper
+#xwallpaper
+
+# Hide mouse cursor after 3 sec.
+unclutter-xfixes --timeout 3 &
+
+# Start dwmblocks
+#dwmblocks &

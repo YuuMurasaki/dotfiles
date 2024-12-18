@@ -1,17 +1,32 @@
-# Disable ctrl+s
-stty stop undef
+# Source /etc/profile and ~/.profile
+#[ -f "/etc/profile" ] && . "/etc/profile"
+#[ -f "$HOME/.profile" ] && . "$HOME/.profile"
 
-# Load the common customization script
-. --autoload --no-alias initialization/common
+# Load aliases
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
 
-# Load custom alias
-. "$HOME/.config/shell/alias"
-
-# Load custom profile
-. "$HOME/.config/shell/profile"
+# Create yash cache dir if not there
+[ ! -d "${XDG_CACHE_HOME:-$HOME/.cache}/yash" ] && mkdir -p "${XDG_CACHE_HOME:-$HOME/.cache}/yash"
 
 # Yash history
+HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/yash/history"
 HISTSIZE=250
+HISTCONTROL=ignoredups
+HISTIGNORE="lf:ls:cd:exit:clear:history"
+HISTTIMEFORMAT="%F %T "
+HISTFILESIZE=2000
+
+# Disable ctrl-s to freeze terminal
+stty stop undef
+
+# ensure job control works as expected
+case $- in (*m*)
+  trap - TSTP TTIN TTOU
+esac
+
+# Enable some vi keybindings
+bindkey --vi-insert '\^L' clear-and-redraw-all
+bindkey --vi-command '\^L' clear-and-redraw-all
 
 # Custom prompt
 HOSTNAME=${HOSTNAME:=$(uname -n)}

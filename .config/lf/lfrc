@@ -72,17 +72,18 @@ map n
 map r push :rename<space>
 map e open_files
 map E extract
-map x %trash-put -- $fx
-map <delete> %rm -rfv $fx
 map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>
+map x %trash-put -- $fx
+map <delete> %rm -rfv -- $fx
 map y %cp -riv -- $fs .
 map d %mv -iv -- $fs .
 
 # Movement
 map gc cd ~/.config
 map gd cd ~/Documents
-map gt cd ~/.local/share/Trash/files/
-map gw cd ~/workspace/
-map gm cd /media/yuu/
+map gt cd ~/.local/share/Trash/files
+map gb cd ~/.local/bin
+map gw cd ~/workspace
+map gm cd /media/yuu
