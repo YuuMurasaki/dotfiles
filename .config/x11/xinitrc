@@ -2,7 +2,11 @@
 
 # xinitrc runs automatically when you run startx.
 
-. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+else
+	. "$HOME/.xprofile"
+fi
 
 # Start window manager
 exec dwm

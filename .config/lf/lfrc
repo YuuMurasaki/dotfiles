@@ -82,8 +82,10 @@ map d %mv -iv -- $fs .
 
 # Movement
 map gc cd ~/.config
+map gC cd /etc
 map gd cd ~/Documents
 map gt cd ~/.local/share/Trash/files
 map gb cd ~/.local/bin
+map gB cd /bin
 map gw cd ~/workspace
 map gm cd /media/yuu

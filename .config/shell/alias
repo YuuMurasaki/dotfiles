@@ -2,10 +2,12 @@
 # Custom alias file
 
 # Packages
-alias install='doas apt install'
-alias remove='doas apt remove'
-alias installed='apt list'
-alias update='doas apt update && apt upgrade -y'
+alias pkgupdate='doas apt update && apt upgrade -y'
+alias pkginstall='doas apt-get install'
+alias pkgclean='doas apt-get autoremove'
+alias pkgremove='doas apt-get remove'
+alias pkgsearch='apt search'
+alias pkglist='dpkg -l'
 
 # System
 alias top='htop'
@@ -16,11 +18,13 @@ alias cpuinfo='lscpu | $PAGER'
 alias today='date +"%Y-%m-%d"'
 alias now='date +"%T"'
 
+# Weather report
+alias weather='curl wttr.in/Thanhhoa?format=4'
+
 # GNU Core Utilities
 alias df='command df --human-readable --print-type --exclude-type=squashfs'
 alias du='du --human-readable --summarize'
 alias free='free --human'
-alias ping='ping -c 5'
 
 # Move, copy and remove
 alias cp='cp --interactive'
@@ -34,13 +38,13 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 
 # Change directory aliases
-alias home='cd $HOME'
 alias docs='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
 alias music='cd $HOME/Music'
 alias pics='cd $HOME/Pictures'
 alias videos='cd $HOME/Videos'
 alias config='cd $HOME/.config'
+alias CONFIG='cd /etc'
 alias wallpapers='cd $HOME/.local/share/wallpapers'
 alias fonts='cd $HOME/.local/share/fonts'
 alias bin='cd $HOME/.local/bin'
@@ -60,13 +64,15 @@ alias ll='ls --almost-all --classify --color=auto --group-directories-first --hu
 alias lr='ls --almost-all --classify --color=auto --group-directories-first --recursive'
 alias ls='ls --almost-all --classify --color=auto --group-directories-first'
 
+# History
+alias his='$(history | fzf | sed "s/^[ ]*[0-9]\+[ ]*//")'
+alias clearhis='cat /dev/null > $HOME/.cache/yash/history'
+
 # Git
 alias ggg='git status --untracked-files=no'
 alias gall='git add --update'
 alias commit='git commit --verbose -m'
 
-# Weather report
-alias weather='curl wttr.in/Thanhhoa?format=4'
-
 # Networking
 alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias ping='ping -c 5'
