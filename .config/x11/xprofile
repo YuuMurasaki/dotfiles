@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # This file runs when a DM logs you into a graphical session.
+# Add programs which you want to run after logging in
 
 # Use xrandr to set screen resolution
 #xrandr --output "LVDS-1" --mode "1366x768"

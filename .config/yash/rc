@@ -1,6 +1,6 @@
 # Source /etc/profile and ~/.profile
 #[ -f "/etc/profile" ] && . "/etc/profile"
-#[ -f "$HOME/.profile" ] && . "$HOME/.profile"
+#[ -f "$HOME/.config/yash/profile" ] && . "$HOME/.config/yash/profile"
 
 # Load aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"

@@ -3,7 +3,7 @@
 # Script for system states
 
 # Add this line to "doas.conf" in order run this script from outside the terminal:
-# permit nopass :wheel as root cmd shutdown
+# permit noenv nopass :wheel as root cmd shutdown
 
 case "$(printf "Shutdown\nReboot\n" | dmenu -l 10 -i -p "System:")" in
 	"Shutdown") doas shutdown -h now ;;
