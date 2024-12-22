@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # Custom alias file
 
 # Packages
@@ -16,13 +17,13 @@ alias cpuinfo='lscpu | $PAGER'
 
 # Easier to read
 alias df='command df --human-readable --print-type --exclude-type=squashfs'
-alias du='du --human-readable --summarize'
+alias du='command du --human-readable --summarize'
 alias free='free --human'
 
 # Move, copy and remove
 alias cp='cp --interactive'
 alias mv='mv --interactive'
-alias rm='rm -I --preserve-root'
+alias rm='rm --preserve-root'
 
 # Colorize commands when possible.
 alias dmesg='dmesg --color'

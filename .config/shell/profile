@@ -26,6 +26,7 @@ export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 
 # Other program settings
 export MOZ_USE_XINPUT2="1" # Mozilla smooth scrolling
+export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -34,5 +35,5 @@ export FZF_DEFAULT_OPTS=" \
 --multi --extended --cycle \
 --height=60% --info=inline --border=rounded --layout=reverse"
 
-# Automatically start window manager in tty
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx
+# Start graphical server on user's current tty if not already running.
+[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"

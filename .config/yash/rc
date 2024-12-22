@@ -1,6 +1,6 @@
 # Source /etc/profile and ~/.profile
-#[ -f "/etc/profile" ] && . "/etc/profile"
-#[ -f "$HOME/.config/yash/profile" ] && . "$HOME/.config/yash/profile"
+[ -f "/etc/profile" ] && . "/etc/profile"
+[ -f "$HOME/.config/yash/profile" ] && . "$HOME/.config/yash/profile"
 
 # Load aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
@@ -10,11 +10,10 @@
 
 # Yash history
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/yash/history"
-HISTSIZE=250
-HISTCONTROL=ignoredups
 HISTIGNORE="lf:ls:cd:exit:clear:history"
-HISTTIMEFORMAT="%F %T "
+HISTCONTROL=ignoredups
 HISTFILESIZE=2000
+HISTSIZE=250
 
 # Disable ctrl-s to freeze terminal
 stty stop undef
