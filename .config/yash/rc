@@ -26,6 +26,8 @@ esac
 # Enable some vi keybindings
 bindkey --vi-insert '\^L' clear-and-redraw-all
 bindkey --vi-command '\^L' clear-and-redraw-all
+bindkey --vi-insert '\^A' beginning-of-line
+bindkey --vi-insert '\^E' end-of-line
 
 # Custom prompt
 HOSTNAME=${HOSTNAME:=$(uname -n)}

@@ -4,13 +4,13 @@
 # Add programs which you want to run after logging in
 
 # Use xrandr to set screen resolution
-#xrandr --output "LVDS-1" --mode "1366x768"
+xrandr --output "LVDS-1" --mode "1366x768"
 
 # Set wallpaper
-#xwallpaper --zoom $HOME/.local/share/wallpapers/landscape.jpg
+xwallpaper --zoom $HOME/.local/share/wallpapers/girl-2.jpg
 
 # Hide mouse cursor after 3 sec.
-#unclutter-xfixes --root --timeout 3 &
+unclutter --root --timeout 3 &
 
 # Start dwmblocks
 #dwmblocks &
