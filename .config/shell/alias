@@ -81,7 +81,7 @@ alias now='date +"%T"'
 fcd() {
     local dir view
     view="eza --tree --level=2 --all --color=always --color-scale=all --icons=always --group-directories-first --header"
-    dir=$( fdfind --type d --max-depth 4 --hidden 2>/dev/null |
+    dir=$( fdfind --type d --max-depth 4 --hidden --exclude .git 2>/dev/null |
         fzf --preview "$view {}" --preview-window 'right,40%' )
     if [ -n "$dir" ]; then
         cd "$dir" || return
@@ -90,7 +90,7 @@ fcd() {
 
 fvi() {
     local files
-    files=$( fzf --preview "cat {}" --preview-window 'right,40%' )
+    files=$( fzf --preview "cat -- {}" --preview-window 'right,40%' )
     if [ -n "$files" ]; then
         nvim "$files" || return
     fi
