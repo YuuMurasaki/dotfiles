@@ -28,7 +28,6 @@ alias rm='rm --preserve-root'
 # Colorize commands when possible.
 alias dmesg='dmesg --color'
 alias grep='grep --color=auto'
-alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 
 # Change directory aliases
@@ -90,7 +89,8 @@ fcd() {
 
 fvi() {
     local files
-    files=$( fzf --preview "cat -- {}" --preview-window 'right,40%' )
+    files=$( fdfind --type f --max-depth 3 --hidden --exclude '*.o' --exclude '*.bin' 2>/dev/null |
+            fzf --preview "head -n 40 {}" --preview-window 'right,40%' )
     if [ -n "$files" ]; then
         nvim "$files" || return
     fi
