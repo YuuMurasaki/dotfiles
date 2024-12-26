@@ -5,7 +5,7 @@
 # Add this line to "doas.conf" in order run this script from outside the terminal:
 # permit noenv nopass :wheel as root cmd shutdown
 
-case "$(printf "Shutdown\nReboot\n" | dmenu -l 10 -i -p "System:")" in
+case "$(printf "Shutdown\nReboot\n" | dmenu -l 5 -i -p "System:")" in
 	"Shutdown") doas shutdown -h now ;;
 	"Reboot") doas shutdown -r now ;;
 	*) exit 1 ;;

@@ -9,4 +9,4 @@ else
 fi
 
 # Start window manager
-exec dwm
+exec /usr/local/bin/dwm

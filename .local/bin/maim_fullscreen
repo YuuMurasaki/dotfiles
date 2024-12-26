@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Define the screenshots directory
+screenshots_dir="$HOME/Pictures/Screenshots"
+
+# Create screenshot folder if not found
+[ ! -d "$screenshots_dir" ] && mkdir -p "$screenshots_dir"
+
+# Generate timestamp
+timestamp=$(date '+%Y-%m-%d_%H-%M-%S')
+
+# Take screenshot
+maim --hidecursor "$screenshots_dir/$timestamp.png";
