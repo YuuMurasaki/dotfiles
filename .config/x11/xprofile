@@ -7,14 +7,10 @@
 xrandr --output "Virtual1" --mode "1366x768"
 
 # Set wallpaper
-xwallpaper --zoom $HOME/.local/share/wallpapers/girl-2.jpg
+xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png
 
 # Hide mouse cursor after 3 sec.
 unclutter --root --timeout 3 &
 
-# Start dwmblocks
-#dwmblocks &
-
 # Start dwm bar
 dash $HOME/.local/bin/dwm_barrr &
-

@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Get memory usage from the free command
-memoryUsage=$(free --human | awk '/^Mem:/ { print $3 "/" $2 }')
-
-# Output memory usage in used/total format using printf
-printf "%s\n" " $memoryUsage"

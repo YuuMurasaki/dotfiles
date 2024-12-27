@@ -12,8 +12,8 @@
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/yash/history"
 HISTIGNORE="lf:ls:cd:exit:clear:history"
 HISTCONTROL=ignoredups
-HISTFILESIZE=2000
-HISTSIZE=250
+HISTFILESIZE=10000
+HISTSIZE=10000
 
 # Disable ctrl-s to freeze terminal
 stty stop undef
