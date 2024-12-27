@@ -13,4 +13,8 @@ xwallpaper --zoom $HOME/.local/share/wallpapers/girl-2.jpg
 unclutter --root --timeout 3 &
 
 # Start dwmblocks
-dwmblocks &
+#dwmblocks &
+
+# Start dwm bar
+dash $HOME/.local/bin/dwm_barrr &
+
