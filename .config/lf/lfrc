@@ -76,9 +76,9 @@ map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>
 map x %trash-put -- $fx
-map <delete> %rm -rfv -- $fx
-map y %cp -riv -- $fs .
-map d %mv -iv -- $fs .
+map <delete> %rm -rf -- $fx
+map y %cp -ri -- $fs .
+map d %mv -i -- $fs .
 
 # Movement
 map gc cd ~/.config

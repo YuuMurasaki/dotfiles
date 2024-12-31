@@ -56,9 +56,9 @@ alias ......='cd ../../../../..'
 #alias lt="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --header --long --tree"
 
 # Better ls
-alias ls="ls --almost-all --classify --color=auto --group-directories-first"
-alias ll="ls --almost-all --classify --color=auto --group-directories-first -l --human-readable"
-alias lr="ls --almost-all --classify --color=auto --group-directories-first --recursive"
+alias ls="ls -AF --color=auto --group-directories-first"
+alias ll="ls -AF --color=auto --group-directories-first -lh"
+alias lr="ls -AF --color=auto --group-directories-first -R"
 
 # History
 alias clearhis='cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
