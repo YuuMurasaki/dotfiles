@@ -16,14 +16,13 @@ alias cpu='ps aux | sort -r -nk +4 | head | $PAGER'
 alias cpuinfo='lscpu | $PAGER'
 
 # Easier to read
-alias df='command df --human-readable --print-type --exclude-type=squashfs'
-alias du='command du --human-readable --summarize'
-alias free='command free --human'
+alias df='command df -h'
+alias du='command du -h'
+alias free='command free -h'
 
 # Move, copy and remove
-alias cp='cp --interactive'
-alias mv='mv --interactive'
-alias rm='rm --preserve-root'
+alias cp='cp -i'
+alias mv='mv -i'
 
 # Colorize commands when possible.
 alias dmesg='dmesg --color'
@@ -56,9 +55,9 @@ alias ......='cd ../../../../..'
 #alias lt="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --header --long --tree"
 
 # Better ls
-alias ls="ls -AF --color=auto --group-directories-first"
-alias ll="ls -AF --color=auto --group-directories-first -lh"
-alias lr="ls -AF --color=auto --group-directories-first -R"
+alias ls="ls -aF --color=auto --group-directories-first"
+alias ll="ls -aF --color=auto --group-directories-first -lh"
+alias lr="ls -aF --color=auto --group-directories-first -R"
 
 # History
 alias clearhis='cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'

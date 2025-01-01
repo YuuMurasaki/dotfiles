@@ -10,7 +10,7 @@ xrandr --output "Virtual-1" --mode "1366x768"
 xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png
 
 # Hide mouse cursor after 3 sec.
-unclutter --root --timeout 3 &
+unclutter-xfixes --timeout 3 &
 
 # Start dwm bar
 sh $HOME/.local/bin/dwm_barrr &
