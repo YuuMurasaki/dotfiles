@@ -24,11 +24,6 @@ alias free='busybox free -h'
 alias cp='busybox cp -i'
 alias mv='busybox mv -i'
 
-# Colorize commands when possible.
-alias dmesg='busybox dmesg --color'
-alias grep='busybox grep --color=auto'
-alias diff='busybox diff --color=auto'
-
 # Change directory aliases
 alias docs='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
