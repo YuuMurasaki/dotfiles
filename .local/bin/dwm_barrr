@@ -6,8 +6,8 @@ cpu() {
 }
 
 mem() {
-    memoryUsage=$(free --human | awk '/^Mem:/ { print $3 "/" $2 }')
-    printf " $memoryUsage"
+    memoryUsage=$(busybox free -h | awk '/^Mem:/ { print $3 "/" $2 }')
+    printf "  $memoryUsage"
 }
 
 wlan() {
@@ -25,12 +25,12 @@ wlan() {
 
 clock() {
     timeee=$(date +"%H:%M")
-    printf " $timeee"
+    printf "  $timeee"
 }
 
 calendar() {
     todayyy=$(date +"%d %b %Y")
-    printf " $todayyy"
+    printf "  $todayyy"
 }
 
 while true; do
