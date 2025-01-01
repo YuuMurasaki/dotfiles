@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # This file runs when a DM logs you into a graphical session.
-# Add programs which you want to run after logging in
+# Add programs which you want to run in the backgroup
 
 # Use xrandr to set screen resolution
 xrandr --output "Virtual-1" --mode "1366x768"

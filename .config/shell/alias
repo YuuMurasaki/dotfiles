@@ -3,12 +3,12 @@
 # Custom alias and commands file
 
 # Packages
-alias pkgupdate='doas apt update && apt upgrade -y'
-alias pkginstall='doas apt-get install'
-alias pkgclean='doas apt-get autoremove'
-alias pkgremove='doas apt-get remove'
-alias pkgsearch='apt search'
-alias pkglist='dpkg -l'
+alias pkgupdate='doas apk update && doas apk upgrade'
+alias pkginstall='doas apk add'
+alias pkgclean='doas apk del $(doas apk info -v | awk "{print \$1}")'
+alias pkgremove='doas apk del'
+alias pkgsearch='doas apk search'
+alias pkglist='doas apk info'
 
 # System
 alias top='htop'
@@ -16,18 +16,18 @@ alias cpu='ps aux | sort -r -nk +4 | head | $PAGER'
 alias cpuinfo='lscpu | $PAGER'
 
 # Easier to read
-alias df='command df -h'
-alias du='command du -h'
-alias free='command free -h'
+alias df='busybox df -h'
+alias du='busybox du -hs'
+alias free='busybox free -h'
 
 # Move, copy and remove
-alias cp='cp -i'
-alias mv='mv -i'
+alias cp='busybox cp -i'
+alias mv='busybox mv -i'
 
 # Colorize commands when possible.
-alias dmesg='dmesg --color'
-alias grep='grep --color=auto'
-alias diff='diff --color=auto'
+alias dmesg='busybox dmesg --color'
+alias grep='busybox grep --color=auto'
+alias diff='busybox diff --color=auto'
 
 # Change directory aliases
 alias docs='cd $HOME/Documents'
@@ -55,9 +55,9 @@ alias ......='cd ../../../../..'
 #alias lt="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --header --long --tree"
 
 # Better ls
-alias ls="ls -aF --color=auto --group-directories-first"
-alias ll="ls -aF --color=auto --group-directories-first -lh"
-alias lr="ls -aF --color=auto --group-directories-first -R"
+alias ls="busybox ls -aF --color=auto --group-directories-first"
+alias ll="busybox ls -aF --color=auto --group-directories-first -lh"
+alias lr="busybox ls -aF --color=auto --group-directories-first -R"
 
 # History
 alias clearhis='cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
@@ -82,14 +82,14 @@ alias now='date +"%T"'
 ############################################
 
 fcd() {
-    local dir=$( fdfind --type d --max-depth 5 --hidden 2>/dev/null | fzf )
+    local dir=$( fd --type d --max-depth 5 --hidden 2>/dev/null | fzf )
     if [ -n "$dir" ]; then
         cd "$dir" || return
     fi
 }
 
 fvi() {
-    local files=$( fdfind --type f --hidden 2>/dev/null | fzf )
+    local files=$( fd --type f --hidden 2>/dev/null | fzf )
     if [ -n "$files" ]; then
         nvim "$files" || return
     fi
