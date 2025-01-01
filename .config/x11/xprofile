@@ -4,7 +4,7 @@
 # Add programs which you want to run after logging in
 
 # Use xrandr to set screen resolution
-xrandr --output "Virtual1" --mode "1366x768"
+xrandr --output "Virtual-1" --mode "1366x768"
 
 # Set wallpaper
 xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png
@@ -13,4 +13,4 @@ xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png
 unclutter --root --timeout 3 &
 
 # Start dwm bar
-dash $HOME/.local/bin/dwm_barrr &
+sh $HOME/.local/bin/dwm_barrr &

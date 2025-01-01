@@ -6,11 +6,12 @@
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
 # Program variables
-export TERMINAL="st"
 export EDITOR="nvim"
+export TERMINAL="st"
+export TERMINAL_PROG="st"
+export BROWSER="librewolf"
 export VISUAL="${EDITOR}"
 export PAGER="less"
-export BROWSER="firefox"
 export READER="zathura"
 
 # ~/ Clean-up:
