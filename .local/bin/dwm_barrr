@@ -24,12 +24,12 @@ wlan() {
 }
 
 clock() {
-	timeee=$(date +"%H:%M")
+	timeee=$(busybox date +"%H:%M")
 	printf "  $timeee"
 }
 
 calendar() {
-	todayyy=$(date +"%d %b %Y")
+	todayyy=$(busybox date +"%d %b %Y")
 	printf "  $todayyy"
 }
 

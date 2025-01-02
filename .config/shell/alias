@@ -55,7 +55,7 @@ alias ll="busybox ls -aF --color=auto --group-directories-first -lh"
 alias lr="busybox ls -aF --color=auto --group-directories-first -R"
 
 # History
-alias clearhis='cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
+alias clearhis='busybox cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
 
 # Git
 alias ggg='git status --untracked-files=no'
@@ -66,18 +66,14 @@ alias ggc='git commit --verbose -m'
 
 # Networking
 alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
-alias ping='ping -c 5'
-
-# Date and time
-alias today='date +"%Y-%m-%d"'
-alias now='date +"%T"'
+alias ping='busybox ping -c 5'
 
 ############################################
 ############### FZF COMMANDS ###############
 ############################################
 
 fcd() {
-    local dir=$( fd --type d --max-depth 5 --hidden 2>/dev/null | fzf )
+    local dir=$( fd --type d --max-depth 5 --hidden --exclude .git 2>/dev/null | fzf )
     if [ -n "$dir" ]; then
         cd "$dir" || return
     fi

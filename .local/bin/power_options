@@ -5,6 +5,8 @@
 # Add this line to "/etc/doas.conf" in order run this script from outside the terminal:
 # permit noenv nopass :wheel as root cmd busybox poweroff
 # permit noenv nopass :wheel as root cmd busybox reboot
+#
+# FIXME
 
 case "$(printf "Shutdown\nReboot\n" | dmenu -l 5 -i -p "System:")" in
 	"Shutdown") doas busybox poweroff ;;

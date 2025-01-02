@@ -7,7 +7,7 @@ screenshots_dir="$HOME/Pictures/Screenshots"
 [ ! -d "$screenshots_dir" ] && mkdir -p "$screenshots_dir"
 
 # Generate timestamp
-timestamp=$(date '+%Y-%m-%d_%H-%M-%S')
+timestamp=$(busybox date '+%Y-%m-%d_%H-%M-%S')
 
 # Take screenshot
 maim --hidecursor "$screenshots_dir/$timestamp.png"
