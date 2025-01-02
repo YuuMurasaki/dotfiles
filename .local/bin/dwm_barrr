@@ -1,39 +1,39 @@
 #!/bin/sh
 
 cpu() {
-    cpuUsage=$(grep -o "^[^ ]*" /proc/loadavg)
-    printf " $cpuUsage"
+	cpuUsage=$(grep -o "^[^ ]*" /proc/loadavg)
+	printf " $cpuUsage"
 }
 
 mem() {
-    memoryUsage=$(busybox free -h | awk '/^Mem:/ { print $3 "/" $2 }')
-    printf "  $memoryUsage"
+	memoryUsage=$(busybox free -h | awk '/^Mem:/ { print $3 "/" $2 }')
+	printf "  $memoryUsage"
 }
 
 wlan() {
-    wifiicon=""
-    ethericon=""
+	wifiicon=""
+	ethericon=""
 
-    # WiFi
-    [ "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" = 'up' ] && wifiicon=""
+	# WiFi
+	[ "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" = 'up' ] && wifiicon=""
 
-    # Ethernet
-    [ "$(cat /sys/class/net/e*/operstate 2>/dev/null)" = 'up' ] && ethericon=""
+	# Ethernet
+	[ "$(cat /sys/class/net/e*/operstate 2>/dev/null)" = 'up' ] && ethericon=""
 
-    printf "%s %s" "$wifiicon" "$ethericon"
+	printf "%s %s" "$wifiicon" "$ethericon"
 }
 
 clock() {
-    timeee=$(date +"%H:%M")
-    printf "  $timeee"
+	timeee=$(date +"%H:%M")
+	printf "  $timeee"
 }
 
 calendar() {
-    todayyy=$(date +"%d %b %Y")
-    printf "  $todayyy"
+	todayyy=$(date +"%d %b %Y")
+	printf "  $todayyy"
 }
 
 while true; do
-    xsetroot -name "$(mem) | $(wlan) | $(clock) | $(calendar)"
-    sleep 2
+	xsetroot -name "$(mem) | $(wlan) | $(clock) | $(calendar)"
+	sleep 2
 done

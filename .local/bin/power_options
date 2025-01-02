@@ -3,10 +3,11 @@
 # Script for system states
 
 # Add this line to "/etc/doas.conf" in order run this script from outside the terminal:
-# permit noenv nopass :wheel as root cmd shutdown
+# permit noenv nopass :wheel as root cmd busybox poweroff
+# permit noenv nopass :wheel as root cmd busybox reboot
 
 case "$(printf "Shutdown\nReboot\n" | dmenu -l 5 -i -p "System:")" in
-	"Shutdown") doas shutdown -h now ;;
-	"Reboot") doas shutdown -r now ;;
+	"Shutdown") doas busybox poweroff ;;
+	"Reboot") doas busybox reboot ;;
 	*) exit 1 ;;
 esac

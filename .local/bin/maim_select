@@ -10,4 +10,4 @@ screenshots_dir="$HOME/Pictures/Screenshots"
 timestamp=$(date '+%Y-%m-%d_%H-%M-%S')
 
 # Take screenshot
-maim --select --hidecursor "$screenshots_dir/$timestamp.png";
+maim --select --hidecursor "$screenshots_dir/$timestamp.png"
