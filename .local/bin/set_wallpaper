@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Wallpaper Setter Script
 # This script allows you to apply a wallpaper from a selection of images stored in a specified directory.
 # If no specific wallpaper is provided as an argument, a random wallpaper from "$HOME/Pictures/wallpapers" will be applied.
 # The script ensures that the wallpaper file type (e.g., .jpg, .png) matches the extension of the target wallpaper file.
