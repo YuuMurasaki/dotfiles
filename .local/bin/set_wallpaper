@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# This script allows you to apply a wallpaper from a selection of images stored in a specified directory.
-# If no specific wallpaper is provided as an argument, a random wallpaper from "$HOME/Pictures/wallpapers" will be applied.
-# The script ensures that the wallpaper file type (e.g., .jpg, .png) matches the extension of the target wallpaper file.
-# This script is intended to be used with `nsxiv` or other image viewers that allow selecting a file to set as the wallpaper.
-# The current wallpaper is stored in "$HOME/.local/share/wallpapers/wallpaper.png".
-
 # NOTE: The selected wallpaper and target file must have the same extension.
 # For example, if the selected wallpaper is a .jpg, the target wallpaper file should also be a .jpg.
 # Copying between different formats (e.g., .jpg to .png) may cause issues.
@@ -14,17 +8,21 @@
 dir="$HOME/Pictures/wallpapers"
 currentWall="$HOME/.local/share/wallpapers/wallpaper.png"
 
-# Exit if the wallpaper directory does not exist
+# Check if the wallpapers directory exists
 [ ! -d "$dir" ] && exit 1
 
-# Select a random wallpaper from the directory
-selectWall=$(find "$dir" -type f | shuf --head-count=1)
+# Select wallpaper: either from argument or a random one from the directory
+if [ -f "$1" ]; then
+    selectWall=$(find "$dir" -type f -name "*.png" | shuf -n 1)
+else
+    selectWall="$1"
+fi
+
+# Check if the selected wallpaper exists
+[ ! -f "$selectWall" ] && exit 1
 
 # Apply the wallpaper
-if [ -z "$1" ]; then # If no argument is passed, apply a random wallpaper
-    xwallpaper --zoom "$selectWall"
-    cp "$selectWall" "$currentWall"
-else # If a specific wallpaper is passed as an argument, apply it
-    xwallpaper --zoom "$1"
-    cp "$1" "$currentWall"
-fi
+xwallpaper --zoom "$selectWall" || exit 1
+
+# Copy the selected wallpaper to the target location
+cp "$selectWall" "$currentWall" || exit 1

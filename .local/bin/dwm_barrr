@@ -6,34 +6,39 @@ cpu() {
 }
 
 mem() {
-	memoryUsage=$(busybox free -h | awk '/^Mem:/ { print $3 "/" $2 }')
+	memoryUsage=$(free -h | awk '/^Mem:/ { print $3 "/" $2 }')
 	printf "  $memoryUsage"
 }
 
-wlan() {
+wifi() {
 	wifiicon=""
-	ethericon=""
 
 	# WiFi
 	[ "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" = 'up' ] && wifiicon=""
 
+	printf "$wifiicon"
+}
+
+ethernet() {
+	ethericon=""
+
 	# Ethernet
 	[ "$(cat /sys/class/net/e*/operstate 2>/dev/null)" = 'up' ] && ethericon=""
 
-	printf "%s %s" "$wifiicon" "$ethericon"
+	printf "$ethericon"
 }
 
 clock() {
-	timeee=$(busybox date +"%H:%M")
+	timeee=$(date +"%H:%M")
 	printf "  $timeee"
 }
 
 calendar() {
-	todayyy=$(busybox date +"%d %b %Y")
+	todayyy=$(date +"%d %b %Y")
 	printf "  $todayyy"
 }
 
 while true; do
-	xsetroot -name "$(mem) | $(wlan) | $(clock) | $(calendar)"
+	xsetroot -name "$(mem) | $(ethernet) | $(clock) | $(calendar)"
 	sleep 2
 done

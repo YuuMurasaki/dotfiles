@@ -1,0 +1,21 @@
+#!/bin/sh -e
+
+# Open file in application based on file extension
+
+[ ! -f "$1" ] && exit 1
+
+case "$1" in
+    *.mp3|*.flac|*.wav)
+        mpv --no-video --loop "$1" ;;
+        
+    *.mp4|*.mkv|*.webm|*.avi|*.mov|*.flv|*.mpeg|*.mpg|*.3gp|*.ogv|*.wmv)
+        mpv --fullscreen --loop --hwdec=no "$1" ;;
+        
+    *.jpg|*.jpeg|*.png|*.gif|*.bmp|*.tiff|*.webp|*.svg|*.ico) 
+        nsxiv --no-bar --fullscreen --private "$1" ;;
+        
+    *.pdf|*.xps|*.epub|*.xhtml|*.cbz) 
+        zathura "$1" ;;
+        
+    *) "${EDITOR:=vi}" "$1" ;;
+esac

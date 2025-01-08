@@ -11,18 +11,13 @@ alias pkgsearch='doas apk search'
 alias pkglist='doas apk info'
 
 # System
-alias top='htop'
 alias cpu='ps aux | sort -r -nk +4 | head | $PAGER'
 alias cpuinfo='lscpu | $PAGER'
 
 # Easier to read
-alias df='busybox df -h'
-alias du='busybox du -hs'
-alias free='busybox free -h'
-
-# Move, copy and remove
-alias cp='busybox cp -i'
-alias mv='busybox mv -i'
+alias df='df -h'
+alias du='du -hs'
+alias free='free -h'
 
 # Change directory aliases
 alias docs='cd $HOME/Documents'
@@ -55,7 +50,7 @@ alias ll="busybox ls -aF --color=auto --group-directories-first -lh"
 alias lr="busybox ls -aF --color=auto --group-directories-first -R"
 
 # History
-alias clearhis='busybox cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
+alias clearhis='cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
 
 # Git
 alias ggg='git status --untracked-files=no'
@@ -66,7 +61,6 @@ alias ggc='git commit --verbose -m'
 
 # Networking
 alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
-alias ping='busybox ping -c 5'
 
 ############################################
 ############### FZF COMMANDS ###############

@@ -1,23 +1,6 @@
 # Rename function
 cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
-# Files handler
-cmd open_files ${{
-    set -f
-    case $f in
-        *.jpg|*.jpeg|*.png|*.gif|*.bmp|*.tiff|*.webp|*.svg|*.ico) 
-            nsxiv --no-bar --fullscreen --private $f 
-            ;;
-        *.mp4|*.mkv|*.webm|*.avi|*.mov|*.flv|*.mpeg|*.mpg|*.3gp|*.ogv|*.wmv)
-            mpv --fullscreen --loop --hwdec=no $f
-            ;;
-        *.pdf|*.xps|*.epub|*.xhtml|*.cbz) 
-            zathura $f 
-            ;;
-        *) nvim $f ;;
-    esac
-}}
-
 # extract the current file with the right command
 cmd extract &{{
     set -f
@@ -70,12 +53,12 @@ map n
 
 # Mapping
 map r push :rename<space>
-map e open_files
+map e $open_file $f
 map E extract
 map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>
-map x %trash-put -- $fx
+map x %trash-put -f -- $fx
 map <delete> %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .

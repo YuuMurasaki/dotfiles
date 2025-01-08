@@ -9,4 +9,4 @@ else
 fi
 
 # Start window manager
-exec /usr/local/bin/dwm
+exec /usr/local/bin/dwm 2>/dev/null
