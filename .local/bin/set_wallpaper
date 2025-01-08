@@ -12,7 +12,7 @@ currentWall="$HOME/.local/share/wallpapers/wallpaper.png"
 [ ! -d "$dir" ] && exit 1
 
 # Select wallpaper: either from argument or a random one from the directory
-if [ -f "$1" ]; then
+if [ -z "$1" ]; then
 	selectWall=$(find "$dir" -type f -name "*.png" | shuf -n 1)
 else
 	selectWall="$1"
