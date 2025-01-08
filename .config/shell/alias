@@ -22,14 +22,10 @@ alias free='free -h'
 # Change directory aliases
 alias docs='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
-alias music='cd $HOME/Music'
 alias pics='cd $HOME/Pictures'
 alias videos='cd $HOME/Videos'
 alias config='cd $HOME/.config'
-alias CONFIG='cd /etc'
-alias fonts='cd $HOME/.local/share/fonts'
 alias bin='cd $HOME/.local/bin'
-alias BIN='cd /bin'
 
 # Better cd
 alias ..='cd ..'

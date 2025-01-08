@@ -13,9 +13,9 @@ currentWall="$HOME/.local/share/wallpapers/wallpaper.png"
 
 # Select wallpaper: either from argument or a random one from the directory
 if [ -f "$1" ]; then
-    selectWall=$(find "$dir" -type f -name "*.png" | shuf -n 1)
+	selectWall=$(find "$dir" -type f -name "*.png" | shuf -n 1)
 else
-    selectWall="$1"
+	selectWall="$1"
 fi
 
 # Check if the selected wallpaper exists
