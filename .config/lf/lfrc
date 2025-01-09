@@ -1,5 +1,27 @@
-# Rename function
-cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+# Bulk-rename
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a -- $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" > "$old"
+    printf '%s\n' "$fs" > "$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
 
 # extract the current file with the right command
 cmd extract &{{
@@ -52,7 +74,7 @@ map p
 map n
 
 # Mapping
-map r push :rename<space>
+map R bulk-rename
 map e $open_file $f
 map E extract
 map <enter> shell
@@ -65,10 +87,5 @@ map d %mv -i -- $fs .
 
 # Movement
 map gc cd ~/.config
-map gC cd /etc
-map gd cd ~/Documents
-map gt cd ~/.local/share/Trash/files
 map gb cd ~/.local/bin
-map gB cd /bin
-map gw cd ~/workspace
 map gm cd /media/yuu
