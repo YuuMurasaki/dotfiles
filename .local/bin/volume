@@ -1,6 +1,9 @@
 #!/bin/sh
 
-# Increment, decrement, or mute the volume using Pipewire
+# Increment, decrement, or mute the volume using Pipewire through WirePlumber
+
+# Check if wpctl is installed
+command -v wpctl >/dev/null 2>&1 || exit 1
 
 case $1 in
     up)

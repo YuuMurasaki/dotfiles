@@ -6,19 +6,19 @@
 
 case "$1" in
     *.mp3 | *.flac | *.wav)
-        mpv --no-video --loop --quiet "$1"
+        mpv --no-video --loop --quiet "$1" >/dev/null 2>&1
         ;;
 
     *.mp4 | *.mkv | *.webm | *.avi | *.mov | *.flv | *.mpeg | *.mpg | *.3gp | *.ogv | *.wmv)
-        mpv --fullscreen --quiet --loop --hwdec=no "$1"
+        mpv --fullscreen --quiet --loop --hwdec=no "$1" >/dev/null 2>&1
         ;;
 
     *.jpg | *.jpeg | *.png | *.gif | *.bmp | *.tiff | *.webp | *.svg | *.ico)
-        nsxiv --animate --no-bar --fullscreen --private "$1"
+        nsxiv --animate --no-bar --fullscreen --private "$1" >/dev/null 2>&1
         ;;
 
     *.pdf | *.xps | *.epub | *.xhtml | *.cbz)
-        zathura "$1"
+        zathura "$1" >/dev/null 2>&1
         ;;
 
     *) "${EDITOR:=vi}" "$1" ;;

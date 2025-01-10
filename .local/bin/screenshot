@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Check if maim is installed
+command -v maim >/dev/null 2>&1 || exit 1
+
 # Define the screenshots directory
 dir="$HOME/Pictures/Screenshots"
 
