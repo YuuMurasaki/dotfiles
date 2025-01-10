@@ -11,7 +11,7 @@ timeee=$(date '+%Y-%m-%d_%H-%M-%S')
 
 # Take screenshot
 case "$1" in
-	"crop") maim --select --hidecursor "$dir/$timeee.png" ;;
-	"full") maim --hidecursor "$dir/$timeee.png" ;;
-	*) exit 1 ;;
+    "crop") maim --select --hidecursor "$dir/$timeee.png" ;;
+    "full") maim --hidecursor "$dir/$timeee.png" ;;
+    *) exit 1 ;;
 esac

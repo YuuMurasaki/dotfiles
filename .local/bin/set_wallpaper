@@ -6,23 +6,23 @@
 
 # Wallpaper directory
 dir="$HOME/Pictures/wallpapers"
-currentWall="$HOME/.local/share/wallpapers/wallpaper.png"
+current="$HOME/.local/share/wallpapers/wallpaper.png"
 
 # Check if the wallpapers directory exists
 [ ! -d "$dir" ] && exit 1
 
 # Select wallpaper: either from argument or a random one from the directory
 if [ -z "$1" ]; then
-	selectWall=$(find "$dir" -type f -name "*.png" | shuf -n 1)
+    select=$(find "$dir" -type f -name "*.png" | shuf -n 1)
 else
-	selectWall="$1"
+    select="$1"
 fi
 
 # Check if the selected wallpaper exists
-[ ! -f "$selectWall" ] && exit 1
+[ ! -f "$select" ] && exit 1
 
 # Apply the wallpaper
-xwallpaper --zoom "$selectWall" || exit 1
+xwallpaper --zoom "$select" || exit 1
 
 # Copy the selected wallpaper to the target location
-cp "$selectWall" "$currentWall" || exit 1
+cp "$select" "$current" || exit 1
