@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Fuzzy search bookmarks file using fzf
+
+file="${XDG_DATA_HOME:-$HOME/.local/share}/bookmarks"
+
+[ ! -f "$file" ] && exit 1
+
+selected=$( cat "$file" | fzf --prompt="Bookmarks: " )
+
+[ -n "$selected" ] && echo "$selected" | xclip -selection clipboard

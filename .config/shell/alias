@@ -10,10 +10,6 @@ alias pkgremove='doas apk del'
 alias pkgsearch='doas apk search'
 alias pkglist='doas apk info'
 
-# System
-alias cpu='ps aux | sort -r -nk +4 | head | $PAGER'
-alias cpuinfo='lscpu | $PAGER'
-
 # Easier to read
 alias df='df -h'
 alias du='du -hs'
@@ -57,25 +53,3 @@ alias ggc='git commit --verbose -m'
 
 # Networking
 alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
-
-############################################
-############### FZF COMMANDS ###############
-############################################
-
-fcd() {
-    local dir=$( fd --type d --max-depth 5 --hidden --exclude .git 2>/dev/null | fzf )
-    if [ -n "$dir" ]; then
-        cd "$dir" || return
-    fi
-}
-
-fvi() {
-    local files=$( fd --type f --hidden 2>/dev/null | fzf )
-    if [ -n "$files" ]; then
-        nvim "$files" || return
-    fi
-}
-
-fhis() {
-    eval $( history | fzf --no-sort --tac --height=70% | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g' )
-}
