@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Fuzzy search shell history with fzf
-
-his=$( history | fzf --no-sort --tac --height=70% | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g' )
-
-eval "$his"

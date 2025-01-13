@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Custom alias and commands file
+# Custom alias and commands
 
 # Packages
 alias pkgupdate='doas apk update && doas apk upgrade'
@@ -47,3 +47,18 @@ alias ggc='git commit --verbose -m'
 
 # Networking
 alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+############################################
+############### FZF COMMANDS ###############
+############################################
+
+fcd() {
+    local dir=$( fd --type d --max-depth 5 --hidden 2>/dev/null | fzf )
+    if [ -n "$dir" ]; then
+        cd "$dir" || return
+    fi
+}
+
+fhis() {
+    eval $( history | fzf --no-sort --tac --height=70% | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g' )
+}

@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# Fuzzy cd with fzf
-
-dir=$( fd --type d --max-depth 5 --hidden --exclude .git 2>/dev/null | fzf )
-cd "$dir"
