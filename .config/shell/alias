@@ -18,8 +18,6 @@ alias free='free -h'
 # Change directory aliases
 alias docs='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
-alias pics='cd $HOME/Pictures'
-alias videos='cd $HOME/Videos'
 alias config='cd $HOME/.config'
 alias bin='cd $HOME/.local/bin'
 
@@ -41,13 +39,9 @@ alias ls="busybox ls -aF --color=auto --group-directories-first"
 alias ll="busybox ls -aF --color=auto --group-directories-first -lh"
 alias lr="busybox ls -aF --color=auto --group-directories-first -R"
 
-# History
-alias clearhis='cat /dev/null > ${XDG_CACHE_HOME:-$HOME/.cache}/yash/history'
-
 # Git
 alias ggg='git status --untracked-files=no'
 alias ggs='git status'
-alias ggall='git add --update'
 alias gga='git add'
 alias ggc='git commit --verbose -m'
 
