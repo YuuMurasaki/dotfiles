@@ -25,6 +25,7 @@ export XAUTHORITY="$XDG_CACHE_HOME/Xauthority" # This line will break some DMs.
 export GIT_CONFIG_GLOBAL="${XDG_CONFIG_HOME:-$HOME/.config}/git/gitconfig"
 export TMUX_TMPDIR="$XDG_CACHE_HOME"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+export MESA_LOADER_DRIVER_OVERRIDE=crocus # For all Intel Graphics up to Haswell
 
 # Other program settings
 export MOZ_USE_XINPUT2="1"

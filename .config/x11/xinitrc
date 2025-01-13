@@ -8,5 +8,8 @@ else
 	. "$HOME/.xprofile"
 fi
 
-# Start window manager
-exec /usr/local/bin/dwm 2>/dev/null
+# Activate DBus environment variables
+dbus-update-activation-environment --all
+
+# Start ssh-agent and dwm with dbus-launch
+dbus-launch ssh-agent dwm
