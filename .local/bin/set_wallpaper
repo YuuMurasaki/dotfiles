@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # NOTE: The selected wallpaper and target file must have the same extension.
 # For example, if the selected wallpaper is a .jpg, the target wallpaper file should also be a .jpg.
@@ -24,7 +24,7 @@ file_type=$(file --mime-type -b "$select")
 [ "$file_type" != "image/png" ] && exit 1
 
 # Apply the wallpaper
-xwallpaper --zoom "$select" || exit 1
+xwallpaper --zoom "$select"
 
 # Copy the selected wallpaper to the target location
-cp "$select" "$current" || exit 1
+cp "$select" "$current"

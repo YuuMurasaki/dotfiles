@@ -4,13 +4,13 @@
 # Add programs which you want to run in the backgroup
 
 # Use xrandr to set screen resolution
-xrandr --output "Virtual-1" --mode "1366x768"
+xrandr --output "Virtual-1" --mode "1366x768" &
 
 # Set wallpaper
-xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png
+xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
 
 # Hide mouse cursor after 3 sec.
 unclutter-xfixes --timeout 3 &
 
 # Start dwm bar
-sh $HOME/.local/bin/dwm_barrr &
+sh $HOME/.local/bin/dwm_bar &
