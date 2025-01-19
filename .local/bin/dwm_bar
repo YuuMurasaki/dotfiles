@@ -44,6 +44,6 @@ calendar() {
 }
 
 while true; do
-    xsetroot -name "$(ethernet) | $(clock) | $(calendar)"
+    xsetroot -name "$(mem) | $(ethernet) | $(clock) | $(calendar)"
     sleep 2
 done
