@@ -7,9 +7,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Default programs
 export EDITOR="nvim"
-export TERMINAL="st"
-export TERMINAL_PROG="st"
-export BROWSER="librewolf"
 export PAGER="less"
 export READER="zathura"
 

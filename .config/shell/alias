@@ -2,14 +2,6 @@
 
 # Custom alias and commands
 
-# Packages
-alias pkgupdate='doas apk update && doas apk upgrade'
-alias pkginstall='doas apk add'
-alias pkgclean='doas apk del $(doas apk info -v | awk "{print \$1}")'
-alias pkgremove='doas apk del'
-alias pkgsearch='doas apk search'
-alias pkglist='doas apk info'
-
 # Easier to read
 alias df='df -h'
 alias du='du -hs'
