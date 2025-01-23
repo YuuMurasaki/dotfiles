@@ -8,7 +8,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Default programs
 export EDITOR="nvim"
 export PAGER="less"
-export READER="zathura"
 
 # Disable Go/Google crap
 export GOPROXY=direct
@@ -16,13 +15,18 @@ export GOSUMDB=off
 export GOTELEMETRY=off
 export GOTOOLCHAIN=local
 
+# Setup folder
+[ ! -d  "${XDG_CONFIG_HOME:-$HOME/.config}/wget" ] && mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/wget"
+[ ! -f  "${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" ] && touch "${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+[ ! -d  "${XDG_CONFIG_HOME:-$HOME/.config}/git" ] && mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/git"
+[ ! -f  "${XDG_CONFIG_HOME:-$HOME/.config}/git/gitconfig" ] && touch "${XDG_CONFIG_HOME:-$HOME/.config}/git/gitconfig"
+
 # Clean up $HOME
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
 export GIT_CONFIG_GLOBAL="${XDG_CONFIG_HOME:-$HOME/.config}/git/gitconfig"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
