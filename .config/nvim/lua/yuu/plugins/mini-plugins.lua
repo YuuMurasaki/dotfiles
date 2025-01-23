@@ -9,6 +9,15 @@ return {
         end,
     },
     {
+        "echasnovski/mini.diff",
+        event = "VeryLazy",
+        version = false,
+
+        config = function()
+            require("mini.diff").setup()
+        end,
+    },
+    {
         "echasnovski/mini.surround",
         version = false,
         event = { "BufReadPre", "BufNewFile" },

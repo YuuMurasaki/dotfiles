@@ -31,6 +31,9 @@ return {
                 opts.desc = "Show buffer diagnostics"
                 vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
+                opts.desc = "Show documentation for what is under cursor"
+                vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
                 opts.desc = "Restart LSP"
                 vim.keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts) -- mapping to restart lsp if necessary
             end,
@@ -40,17 +43,33 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         -- Change the Diagnostic symbols in the sign column (gutter)
-        local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-        for type, icon in pairs(signs) do
-            local hl = "DiagnosticSign" .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-        end
+        -- local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+        -- for type, icon in pairs(signs) do
+        --     local hl = "DiagnosticSign" .. type
+        --     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+        -- end
 
         require("mason-lspconfig").setup_handlers({
             -- Default handler for all installed LSP servers
             function(server_name)
                 lspconfig[server_name].setup({
                     capabilities = capabilities,
+                })
+            end,
+            ["lua_ls"] = function()
+                -- configure lua server (with special settings)
+                lspconfig["lua_ls"].setup({
+                    capabilities = capabilities,
+                    settings = {
+                        Lua = {
+                            diagnostics = { -- make the language server recognize "vim" global
+                                globals = { "vim" },
+                            },
+                            completion = {
+                                callSnippet = "Replace",
+                            },
+                        },
+                    },
                 })
             end,
         })

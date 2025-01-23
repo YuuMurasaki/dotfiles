@@ -10,7 +10,7 @@
 
 # Yash history
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/yash/history"
-HISTIGNORE="fhis:fcd:lf:ls:cd:exit:clear:history"
+HISTIGNORE="nvim:fhis:fcd:lf:ls:cd:exit:clear:history"
 HISTCONTROL=ignoredups
 HISTFILESIZE=10000
 HISTSIZE=10000
