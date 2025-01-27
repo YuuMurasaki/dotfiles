@@ -19,6 +19,10 @@ config.color_scheme = "Catppuccin Mocha" -- Choose from: Catppuccin Mocha, Macch
 
 -- Set the font and font size
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
+config.font = wezterm.font_with_fallback({
+    "JetBrainsMono Nerd Font Mono",
+    "FontAwesome",
+})
 config.font_size = 14
 
 -- Tab settings
