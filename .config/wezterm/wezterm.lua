@@ -5,13 +5,13 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 wezterm.on("update-right-status", function(window, pane)
-    -- Get the current date and time
-    local date = wezterm.strftime("%H:%M")
+	-- Get the current date and time
+	local date = wezterm.strftime("%H:%M")
 
-    -- Set the right status to display time
-    window:set_right_status(wezterm.format({
-        { Text = date },
-    }))
+	-- Set the right status to display time
+	window:set_right_status(wezterm.format({
+		{ Text = date },
+	}))
 end)
 
 -- Set the color scheme
@@ -19,10 +19,6 @@ config.color_scheme = "Catppuccin Mocha" -- Choose from: Catppuccin Mocha, Macch
 
 -- Set the font and font size
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
-config.font = wezterm.font_with_fallback({
-    "JetBrainsMono Nerd Font Mono",
-    "FontAwesome",
-})
 config.font_size = 14
 
 -- Tab settings
@@ -33,10 +29,10 @@ config.window_decorations = "NONE"
 
 -- Set window padding to 0 for no space around the edges
 config.window_padding = {
-    left = 0,
-    right = 0,
-    top = 0,
-    bottom = 0,
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 -- Hide the mouse cursor when typing

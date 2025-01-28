@@ -26,7 +26,5 @@ stty stop undef
 
 # Setting up shell integration
 eval "$(starship init bash)"
-eval "$(zoxide init bash)"
-eval "$(fzf --bash)"
 
 # vim: set et sw=2 sts=2 tw=78 ft=sh:
