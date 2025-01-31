@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Custom alias and commands
+
+# Easier to read
+alias df='df -h'
+alias du='du -hs'
+alias free='free -h'
+
+# Change directory aliases
+alias docs='cd $HOME/Documents'
+alias down='cd $HOME/Downloads'
+alias config='cd $HOME/.config'
+alias bin='cd $HOME/.local/bin'
+
+# Better cd
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# Better ls (Eza) [https://eza.rocks]
+alias ls="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first"
+alias ll="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --long --links --smart-group --modified"
+alias lr="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --grid --recurse"
+alias lt="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --header --long --tree"
+
+# Git
+alias ggg='git status --untracked-files=no'
+alias ggs='git status'
+alias gga='git add'
+alias ggc='git commit --verbose -m'
+
+# Networking
+alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+# Commands
+fhis() {
+    eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
+
+lfcd () {
+    cd "$(command lf -print-last-dir "$@")"
+}

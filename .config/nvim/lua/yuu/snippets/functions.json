@@ -1,0 +1,183 @@
+{
+    "Divisors": {
+        "prefix": "count_divisors",
+        "body": [
+            "int32_t countDivisors(int64_t n) {",
+            "    int32_t count = 1;",
+            "",
+            "    for (int64_t i = 2; i * i <= n && n > 1; ++i) {",
+            "        int32_t cnt = 0;",
+            "",
+            "        while (n % i == 0) {",
+            "            n /= i;",
+            "            ++cnt;",
+            "        }",
+            "",
+            "        count *= (cnt + 1);",
+            "    }",
+            "",
+            "    return n > 1 ? count << 1 : count;",
+            "}"
+        ],
+        "description": "Calculates the number of positive divisors of a given integer n"
+    },
+
+    "Euler Phi": {
+        "prefix": "eulerphi",
+        "body": [
+            "int32_t eulerPhi(int64_t n) {",
+            "    if (n == 0) {",
+            "        return 0;",
+            "    }",
+            "",
+            "    int64_t result = n;",
+            "    for (int64_t x = 2; x * x <= n; ++x) {",
+            "        if (n % x == 0) {",
+            "            while (n % x == 0) {",
+            "                n /= x;",
+            "            }",
+            "            result -= result / x;",
+            "        }",
+            "    }",
+            "",
+            "    if (n > 1) {",
+            "        result -= result / n;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+        ],
+        "description": "Counts the number of integers from 1 to n that are relatively prime to n"
+    },
+
+    "Prime number check": {
+        "prefix": "isprime",
+        "body": [
+            "bool isPrime(int64_t num) {",
+            "    if (num == 2 || num == 3) {",
+            "        return true;",
+            "    }",
+            "",
+            "    if (num <= 1 || num % 2 == 0 || num % 3 == 0) {",
+            "        return false;",
+            "    }",
+            "",
+            "    for (int64_t i = 5; i * i <= num; i += 6) {",
+            "        if (num % i == 0 || num % (i + 2) == 0) {",
+            "            return false;",
+            "        }",
+            "    }",
+            "",
+            "    return true;",
+            "}"
+        ],
+        "description": "Prime number check"
+    },
+
+    "Sum of digits": {
+        "prefix": "sum_digits",
+        "body": [
+            "int32_t sumOfDigits(int64_t number) {",
+            "    int32_t sum = 0;",
+            "    number = abs(number);",
+            "",
+            "    while (number > 0) {",
+            "        sum += number % 10;",
+            "        number /= 10;",
+            "    }",
+            "",
+            "    return sum;",
+            "}"
+        ],
+        "description": "Sum of digits"
+    },
+
+    "Greatest common divisor": {
+        "prefix": "gcd",
+        "body": [
+            "int64_t Gcd(int64_t x, int64_t y) {",
+            "    x = abs(x), y = abs(y);",
+            "    while (x ^= y ^= x ^= y %= x);",
+            "    return y;",
+            "}"
+        ],
+        "description": "Greatest common divisor"
+    },
+
+    "Least Common Multiple": {
+        "prefix": "lcm",
+        "body": [
+            "int64_t Lcm(int64_t a, int64_t b) {",
+            "    return a / Gcd(a, b) * b;",
+            "}"
+        ],
+        "description": "Least Common Multiple"
+    },
+
+    "Binary search": {
+        "prefix": "binary_search",
+        "body": [
+            "int32_t binarySearch(int64_t arr[], int32_t left, int32_t right, int64_t target) {",
+            "    int32_t low = left, high = right, index = -1;",
+            "",
+            "    while (low <= high) {",
+            "        int32_t mid = low + (high - low) / 2;",
+            "",
+            "        if (arr[mid] <= target) {",
+            "            index = mid;",
+            "            low = mid + 1;",
+            "        } else {",
+            "            high = mid - 1;",
+            "        }",
+            "    }",
+            "",
+            "    return index; // Return -1 if not found",
+            "}"
+        ],
+        "description": "Binary search"
+    },
+
+    "Calculate a^b": {
+        "prefix": "power",
+        "body": [
+            "int64_t calculatePower(int64_t base, int64_t exponent, int64_t mod) {",
+            "    int64_t result = 1;",
+            "",
+            "    base = base % mod;",
+            "",
+            "    while (exponent > 0) {",
+            "        if (exponent & 1) {",
+            "            result = (result * base) % mod;",
+            "        }",
+            "",
+            "        base = (base * base) % mod;",
+            "        exponent >>= 1;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+        ],
+        "description": "Calculate a^b"
+    },
+
+    "Calculate a * b": {
+        "prefix": "calculate",
+        "body": [
+            "int64_t calculateMultiply(int64_t multiplier, int64_t multiplicand, int64_t mod) {",
+            "    int64_t result = 0;",
+            "",
+            "    while (multiplicand > 0) {",
+            "        if (multiplicand & 1) {",
+            "            result = (result + multiplier) % mod;",
+            "        }",
+            "",
+            "        multiplier = (multiplier + multiplier) % mod;",
+            "        multiplicand >>= 1;",
+            "    }",
+            "",
+            "    return result;",
+            "}"
+        ],
+        "description": "Russian Peasant Multiplication"
+    }
+}

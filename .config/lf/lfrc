@@ -1,0 +1,91 @@
+# Bulk-rename
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a -- $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" > "$old"
+    printf '%s\n' "$fs" > "$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+# extract the current file with the right command
+cmd extract &{{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip -qq $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+        *) echo "Unsupported format";;
+    esac
+}}
+
+# compress current file or selected files with tar and gunzip
+cmd tar &{{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# compress current file or selected files with zip
+cmd zip &{{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+# Basic Settings
+set shell sh
+set shellopts '-eu'
+set ifs "\n"
+set cursorpreviewfmt ""
+set ignorecase true
+set period 1
+set drawbox true
+set scrolloff 10
+
+# Un-map some keys
+map i
+map e
+map c
+map w
+map p
+map n
+
+# Mapping
+map R bulk-rename
+map e $open_file $f
+map E extract
+map <enter> shell
+map an push %touch<space>
+map aa push %mkdir<space>
+map x %trash-put -f -- $fx
+map <delete> %rm -rf -- $fx
+map y %cp -ri -- $fs .
+map d %mv -i -- $fs .
+
+# Movement
+map gc cd ~/.config
+map gb cd ~/.local/bin
+map gm cd /media/yuu

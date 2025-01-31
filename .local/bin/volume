@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Increment, decrement, set, mute, or show the volume using Pipewire through WirePlumber
+
+# Check if wpctl is installed
+command -v wpctl >/dev/null 2>&1 || exit 1
+
+case $1 in
+    up)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+        ;;
+    down)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+        ;;
+    mute)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+        ;;
+    [0-9]*)
+        if [ "$1" -lt 0 ]; then
+            wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+            wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%
+        elif [ "$1" -gt 100 ]; then
+            wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+            wpctl set-volume @DEFAULT_AUDIO_SINK@ 100%
+        else
+            wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+            wpctl set-volume @DEFAULT_AUDIO_SINK@ $1%
+        fi
+        ;;
+    *)
+        wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//'
+        ;;
+esac
