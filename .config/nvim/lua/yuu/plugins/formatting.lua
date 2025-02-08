@@ -3,12 +3,13 @@ return {
     event = { "BufReadPre", "BufNewFile" },
 
     config = function()
-        local conform = require("conform")
+        local conform = require "conform"
 
-        conform.setup({
+        conform.setup {
             formatters_by_ft = {
                 lua = { "stylua" },
                 cpp = { "clang-format" },
+                html = { "prettier" },
             },
 
             format_on_save = {
@@ -16,6 +17,6 @@ return {
                 async = false,
                 timeout_ms = 1000,
             },
-        })
+        }
     end,
 }

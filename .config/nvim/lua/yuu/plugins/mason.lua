@@ -13,6 +13,7 @@ return {
             ensure_installed = {
                 "clangd",
                 "lua_ls",
+                "html",
             },
         }
 
@@ -20,6 +21,7 @@ return {
             ensure_installed = {
                 "stylua",
                 "clang-format",
+                "prettier",
             },
         }
     end,

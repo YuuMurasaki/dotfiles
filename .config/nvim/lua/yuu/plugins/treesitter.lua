@@ -5,10 +5,10 @@ return {
 
     config = function()
         -- import nvim-treesitter plugin
-        local treesitter = require("nvim-treesitter.configs")
+        local treesitter = require "nvim-treesitter.configs"
 
         -- configure treesitter
-        treesitter.setup({
+        treesitter.setup {
             -- enable syntax highlighting
             highlight = {
                 enable = true,
@@ -24,7 +24,10 @@ return {
                 "vim",
                 "cpp",
                 "c",
+                "html",
+                "css",
+                "javascript",
             },
-        })
+        }
     end,
 }
