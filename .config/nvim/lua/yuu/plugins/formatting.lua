@@ -10,8 +10,7 @@ return {
             python = { "isort", "black" },
             html = { "prettier" },
             css = { "prettier" },
-            javascript = { "prettierd", "prettier", stop_after_first = true },
-            sh = { "shfmt" },
+            javascript = { "prettier", stop_after_first = true },
         },
 
         default_format_opts = {

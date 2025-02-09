@@ -22,7 +22,6 @@ return {
                 "stylua",
                 "clang-format",
                 "prettier",
-                "shfmt",
             },
         }
     end,

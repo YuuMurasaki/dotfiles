@@ -1,14 +1,5 @@
 return {
     {
-        "echasnovski/mini.extra",
-        event = "VeryLazy",
-        version = false,
-
-        config = function()
-            require("mini.extra").setup()
-        end,
-    },
-    {
         "echasnovski/mini.surround",
         version = false,
         event = { "BufReadPre", "BufNewFile" },
@@ -40,7 +31,7 @@ return {
         version = false,
 
         config = function()
-            require("mini.indentscope").setup({
+            require("mini.indentscope").setup {
                 draw = {
                     delay = 0,
                     animation = require("mini.indentscope").gen_animation.none(),
@@ -50,7 +41,7 @@ return {
                     object_scope = "",
                     object_scope_with_border = "",
                 },
-            })
+            }
         end,
     },
     {
@@ -59,8 +50,8 @@ return {
         event = { "BufReadPre", "BufNewFile" },
 
         config = function()
-            local hipatterns = require("mini.hipatterns")
-            hipatterns.setup({
+            local hipatterns = require "mini.hipatterns"
+            hipatterns.setup {
                 highlighters = {
                     -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
                     fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
@@ -71,7 +62,7 @@ return {
                     -- Highlight hex color strings (`#rrggbb`) using that color
                     hex_color = hipatterns.gen_highlighter.hex_color(),
                 },
-            })
+            }
         end,
     },
 }
