@@ -1,22 +1,38 @@
 return {
     "stevearc/conform.nvim",
     event = { "BufReadPre", "BufNewFile" },
+    cmd = { "ConformInfo" },
 
-    config = function()
-        local conform = require "conform"
+    opts = {
+        formatters_by_ft = {
+            lua = { "stylua" },
+            cpp = { "clang-format" },
+            python = { "isort", "black" },
+            html = { "prettier" },
+            css = { "prettier" },
+            javascript = { "prettierd", "prettier", stop_after_first = true },
+            sh = { "shfmt" },
+        },
 
-        conform.setup {
-            formatters_by_ft = {
-                lua = { "stylua" },
-                cpp = { "clang-format" },
-                html = { "prettier" },
+        default_format_opts = {
+            lsp_format = "fallback",
+        },
+
+        format_on_save = {
+            lsp_fallback = true,
+            async = false,
+            timeout_ms = 500,
+        },
+
+        formatters = {
+            shfmt = {
+                prepend_args = { "-i", "4" },
             },
+        },
+    },
 
-            format_on_save = {
-                lsp_fallback = true,
-                async = false,
-                timeout_ms = 1000,
-            },
-        }
+    init = function()
+        -- If you want the formatexpr, here is the place to set it
+        vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
     end,
 }
