@@ -8,10 +8,10 @@ return {
     },
 
     config = function()
-        require("auto-session").setup({
+        require("auto-session").setup {
             auto_restore = false,
             auto_save = false,
-            suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop/" },
-        })
+            suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop" },
+        }
     end,
 }

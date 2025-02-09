@@ -40,7 +40,7 @@ return {
                 ["<C-u>"] = cmp.mapping.scroll_docs(4),
                 ["<C-d>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-Space>"] = cmp.mapping.complete(),
-                ["<C-e>"] = cmp.mapping.close(),
+                ["<C-c>"] = cmp.mapping.close(),
 
                 -- Super Tab function
                 ["<CR>"] = cmp.mapping(function(fallback)
