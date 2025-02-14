@@ -1,11 +1,6 @@
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
 -- Set leader key to < space >
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
-vim.o.laststatus = 3
-vim.o.showmode = false
 
 -- Numbers
 vim.opt.number = true
@@ -36,16 +31,33 @@ vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 
 -- Clipboard
-vim.opt.clipboard:append "unnamedplus"
+vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
+vim.opt.completeopt = "menu,menuone,noselect"
 
--- Vim scrolloff
+vim.opt.fillchars = {
+    foldopen = "",
+    foldclose = "",
+    fold = " ",
+    foldsep = " ",
+    diff = "╱",
+    eob = " ",
+}
+
+vim.opt.foldlevel = 99
+vim.opt.linebreak = true -- Wrap lines at convenient points
+vim.opt.mouse = "a" -- Enable mouse mode
 vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 8 -- Columns of context
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.opt.spelllang = { "en" }
+vim.o.laststatus = 3
+vim.o.showmode = false
+vim.opt.signcolumn = "yes"
+vim.opt.timeoutlen = vim.g.vscode and 1000 or 300 -- Lower than default (1000) to quickly trigger which-key
 
 -- Split windows
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-vim.opt.signcolumn = "yes"
-vim.o.timeoutlen = 400
 
 -- Go to previous/next line with h,l,left arrow and right arrow when cursor reaches end/beginning of line
 vim.opt.whichwrap:append "<>[]hl"

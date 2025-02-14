@@ -24,9 +24,6 @@ return {
                 "vim",
                 "cpp",
                 "c",
-                "html",
-                "css",
-                "javascript",
             },
         }
     end,

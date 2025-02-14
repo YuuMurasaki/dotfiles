@@ -1,14 +1,26 @@
 -- Self-Explanation
 vim.keymap.set("n", "<leader>a", "ggVG0", { desc = "Select whole buffer" })
-vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "general save file" })
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 vim.keymap.set("n", "<C-c>", "<cmd>%y+<CR>", { desc = "general copy whole file" })
 vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
--- Split windows movements
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
+-- better up/down
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+
+-- Move to window using the <ctrl> hjkl keys
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+
+-- Resize window using <ctrl> arrow keys
+vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- Insert mode movements
 vim.keymap.set("i", "<C-a>", "<ESC>^i", { desc = "move beginning of line" })
@@ -29,9 +41,9 @@ vim.keymap.set("n", "N", "Nzzzv", { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
--- Stay in indent mode
-vim.keymap.set("v", "<", "<gv", { silent = true })
-vim.keymap.set("v", ">", ">gv", { silent = true })
+-- better indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- Disable Q, s
 vim.keymap.set({ "n", "v" }, "Q", "<nop>")
