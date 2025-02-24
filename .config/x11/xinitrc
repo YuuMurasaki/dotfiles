@@ -11,5 +11,5 @@ fi
 # Activate DBus environment variables
 dbus-update-activation-environment --all
 
-# Start ssh-agent and dwm with dbus-launch
+# Start dwm with dbus-launch
 exec dbus-launch --exit-with-session /usr/local/bin/dwm

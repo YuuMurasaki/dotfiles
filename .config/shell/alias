@@ -12,6 +12,7 @@ alias docs='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
 alias config='cd $HOME/.config'
 alias bin='cd $HOME/.local/bin'
+alias media='cd /media/yuu'
 
 # Better cd
 alias ..='cd ..'

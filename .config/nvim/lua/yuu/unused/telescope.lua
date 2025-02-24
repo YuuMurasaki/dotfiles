@@ -10,6 +10,7 @@ return {
             build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
         },
         "nvim-tree/nvim-web-devicons",
+        "stevearc/dressing.nvim",
     },
 
     config = function()
