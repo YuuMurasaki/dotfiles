@@ -40,6 +40,10 @@ fhis() {
     eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 
+fcd() { 
+    cd "$( fd -t d . -d 5 | fzf )" || return 1;
+}
+
 lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
