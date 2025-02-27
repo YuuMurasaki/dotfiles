@@ -45,6 +45,6 @@ fcd() {
     cd "$( fd -t d . -d 5 | fzf )" || return 1;
 }
 
-lfcd () {
-    cd "$(command lf -print-last-dir "$@")"
+lfcd() {
+    cd "$( command lf -print-last-dir )"
 }
