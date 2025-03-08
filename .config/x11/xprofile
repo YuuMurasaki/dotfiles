@@ -13,7 +13,8 @@ xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
 unclutter-xfixes --timeout 3 &
 
 # Add compositing
-xcompmgr &
+# FIXME: There is a display problem
+#xcompmgr &
 
 # Start dwm bar
 sh $HOME/.local/bin/dwm_bar &
