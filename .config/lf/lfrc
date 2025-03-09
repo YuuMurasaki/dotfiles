@@ -31,41 +31,31 @@ cmd extract &{{
         *.tar.gz|*.tgz) tar xzvf $f;;
         *.tar.xz|*.txz) tar xJvf $f;;
         *.zip) unzip -qq $f;;
-        *.rar) unrar x $f;;
         *.7z) 7z x $f;;
         *) echo "Unsupported format";;
     esac
 }}
 
-# compress current file or selected files with tar and gunzip
-cmd tar ${{
+# compress current file or selected files
+cmd archive ${{
     set -f
     echo -n "Archive name: "
     read name
     mkdir "$name"
 
-    echo -n "Compression type (1-gzip, 2-xz, 3-bzip2): "
+    echo -n "Compression type (tar, zip, 7z): "
     read type
 
     cp -r $fx "$name"
 
     case $type in
-        1) tar czf "$name.tar.gz" "$name" ;;
-        2) tar cJf "$name.tar.xz" "$name" ;;
-        3) tar cjf "$name.tar.bz2" "$name" ;;
+        tar) tar czf "$name.tar.gz" "$name" ;;
+        zip) zip -r "$name.zip" "$name" ;;
+        7z) 7z a -mx=9 "$name.7z" "$name" ;;
         *) echo "Invalid option"; rm -rf "$name"; exit 1 ;;
     esac
 
     rm -rf "$name"
-}}
-
-# compress current file or selected files with zip
-cmd zip &{{
-    set -f
-    mkdir $1
-    cp -r $fx $1
-    zip -r $1.zip $1
-    rm -rf $1
 }}
 
 # Basic Settings
@@ -90,7 +80,7 @@ map n
 map R bulk-rename
 map e $open_file $f
 map E extract
-map A tar
+map A archive
 map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>

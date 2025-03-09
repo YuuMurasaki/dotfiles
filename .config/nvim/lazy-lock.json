@@ -1,16 +1,16 @@
 {
   "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
-  "catppuccin": { "branch": "main", "commit": "4bb938bbba41d306db18bf0eb0633a5f28fd7ba0" },
+  "catppuccin": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
-  "lazy.nvim": { "branch": "main", "commit": "a8c6db5da7bd382094606340eed015d14fbb5654" },
+  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lspkind.nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },
   "mini.hipatterns": { "branch": "main", "commit": "fbf1e2195fdd65cf1bc970316c28098257728868" },
   "mini.indentscope": { "branch": "main", "commit": "8ce41a77eed7f4121c83c67fda5e2e86af999e6d" },
   "mini.pairs": { "branch": "main", "commit": "1a3e73649c0eaef2f6c48ce1e761c6f0a7c11918" },
   "mini.statusline": { "branch": "main", "commit": "83209bfbca156f9e4a5ec47a2a8ce1e5ce26311d" },
   "mini.surround": { "branch": "main", "commit": "f90069c7441a5fb04c3de42eacf93e16b64dd3eb" },
-  "nvim-cmp": { "branch": "main", "commit": "5a11682453ac6b13dbf32cd403da4ee9c07ef1c3" },
-  "nvim-treesitter": { "branch": "master", "commit": "e6d02ec9efd396d294a7793f2066e2527b07b03a" }
+  "nvim-cmp": { "branch": "main", "commit": "c27370703e798666486e3064b64d59eaf4bdc6d5" },
+  "nvim-treesitter": { "branch": "master", "commit": "59573f96164ab3725a2358fe8ffe69e8291d9549" }
 }
