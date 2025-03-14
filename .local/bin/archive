@@ -1,0 +1,57 @@
+#!/bin/sh
+set -e
+
+# Script to archive file(s)
+
+compress_tar() {
+    printf "Tar type (gz, xz, bz2, lz): "
+    read -r comp
+
+    case $comp in
+        gz)  tar czf "$name.tar.gz" "$name" ;;
+        xz)  tar cJf "$name.tar.xz" "$name" ;;
+        bz2) tar cjf "$name.tar.bz2" "$name" ;;
+        lz)  tar cf - "$name" | lzip -9 -o "$name.tar.lz" ;;
+        *)   printf "Invalid option\n"; return 1 ;;
+    esac
+}
+
+compress_zip() {
+    printf "Password (empty for no): "
+    read -r password
+
+    if [ -n "$password" ]; then
+        zip -r -e -P "$password" "$name.zip" "$name"
+    else
+        zip -r "$name.zip" "$name"
+    fi
+}
+
+compress_7z() {
+    printf "Password (empty for no): "
+    read -r password
+
+    if [ -n "$password" ]; then
+        7z a -m0=LZMA2 -mx=9 -p"$password" "$name.7z" "$name"
+    else
+        7z a -m0=LZMA2 -mx=9 "$name.7z" "$name"
+    fi
+}
+
+printf "Archive name: "
+read -r name
+mkdir "$name"
+
+printf "Compression type (tar, zip, 7z): "
+read -r type
+
+cp -r "$@" "$name"
+
+case $type in
+    tar) compress_tar ;;
+    zip) compress_zip ;;
+    7z)  compress_7z ;;
+    *)   printf "Invalid option\n"; rm -rf "$name"; exit 1 ;;
+esac
+
+rm -rf "$name"
