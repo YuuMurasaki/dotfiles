@@ -17,7 +17,7 @@ compress_tar() {
 }
 
 compress_zip() {
-    printf "Password (empty for no): "
+    printf "Password [none]: "
     read -r password
 
     if [ -n "$password" ]; then
@@ -28,7 +28,7 @@ compress_zip() {
 }
 
 compress_7z() {
-    printf "Password (empty for no): "
+    printf "Password [none]: "
     read -r password
 
     if [ -n "$password" ]; then
@@ -40,11 +40,11 @@ compress_7z() {
 
 printf "Archive name: "
 read -r name
-mkdir "$name"
 
 printf "Compression type (tar, zip, 7z): "
 read -r type
 
+mkdir "$name"
 cp -r "$@" "$name"
 
 case $type in

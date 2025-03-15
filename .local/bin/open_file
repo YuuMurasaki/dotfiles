@@ -21,5 +21,29 @@ case "$1" in
         zathura "$1" >/dev/null 2>&1
         ;;
 
+    *.tar.gz | *.tgz)
+        tar tzf "$1" | less
+        ;;
+
+    *.tar.bz2 | *.tbz2)
+        tar tjf "$1" | less
+        ;;
+
+    *.tar.xz | *.txz)
+        tar tJf "$1" | less
+        ;;
+
+    *.tar.lz | *.tlz)
+        lzip -dc "$1" | tar tf - | less
+        ;;
+
+    *.zip)
+        unzip -l "$1" | less
+        ;;
+
+    *.7z)
+        7z l "$1" | less
+        ;;
+
     *) "${EDITOR:=vi}" "$1" ;;
 esac
