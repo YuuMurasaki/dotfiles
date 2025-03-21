@@ -3,7 +3,6 @@ vim.g.maplocalleader = " "
 
 vim.opt.number = true
 vim.opt.numberwidth = 2
-vim.opt.ruler = false
 
 vim.opt.wrap = false
 vim.opt.swapfile = false
@@ -27,18 +26,13 @@ vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 vim.opt.completeopt = "menu,menuone,noselect"
 
 vim.opt.scrolloff = 5
-vim.opt.sidescrolloff = 8
+vim.opt.sidescrolloff = 10
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-vim.opt.spelllang = { "en" }
-vim.o.laststatus = 3
-vim.o.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.timeoutlen = vim.g.vscode and 1000 or 300
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-
-vim.opt.whichwrap:append "<>[]hl"
 
 vim.g.loaded_node_provider = 0
 vim.g.loaded_python3_provider = 0
