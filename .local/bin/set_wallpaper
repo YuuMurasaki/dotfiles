@@ -1,30 +1,20 @@
 #!/bin/sh -e
 
-# NOTE: The selected wallpaper and target file must have the same extension.
-# For example, if the selected wallpaper is a .jpg, the target wallpaper file should also be a .jpg.
-# Copying between different formats (e.g., .jpg to .png) may cause issues.
+# Set wallpapers script, only support .png format
 
-# Wallpaper directory
-dir="$HOME/Pictures/wallpapers"
-current="$HOME/.local/share/wallpapers/wallpaper.png"
+DIR="$HOME/Pictures/wallpapers"
+CURRENT="$HOME/.local/share/wallpapers/wallpaper.png"
 
-# Check if the wallpapers directory exists
-[ ! -d "$dir" ] && exit 1
+[ ! -d "$DIR" ] && exit 1
 
-# Select wallpaper: either from argument or a random one from the directory
 if [ -z "$1" ]; then
-    select=$(find "$dir" -type f -name "*.png" | shuf -n 1)
+    SELECT=$(find "$DIR" -type f -name "*.png" | shuf -n 1)
 else
-    select="$1"
+    SELECT="$1"
 fi
 
-# Check if the selected wallpaper exists or if it is .png
-[ ! -f "$select" ] && exit 1
-file_type=$(file --mime-type -b "$select")
-[ "$file_type" != "image/png" ] && exit 1
+[ ! -f "$SELECT" ] && exit 1
+[ "$(file --mime-type -b "$SELECT")" != "image/png" ] && exit 1
 
-# Apply the wallpaper
-xwallpaper --zoom "$select"
-
-# Copy the selected wallpaper to the target location
-cp "$select" "$current"
+xwallpaper --zoom "$SELECT"
+cp "$SELECT" "$CURRENT"

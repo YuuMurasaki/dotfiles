@@ -1,16 +1,11 @@
 #!/bin/sh
 
-cpu() {
-    cpuUsage=$(grep -o "^[^ ]*" /proc/loadavg)
-    printf " $cpuUsage"
-}
-
 mem() {
     memoryUsage=$(free -h | awk '/^Mem:/ { print $3 "/" $2 }')
     printf " $memoryUsage"
 }
 
-get_volume() {
+show_volume() {
     volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
     printf "%s%%\n" " $volume"
 }

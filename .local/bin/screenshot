@@ -1,20 +1,16 @@
 #!/bin/sh
 
-# Check if maim is installed
+# Screenshot script using maim, supporting full and cropped screenshots.
+
 command -v maim >/dev/null 2>&1 || exit 1
 
-# Define the screenshots directory
-dir="$HOME/Pictures/Screenshots"
+DIR="$HOME/Pictures/Screenshots"
+[ ! -d "$DIR" ] && mkdir -p "$DIR"
 
-# Create screenshot folder if not found
-[ ! -d "$dir" ] && mkdir -p "$dir"
+TIME=$(date '+%Y-%m-%d_%H-%M-%S')
 
-# Generate name
-timeee=$(date '+%Y-%m-%d_%H-%M-%S')
-
-# Take screenshot
 case "$1" in
-    "crop") maim --select --hidecursor "$dir/$timeee.png" ;;
-    "full") maim --hidecursor "$dir/$timeee.png" ;;
+    "crop") maim --select --hidecursor "$DIR/$TIME.png" ;;
+    "full") maim --hidecursor "$DIR/$TIME.png" ;;
     *) exit 1 ;;
 esac

@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # Handle custom keys for nsxiv
-# The handler is invoked by pressing Ctrl-x.
+# The handler is invoked by pressing ctrl-x
 
 while read -r file
 do
-	case "$1" in
-		"y") xclip -selection clipboard -target image/png "$file" ;;
-		"w") set_wallpaper "$file" ;;
-		"d") trash-put -f -- "$file" ;;
-	esac
+    case "$1" in
+        "y") xclip -selection clipboard -target image/png "$file" ;;
+        "w") set_wallpaper "$file" ;;
+        "d") trash-put -f -- "$file" ;;
+    esac
 done
