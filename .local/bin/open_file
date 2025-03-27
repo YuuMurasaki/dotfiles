@@ -45,5 +45,5 @@ case "$1" in
         7z l "$1" | less
         ;;
 
-    *) "${EDITOR:=vi}" "$1" ;;
+    *) "${EDITOR:=vi}" -- "$1" ;;
 esac
