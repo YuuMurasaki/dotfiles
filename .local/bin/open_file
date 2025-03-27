@@ -1,0 +1,49 @@
+#!/bin/sh -e
+
+# Open file in application based on file extension
+
+[ ! -f "$1" ] && exit 1
+
+case "$1" in
+    *.mp3 | *.flac | *.wav)
+        mpv --no-terminal --af=lavfi="acompressor" --player-operation-mode=pseudo-gui --loop "$1" >/dev/null 2>&1
+        ;;
+
+    *.mp4 | *.mkv | *.webm | *.avi | *.mov | *.flv | *.mpeg | *.mpg | *.3gp | *.ogv | *.wmv)
+        setsid -f mpv --no-terminal --fullscreen --loop --hwdec=no "$1" >/dev/null 2>&1
+        ;;
+
+    *.jpg | *.jpeg | *.png | *.gif | *.bmp | *.tiff | *.webp | *.svg | *.ico)
+        setsid -f nsxiv --animate --no-bar --fullscreen "$1" >/dev/null 2>&1
+        ;;
+
+    *.pdf | *.xps | *.epub | *.xhtml | *.cbz)
+        setsid -f zathura "$1" >/dev/null 2>&1
+        ;;
+
+    *.tar.gz | *.tgz)
+        tar tzf "$1" | less
+        ;;
+
+    *.tar.bz2 | *.tbz2)
+        tar tjf "$1" | less
+        ;;
+
+    *.tar.xz | *.txz)
+        tar tJf "$1" | less
+        ;;
+
+    *.tar.lz | *.tlz)
+        lzip -dc "$1" | tar tf - | less
+        ;;
+
+    *.zip)
+        unzip -l "$1" | less
+        ;;
+
+    *.7z)
+        7z l "$1" | less
+        ;;
+
+    *) "${EDITOR:=vi}" "$1" ;;
+esac
