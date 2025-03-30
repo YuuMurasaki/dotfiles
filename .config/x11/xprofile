@@ -12,9 +12,5 @@ xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
 # Hide mouse cursor after 3 sec.
 unclutter-xfixes --timeout 3 &
 
-# Add compositing
-# FIXME: There is a display problem
-#xcompmgr &
-
 # Start dwm bar
 sh $HOME/.local/bin/dwm_bar &
