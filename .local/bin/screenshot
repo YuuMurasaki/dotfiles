@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Screenshot script using maim
+
+command -v maim >/dev/null 2>&1 || exit 1
+
+DIR="$HOME/Pictures/Screenshots"
+[ ! -d "$DIR" ] && mkdir -p "$DIR"
+
+TIME=$(date '+%Y-%m-%d_%H-%M-%S')
+
+case "$1" in
+    "crop") maim --select --hidecursor "$DIR/crop-$TIME.png" ;;
+    "full") maim --hidecursor "$DIR/full-$TIME.png" ;;
+    *) exit 1 ;;
+esac
