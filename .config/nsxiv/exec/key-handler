@@ -9,6 +9,5 @@ do
         "y") xclip -selection clipboard -target image/png "$file" ;;
         "w") set_wallpaper "$file" ;;
         "d") trash-put -f -- "$file" ;;
-        "g") setsid -f gimp "$file" ;;
     esac
 done

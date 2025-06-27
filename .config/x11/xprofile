@@ -6,6 +6,9 @@
 # Use xrandr to set screen resolution
 xrandr --output "Virtual-1" --mode "1366x768" &
 
+# Add compositing
+xcompmgr &
+
 # Set wallpaper
 xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
 
