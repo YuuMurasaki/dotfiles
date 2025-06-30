@@ -42,6 +42,7 @@ set shellopts '-eu'
 set ifs "\n"
 set cursorpreviewfmt ""
 set ignorecase true
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set period 1
 set drawbox true
 set scrolloff 10
