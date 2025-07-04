@@ -8,15 +8,11 @@ esac
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
 
 # History control
-HISTDIR="${XDG_CACHE_HOME:-$HOME/.cache}/bash"
-HISTFILE="$HISTDIR/history"
-[ ! -d "$HISTDIR" ] && mkdir -p "$HISTDIR"
-
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
-HISTIGNORE="lf:nvim:ls:cd:pwd:exit:clear:cls:history"
+HISTIGNORE="lf:nvim:ls:cd:pwd:exit:clear:fhis:history"
 
 # Disable ctrl+s
 stty stop undef
