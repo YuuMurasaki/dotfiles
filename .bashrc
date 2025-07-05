@@ -12,7 +12,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
-HISTIGNORE="lf:nvim:ls:cd:pwd:exit:clear:fhis:history"
+HISTIGNORE="lf:nvim:ls:ll:cd:pwd:exit:clear:fhis:history:ggg:ggs"
 
 # Disable ctrl+s
 stty stop undef
