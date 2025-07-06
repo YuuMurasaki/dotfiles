@@ -39,7 +39,7 @@ fhis() {
     eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 playmp3() {
-    mpv --geometry=500x500+1600+800 --shuffle --x11-name=no-title \
+    mpv --geometry=500x500 --shuffle --x11-name=no-title \
         --player-operation-mode=pseudo-gui --af=lavfi="acompressor" \
         --no-terminal -- ./*.mp3
 }
