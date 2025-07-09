@@ -72,4 +72,3 @@ map d %mv -i -- $fs .
 # Movement
 map gc cd ~/.config
 map gb cd ~/.local/bin
-map gm cd /media/yuu
