@@ -6,11 +6,8 @@
 # Use xrandr to set screen resolution
 xrandr --output "LVDS-1" --mode "1366x768" &
 
-# Add compositing
-xcompmgr &
-
-# Hide mouse
-unclutter-xfixes --timeout 3 &
+# Hide mouse cursor after 3 sec.
+unclutter-xfixes -idle 3 -root &
 
 # Set wallpaper
 xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
