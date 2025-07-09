@@ -60,15 +60,11 @@ map n
 map A $archive $fs
 map E extract
 map R bulk-rename
-map D %rm -rf -- $fx
 map e $open_file $f
 map <enter> shell
 map an push %touch<space>
 map aa push %mkdir<space>
 map x %trash-put -f -- $fx
-map y %cp -ri -- $fs .; clear
+map D %rm -rf -- $fx
+map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
-
-# Movement
-map gc cd ~/.config
-map gb cd ~/.local/bin

@@ -3,10 +3,10 @@
 # Script for system states
 
 # Add this line to "/etc/doas.conf" in order to run this script from outside the terminal
-# permit nopass :wheel cmd /sbin/poweroff
-# permit nopass :wheel cmd /sbin/reboot
+# permit nopass :wheel cmd poweroff
+# permit nopass :wheel cmd reboot
 
-case "$(printf "Shutdown\nReboot\n" | dmenu -l 5 -i -p "System:")" in
+case "$(printf "Shutdown\nReboot\n" | dmenu -l 2 -i -p "System:")" in
     "Shutdown") doas poweroff ;;
     "Reboot") doas reboot ;;
     *) exit 1 ;;

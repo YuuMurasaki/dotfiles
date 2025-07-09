@@ -7,11 +7,6 @@ alias df='df -h'
 alias du='du -hs'
 alias free='free -h'
 
-# Change directory aliases
-alias config='cd $HOME/.config'
-alias bin='cd $HOME/.local/bin'
-alias media='cd /media/yuu'
-
 # Better cd
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -39,7 +34,7 @@ fhis() {
     eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 playmp3() {
-    mpv --geometry=500x500 --shuffle --x11-name=no-title \
-        --player-operation-mode=pseudo-gui --af=lavfi="acompressor" \
+    mpv --player-operation-mode=pseudo-gui --x11-name=no-title \
+        --shuffle --af=lavfi="acompressor" \
         --no-terminal -- ./*.mp3
 }
