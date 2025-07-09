@@ -39,6 +39,6 @@ calendar() {
 }
 
 while true; do
-    xsetroot -name "$(wifi) | $(ethernet) | $(clock) | $(calendar)"
+    xsetroot -name "$(show_volume) | $(wifi) | $(ethernet) | $(clock) | $(calendar)"
     sleep 2
 done

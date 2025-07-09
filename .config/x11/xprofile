@@ -9,6 +9,9 @@ xrandr --output "LVDS-1" --mode "1366x768" &
 # Hide mouse cursor after 3 sec.
 unclutter --timeout 3 &
 
+# Start pipewire
+pipewire &
+
 # Set wallpaper
 xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
 
