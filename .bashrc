@@ -14,7 +14,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 HISTIGNORE="lf:nvim:ls:ll:cd:pwd:exit:clear:fhis:history:ggg:ggs"
 
-# Disable Ctrl+s and Ctrl+q
+# Disable ctrl+s, ctrl+q
 stty -ixon
 
 # Set up fzf key bindings and fuzzy completion
