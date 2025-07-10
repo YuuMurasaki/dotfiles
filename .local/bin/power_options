@@ -2,7 +2,7 @@
 
 # Script for system states
 
-# Add this line to "/etc/doas.conf" in order to run this script from outside the terminal
+# Edit "doas.conf" to run this script from outside the terminal:
 # permit nopass :wheel cmd poweroff
 # permit nopass :wheel cmd reboot
 
