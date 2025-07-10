@@ -6,11 +6,11 @@
 # Use xrandr to set screen resolution
 xrandr --output "LVDS-1" --mode "1366x768" &
 
-# Hide mouse cursor after 3 sec.
-unclutter --timeout 3 &
+# Hide mouse cursor
+pidof -sx unclutter || unclutter & >/dev/null 2>&1
 
 # Start pipewire
-pipewire &
+pidof -sx pipewire || pipewire & >/dev/null 2>&1
 
 # Set wallpaper
 xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
