@@ -3,16 +3,16 @@
 # xdg-open will use these settings to determine how to open filetypes.
 # These .desktop entries can also be seen and changed in ~/.local/share/applications/
 
-text/plain=text.desktop
-text/x-shellscript=text.desktop
 application/pdf=pdf.desktop
 application/postscript=pdf.desktop
-image/png=image.desktop
+image/jpg=image.desktop
 image/jpeg=image.desktop
+image/png=image.desktop
 image/gif=image.desktop
+image/x-portable-arbitrarymap=image.desktop
 video/mp4=video.desktop
 video/mkv=video.desktop
-inode/directory=file.desktop
+audio/mpeg=video.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=firefox.desktop

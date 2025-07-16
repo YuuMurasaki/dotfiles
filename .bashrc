@@ -12,7 +12,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
-HISTIGNORE="lf:nvim:ls:ll:cd:pwd:exit:clear:fhis:history:ggg:ggs"
+HISTIGNORE="nvim:ls:ll:cd:pwd:exit:clear:fhis:history:ggg:fff"
 
 # Disable ctrl+s, ctrl+q
 stty -ixon

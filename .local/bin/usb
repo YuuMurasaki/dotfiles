@@ -6,18 +6,16 @@
 # permit nopass :wheel cmd mount
 # permit nopass :wheel cmd umount
 
-option=$(printf "Mount\nUmount\n" | dmenu -p "Mount or Umount:" -i -l 2)
-
-[ -z "$option" ] && exit 1
-
-if [ "$option" = "Mount" ]; then
+mount_drive() {
     drive=$(ls -1 /dev | grep "sd[a-z][0-9]" | dmenu -p "Mount:" -i -l 10)
     [ -z "$drive" ] && exit 1
 
     temp="$(mktemp -d)"
 
     doas mount "/dev/$drive" "$temp" >/dev/null 2>&1
-elif [ "$option" = "Umount" ]; then
+}
+
+umount_drive() {
     mount=$(mount | grep "sd[a-z][0-9]" | awk '{ print $1 " " $2 " " $3 }' | dmenu -p "Unmount:" -i -l 10)
     [ -z "$mount" ] && exit 1
 
@@ -25,4 +23,14 @@ elif [ "$option" = "Umount" ]; then
 
     doas umount "$mountpoint" >/dev/null 2>&1
     rmdir "$mountpoint"
-fi
+}
+
+option=$(printf "Mount\nUmount\n" | dmenu -p "Mount/Umount:" -i -l 2)
+
+[ -z "$option" ] && exit 1
+
+case "$option" in
+    "Mount") mount_drive ;;
+    "Umount") umount_drive ;;
+    *) exit 1 ;;
+esac
