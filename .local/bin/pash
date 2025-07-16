@@ -161,6 +161,7 @@ pash 2.3.0 - simple password manager.
 => [l]ist        - List all entries.
 => [s]how [name] - Show password for an entry.
 => [t]ree        - List all entries in a tree.
+=> [g]it         - Interact with git command
 
 Using a key pair:  export PASH_KEYID=XXXXXXXX
 Password length:   export PASH_LENGTH=50
@@ -226,6 +227,7 @@ main() {
         s*) pw_show "$2" ;;
         l*) pw_list ;;
         t*) pw_tree ;;
+        g*) shift; git "$@" ;;
         *)  usage
     esac
 }
