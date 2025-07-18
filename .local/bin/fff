@@ -404,24 +404,7 @@ trash() {
     [[ $cmd_reply != y ]] &&
         return
 
-    if [[ $FFF_TRASH_CMD ]]; then
-        # Pass all but the last argument to the user's
-        # custom script. command is used to prevent this function
-        # from conflicting with commands named "trash".
-        command "$FFF_TRASH_CMD" "${@:1:$#-1}"
-
-    else
-        cd "$FFF_TRASH" || cmd_line "error: Can't cd to trash directory."
-
-        if cp -alf "$@" &>/dev/null; then
-            rm -r "${@:1:$#-1}"
-        else
-            mv -f "$@"
-        fi
-
-        # Go back to where we were.
-        cd "$OLDPWD" ||:
-    fi
+    command trash-put -- "${@:1:$#-1}"
 }
 
 bulk_rename() {

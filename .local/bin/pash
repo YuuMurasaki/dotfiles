@@ -22,7 +22,7 @@ pw_add() {
         # 'sread()' is a simple wrapper function around 'read'
         # to prevent user input from being printed to the terminal.
         sread pass  "Enter password"
-        sread pass2 "Enter password (again)"
+        sread pass2 "Re-enter password"
 
         # Disable this check as we dynamically populate the two
         # passwords using the 'sread()' function.
@@ -93,13 +93,6 @@ pw_list() {
     find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//'
 }
 
-pw_tree() {
-    command -v tree >/dev/null 2>&1 ||
-        die "'tree' command not found"
-
-    tree --noreport | sed 's/\.gpg$//'
-}
-
 yn() {
     printf '%s [y/n]: ' "$1"
 
@@ -160,7 +153,6 @@ pash 2.3.0 - simple password manager.
 => [d]el  [name] - Delete a password entry.
 => [l]ist        - List all entries.
 => [s]how [name] - Show password for an entry.
-=> [t]ree        - List all entries in a tree.
 
 Using a key pair:  export PASH_KEYID=XXXXXXXX
 Password length:   export PASH_LENGTH=50
@@ -225,7 +217,6 @@ main() {
         d*) pw_del  "$2" ;;
         s*) pw_show "$2" ;;
         l*) pw_list ;;
-        t*) pw_tree ;;
         *)  usage
     esac
 }
