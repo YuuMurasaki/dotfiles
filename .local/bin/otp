@@ -20,7 +20,7 @@ otp_copy() {
     otp_show "$1" | $PASH_CLIP
 }
 
-cd ~/.local/share/pash/otp || { echo "Can't access dir."; exit 1; }
+cd ~/.local/share/pash/otp || exit 1;
 
 SELECT=$( find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//' | fzf ) || exit 1;
 
