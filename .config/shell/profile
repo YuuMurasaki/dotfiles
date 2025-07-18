@@ -32,6 +32,7 @@ export PASH_LENGTH=32
 export PASH_TIMEOUT=30
 
 # Fucking Fast File
+export FFF_TRASH_CMD="trash-put"
 export FFF_FAV1=/tmp
 export FFF_FAV2=~/.local/share/pash
 
