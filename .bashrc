@@ -9,10 +9,13 @@ esac
 
 # History control
 HISTCONTROL=ignoreboth
-shopt -s histappend
-HISTSIZE=1000
+HISTSIZE=10000
 HISTFILESIZE=2000
-HISTIGNORE="nvim:ls:ll:cd:pwd:exit:clear:fhis:history:ggg:fff"
+HISTIGNORE="nvim:ls:ll:cd:pwd:exit:clear:fhis:history:fff:pash"
+
+shopt -s histappend
+shopt -s globstar
+shopt -s checkwinsize
 
 # Disable ctrl+s, ctrl+q
 stty -ixon

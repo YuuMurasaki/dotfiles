@@ -26,13 +26,14 @@ export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
 export HISTFILE="$XDG_DATA_HOME/history"
 
 # Pash password manager
-export PASH_KEYID=71EC3722D2EFFE62F924C6CF2CF60B4D63C9A536
+export PASH_KEYID=A5D0C5438A4A8955C113E80FB4B676641EC529AB
 export PASH_PATTERN="A-Z-a-z-0-9$%^&*?(){}[]-_+=:;/|<>"
 export PASH_LENGTH=32
 export PASH_TIMEOUT=30
 
 # Fucking Fast File
 export FFF_FAV1=/tmp
+export FFF_FAV2=~/.local/share/pash
 
 # Other programs settings
 export MOZ_USE_XINPUT2="1"

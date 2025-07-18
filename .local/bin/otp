@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Script to take OTP code
+
+otp_show() {
+    SECRET=$(gpg -dq "$1.gpg")
+    oathtool --totp -b --digit=6 --time=30 "$SECRET"
+}
+
+otp_copy() {
+    : "${PASH_CLIP:=xclip -sel c}"
+
+    [ "$PASH_TIMEOUT" != off ] && {
+        printf 'Clearing clipboard in "%s" seconds.\n' "${PASH_TIMEOUT:=15}"
+
+        sleep "$PASH_TIMEOUT" || kill 0
+        $PASH_CLIP </dev/null
+    } &
+
+    otp_show "$1" | $PASH_CLIP
+}
+
+cd ~/.local/share/pash/otp || { echo "Can't access dir."; exit 1; }
+
+SELECT=$( find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//' | fzf ) || exit 1;
+
+otp_copy "$SELECT"
