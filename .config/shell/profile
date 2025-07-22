@@ -9,12 +9,6 @@
 export EDITOR="nvim"
 export PAGER="less"
 
-# Setup folder
-[ ! -d  "${XDG_CONFIG_HOME:-$HOME/.config}/wget" ] && mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/wget"
-[ ! -f  "${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" ] && touch "${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-[ ! -d  "${XDG_CONFIG_HOME:-$HOME/.config}/git" ] && mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/git"
-[ ! -f  "${XDG_CONFIG_HOME:-$HOME/.config}/git/gitconfig" ] && touch "${XDG_CONFIG_HOME:-$HOME/.config}/git/gitconfig"
-
 # Clean up $HOME
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -31,12 +25,6 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export PASH_KEYID=A5D0C5438A4A8955C113E80FB4B676641EC529AB
 export PASH_PATTERN="A-Z-a-z-0-9$%^&*?(){}[]-_+=:;/|<>"
 export PASH_LENGTH=32
-
-# Fucking Fast File
-export FFF_FAV1=/tmp
-export FFF_FAV2=~/Documents
-export FFF_FAV3=~/Downloads
-export FFF_FAV4=~/Pictures
 
 # Other programs settings
 export MOZ_USE_XINPUT2="1"
