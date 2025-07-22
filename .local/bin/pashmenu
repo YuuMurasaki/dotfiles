@@ -1,0 +1,30 @@
+#!/bin/sh
+
+password() {
+    NAME=$(pash list | grep -v 'otp/' | dmenu -i -l 10 -p "Pass:") || exit 1
+    PASSWORD=$(pash show "$NAME") || exit 1
+    paste "$PASSWORD"
+}
+
+otp_show() {
+    oathtool --totp -b --digit=6 --time=30 "$(gpg -dq "$1.gpg")"
+}
+
+otp() {
+    cd ~/.local/share/pash/otp || exit 1
+
+    SELECT=$( find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//' | dmenu -l 10 -p "OTP:" ) || exit 1
+    OTP=$(otp_show "$SELECT") || exit 1
+
+    paste "$OTP"
+}
+
+paste() {
+    xdotool type --clearmodifiers "$1"
+}
+
+case "$(printf "Password\nOTP\n" | dmenu -l 2 -i -p "Which:")" in
+    "Password") password ;;
+    "OTP") otp ;;
+    *) exit 1 ;;
+esac

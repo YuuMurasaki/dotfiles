@@ -1,0 +1,41 @@
+{
+    "name": "friendly-snippets",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": [
+                    "plaintext",
+                    "markdown",
+                    "tex",
+                    "html",
+                    "global",
+                    "all"
+                ],
+                "path": "./global.json"
+            },
+            {
+                "language": "c",
+                "path": "./c.json"
+            },
+            {
+                "language": "cpp",
+                "path": "./cpp.json"
+            },
+            {
+                "language": "cpp",
+                "path": "./functions.json"
+            },
+            {
+                "language": "cpp",
+                "path": "./cppdoc.json"
+            },
+            {
+                "language": "lua",
+                "path": "./lua.json"
+            }
+        ]
+    }
+}

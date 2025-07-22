@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# This file runs when a DM logs you into a graphical session.
+# Add programs which you want to run in the backgroup
+
+# Use xrandr to set screen resolution
+xrandr --output "LVDS-1" --mode "1366x768" &
+
+# Set wallpaper
+xwallpaper --zoom $HOME/.local/share/wallpapers/wallpaper.png &
+
+# Start compositor
+pidof -sx xcompmgr || xcompmgr & >/dev/null 2>&1
+
+# Start pipewire
+pidof -sx pipewire || pipewire & >/dev/null 2>&1
+
+# Hide mouse cursor
+pidof -sx unclutter || unclutter & >/dev/null 2>&1
+
+# Start dwm bar
+sh $HOME/.local/bin/dwm_bar &

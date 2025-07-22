@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Custom alias and commands
+
+# Core Utilities
+alias df='df -hT'
+alias du='du -hs'
+alias free='free -h'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Better cd
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Better ls (Eza) [https://eza.rocks]
+alias ls="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first"
+alias ll="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --long --links --smart-group --modified"
+alias lr="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --grid --recurse"
+alias lt="command eza --all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --header --long --tree"
+
+# Commands
+playmp3() {
+    setsid -f \
+        mpv --player-operation-mode=pseudo-gui \
+            --shuffle --af=lavfi="acompressor" \
+            --no-terminal -- ./*.mp3
+}
