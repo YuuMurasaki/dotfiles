@@ -2,21 +2,22 @@
 
 # Screenshot script using shotgun and slop
 
-command -v shotgun >/dev/null 2>&1 || exit 1
-command -v slop >/dev/null 2>&1 || exit 1
+full() {
+    shotgun -f pam -s "$DIR/full_$TIME.pam"
+}
+
+crop() {
+    SELECT=$(slop -f "-i %i -g %g") && [ -n "$SELECT" ] || exit 1
+    shotgun -f pam $SELECT "$DIR/crop_$TIME.pam"
+}
 
 DIR="$HOME/Pictures/Screenshots"
-[ ! -d "$DIR" ] && mkdir -p "$DIR"
+mkdir -p "$DIR"
 
 TIME=$(date "+%Y-%m-%d_%H-%M-%S")
 
 case "$1" in
-    "full")
-        shotgun -f pam -s "$DIR/full_$TIME.pam" ;;
-    "crop")
-        SELECT=$(slop -f "-i %i -g %g")
-        [ -z "$SELECT" ] && exit 1
-        shotgun -f pam $SELECT "$DIR/crop_$TIME.pam" ;;
-    *)
-        exit 1 ;;
+    "full") full ;;
+    "crop") crop ;;
+    *) exit 1    ;;
 esac

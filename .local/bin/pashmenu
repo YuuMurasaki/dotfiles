@@ -1,6 +1,6 @@
 #!/bin/sh
 
-password() {
+pass() {
     NAME=$(pash list | grep -v 'otp/' | dmenu -i -l 10 -p "Pass:") || exit 1
     PASSWORD=$(pash show "$NAME") || exit 1
     paste "$PASSWORD"
@@ -24,7 +24,7 @@ paste() {
 }
 
 case "$(printf "Password\nOTP\n" | dmenu -l 2 -i -p "Which:")" in
-    "Password") password ;;
+    "Password") pass ;;
     "OTP") otp ;;
     *) exit 1 ;;
 esac

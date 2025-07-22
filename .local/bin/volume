@@ -2,8 +2,6 @@
 
 # Manage volume using Pipewire through WirePlumber
 
-command -v wpctl >/dev/null 2>&1 || exit 1
-
 set_volume() {
     wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
     wpctl set-volume @DEFAULT_AUDIO_SINK@ "$1"

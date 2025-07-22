@@ -1,11 +1,10 @@
 #!/bin/sh -e
 
-# Set wallpapers script, only support .png format
+# Set wallpapers script, only accept .png format
 
 CURRENT="$HOME/.local/share/wallpapers/wallpaper.png"
 
-SELECT="$1"
-[ -f "$SELECT" ] && [ "$(file --mime-type -b "$SELECT")" = "image/png" ] || exit 1
+[ -f "$1" ] && [ "$(file --mime-type -b "$1")" = "image/png" ] || exit 1
 
-xwallpaper --zoom "$SELECT"
-cp "$SELECT" "$CURRENT"
+xwallpaper --zoom "$1"
+cp "$1" "$CURRENT"
