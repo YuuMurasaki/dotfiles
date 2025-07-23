@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Script to open files
 
@@ -6,10 +6,11 @@
 
 case "$(file --mime-type -b "$1")" in
     text/*|*x-empty*|application/json|application/javascript)
-        nvim "$1"
-        ;;
+        ${EDITOR:-vi} "$1"
+    ;;
 
     *)
-        nohup xdg-open "$1" >/dev/null 2>&1 &
-        ;;
+        nohup xdg-open "$1" &>/dev/null &
+        disown
+    ;;
 esac
