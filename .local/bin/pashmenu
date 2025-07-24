@@ -3,7 +3,7 @@
 pass() {
     cd ~/.local/share/pash || exit
 
-    SELECT=$(find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//' | grep -v "otp/" | dmenu -l 20 -p "Pass:")
+    SELECT=$(find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//;/otp/d' | dmenu -l 20 -p "Pass:")
     PASSWORD=$(decrypt "$SELECT")
 
     paste "$PASSWORD"
@@ -13,7 +13,7 @@ otp() {
     cd ~/.local/share/pash/otp || exit
 
     SELECT=$(find . -type f -name \*.gpg | sed 's/..//;s/\.gpg$//' | dmenu -l 20 -p "OTP:")
-    OTP=$(oathtool --totp -b --digit=6 --time=30 "$(decrypt "$SELECT")")
+    OTP=$(oathtool --totp --base32 "$(decrypt "$SELECT")")
 
     paste "$OTP"
 }
@@ -23,7 +23,7 @@ paste() {
 }
 
 decrypt() {
-    gpg -dq "$1.gpg"
+    [ -z "$1" ] || gpg -dq "$1.gpg"
 }
 
 case "$(printf "Password\nOTP\n" | dmenu -l 2 -i -p "Which:")" in

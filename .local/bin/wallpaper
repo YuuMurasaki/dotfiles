@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 
 # Set wallpapers script, only accept .png format
 
