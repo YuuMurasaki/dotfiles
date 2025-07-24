@@ -17,10 +17,6 @@
                 "path": "./global.json"
             },
             {
-                "language": "c",
-                "path": "./c.json"
-            },
-            {
                 "language": "cpp",
                 "path": "./cpp.json"
             },
@@ -31,10 +27,6 @@
             {
                 "language": "cpp",
                 "path": "./cppdoc.json"
-            },
-            {
-                "language": "lua",
-                "path": "./lua.json"
             }
         ]
     }
