@@ -21,11 +21,6 @@ export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 export HISTFILE="$XDG_DATA_HOME/history"
 
-# Pash password manager
-export PASH_KEYID=A5D0C5438A4A8955C113E80FB4B676641EC529AB
-export PASH_PATTERN="A-Z-a-z-0-9$%^&*?(){}[]-_+=:;/|<>"
-export PASH_LENGTH=32
-
 # Other programs settings
 export MOZ_USE_XINPUT2="1"
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
