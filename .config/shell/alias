@@ -6,8 +6,8 @@
 alias df='df -hT'
 alias du='du -hs'
 alias free='free -h'
-alias cp='cp -i'
-alias mv='mv -i'
+alias cp='cp -iv'
+alias mv='mv -iv'
 
 # Better cd
 alias ..='cd ..'
