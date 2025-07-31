@@ -11,7 +11,7 @@ esac
 HISTCONTROL=ignoreboth
 HISTSIZE=10000
 HISTFILESIZE=2000
-HISTIGNORE="nvim:ls:ll:cd:pwd:exit:clear:fhis:history:fff:pash"
+HISTIGNORE="exit:clear:nvim:ls:ll:cd:pwd:history:lsblk"
 
 shopt -s histappend
 shopt -s globstar
