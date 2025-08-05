@@ -3,11 +3,11 @@
 # Custom alias and commands
 
 # Core Utilities
-alias df='df -hT'
-alias du='du -hs'
-alias free='free -h'
-alias cp='cp -iv'
-alias mv='mv -iv'
+alias df="df -hT"
+alias du="du -hs"
+alias free="free -h"
+alias cp="cp -iv"
+alias mv="mv -iv"
 
 # Better cd
 alias ..='cd ..'
@@ -15,11 +15,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-# Better ls (Eza) [https://eza.rocks]
-alias ls="command eza --almost-all --classify --color=auto --color-scale=all --icons=auto --group-directories-first"
-alias ll="command eza --almost-all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --long --links --smart-group --modified"
-alias lr="command eza --almost-all --classify --color=auto --color-scale=all --icons=auto --group-directories-first --grid --recurse"
-alias lt="command eza --classify --color=auto --color-scale=all --icons=auto --group-directories-first --header --tree"
+# Better ls
+alias ls="ls --color=auto -AF"
+alias ll="ls --color=auto -lhAF"
 
 # Commands
 playmp3() {
