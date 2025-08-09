@@ -50,21 +50,17 @@ set autoquit true
 
 # Un-map some keys
 map i
-map e
 map c
 map w
 map p
 map n
 
 # Mapping
-map A $archive $fs
 map E extract
 map R bulk-rename
-map e $open_file $f
-map <enter> shell
+map e $open $f
 map an push %touch<space>
 map aa push %mkdir<space>
-map x %trash-put -f -- $fx
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
