@@ -5,19 +5,32 @@
 # Core Utilities
 alias df="df -hT"
 alias du="du -hs"
-alias free="free -h"
 alias cp="cp -iv"
 alias mv="mv -iv"
+alias rm="rm -v"
+alias ip="ip -c -h"
+alias free="free -h"
+alias mkdir="mkdir -pv"
+alias grep="grep --color=auto"
+alias ls="ls --color=auto --group-directories-first -AF"
+alias ll="ls --color=auto -lhAF"
 
 # Better cd
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias .....='cd ../../../..'
 
-# Better ls
-alias ls="ls --color=auto -AF"
-alias ll="ls --color=auto -lhAF"
+# Packages manager
+alias update="doas xbps-install -Syu && doas reboot"
+alias install="doas xbps-install -Sy"
+alias remove="doas xbps-remove \$(xbps-query -l | cut -d ' ' -f2 | fzf)"
+alias clean="doas xbps-remove -Oo"
+
+# Git
+alias ggg="git status"
+alias ggp="git push"
+alias ggc="git commit --verbose"
+alias ggs="git show \$(git log --oneline | fzf | cut -d ' ' -f1)"
 
 # Commands
 playmp3() {

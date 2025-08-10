@@ -11,7 +11,7 @@ esac
 HISTCONTROL=ignoreboth
 HISTSIZE=10000
 HISTFILESIZE=2000
-HISTIGNORE="exit:clear:nvim:ls:ll:cd:pwd:history:lsblk"
+HISTIGNORE="exit:ls:ll:cd:pwd:history:lsblk:clear:nvim:lf"
 
 shopt -s histappend
 shopt -s globstar
@@ -23,4 +23,5 @@ stty -ixon
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
+# Prompt
 PS1='\[\e[91;1m\][\[\e[93m\]\h\[\e[92m\]@\[\e[94m\]\u\[\e[0m\] \[\e[95;1m\]\w\[\e[91m\]]\[\e[0m\]\\$ '
