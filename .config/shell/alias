@@ -9,8 +9,7 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -v"
 alias ip="ip -c -h"
-alias free="free -h"
-alias mkdir="mkdir -pv"
+alias free="free -hw"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto --group-directories-first -AF"
 alias ll="ls --color=auto -lhAF"
@@ -38,4 +37,8 @@ playmp3() {
         mpv --player-operation-mode=pseudo-gui \
             --shuffle --af=lavfi="acompressor" \
             --no-terminal -- ./*.mp3
+}
+
+mkd() {
+    mkdir -pv "$1" && cd "$1" || exit 1
 }
