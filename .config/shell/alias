@@ -27,6 +27,7 @@ alias clean="doas xbps-remove -Oo"
 
 # Git
 alias ggg="git status"
+alias gga="git add --verbose"
 alias ggp="git push"
 alias ggc="git commit --verbose"
 alias ggs="git show \$(git log --oneline | fzf | cut -d ' ' -f1)"
