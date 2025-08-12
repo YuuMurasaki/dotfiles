@@ -59,8 +59,8 @@ map n
 map E extract
 map R bulk-rename
 map e $open $f
-map an push %touch<space>
-map aa push %mkdir<space>
+map af push %touch<space>
+map ad push %mkdir<space>
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
