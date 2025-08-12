@@ -11,7 +11,7 @@ crop() {
     shotgun -f pam $SELECT "$DIR/crop_$TIME.pam"
 }
 
-DIR="$HOME/Pictures/Screenshots"
+DIR="$HOME/pictures/screenshots"
 mkdir -p "$DIR"
 
 TIME=$(date "+%Y-%m-%d_%H-%M-%S")
