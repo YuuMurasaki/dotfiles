@@ -4,13 +4,13 @@
 
 [ -f "$1" ] || exit 1
 
-case "$(file --mime-type -b "$1")" in
+case $(file --mime-type -bL "$1") in
     text/*|*x-empty*|application/json|application/javascript)
         ${EDITOR:-vi} "$1"
     ;;
 
     *)
-        nohup xdg-open "$1" &>/dev/null &
+        xdg-open "$1" &>/dev/null &
         disown
     ;;
 esac

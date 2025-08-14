@@ -1,4 +1,3 @@
-# Bulk-rename
 cmd bulk-rename ${{
     old="$(mktemp)"
     new="$(mktemp)"
@@ -58,9 +57,7 @@ map n
 # Mapping
 map E extract
 map R bulk-rename
-map e $open $f
-map af push %touch<space>
-map ad push %mkdir<space>
+map e $open_file $f
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
