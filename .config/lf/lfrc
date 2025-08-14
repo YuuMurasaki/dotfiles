@@ -35,6 +35,10 @@ cmd extract ${{
     esac
 }}
 
+cmd viewimage ${{
+    setsid -f nsxiv -t -b "$(pwd)"
+}}
+
 # Basic Settings
 set shell sh
 set shellopts '-eu'
@@ -55,9 +59,15 @@ map p
 map n
 
 # Mapping
+map T viewimage
 map E extract
 map R bulk-rename
+
 map e $open_file $f
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
+map cp $readlink -f "$f" | xclip -sel c
+
+# Source Bookmarks
+source "~/.config/lf/shortcutrc"

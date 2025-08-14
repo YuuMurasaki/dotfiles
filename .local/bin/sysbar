@@ -18,17 +18,17 @@ ethernet() {
 
     [ "$(cat /sys/class/net/e*/operstate 2>/dev/null)" = 'up' ] && ethericon=""
 
-    printf "$ethericon"
+    printf "%s" "$ethericon"
 }
 
 clock() {
     timeee=$(date +"%H:%M")
-    printf " $timeee"
+    printf "%s" " $timeee"
 }
 
 calendar() {
     todayyy=$(date +"%d %b %Y")
-    printf " $todayyy"
+    printf "%s" " $todayyy"
 }
 
 while true; do
