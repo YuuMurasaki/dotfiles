@@ -8,7 +8,7 @@ esac
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
 
 # History control
-HISTCONTROL=ignoreboth
+HISTCONTROL=erasedups:ignoredups:ignorespace
 HISTSIZE=10000
 HISTFILESIZE=2000
 HISTIGNORE="exit:ls:ll:cd:pwd:history:lsblk:clear:nvim:lf:tmux"
