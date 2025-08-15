@@ -11,6 +11,7 @@ alias rm="rm -v"
 alias ip="ip -c -h"
 alias free="free -hw"
 alias grep="grep --color=auto"
+alias ping="ping -c 3"
 alias ls="ls --color=auto --group-directories-first -AF"
 alias ll="ls --color=auto -lhAF"
 
@@ -20,9 +21,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Packages manager
-alias update="doas xbps-install -Syu && doas reboot"
-alias install="doas xbps-install -Sy"
-alias clean="doas xbps-remove -Oo"
+alias updatepkg="doas xbps-install -Syu"
+alias installpkg="doas xbps-install -S"
+alias cleanpkg="doas xbps-remove -Oo"
+alias searchpkg="xbps-query -Rs"
 
 # Git
 alias ggg="git status"
@@ -38,20 +40,12 @@ playmp3() {
             --no-terminal -- ./*.mp3
 }
 
-mkd() {
-    mkdir -pv "$1" && cd "$1" || exit 1
-}
-
-mkf() {
-    touch "$1" && ${EDITOR:-vi} "$1" || exit 1
-}
-
 ggs() {
     local hash=$(git log --oneline | fzf | cut -d ' ' -f1)
     [ -n "$hash" ] && git show "$hash"
 }
 
-remove() {
+removepkg() {
     local package=$(xbps-query -l | cut -d ' ' -f2 | fzf)
     [ -n "$package" ] && doas xbps-remove "$package"
 }

@@ -1,43 +1,6 @@
-cmd bulk-rename ${{
-    old="$(mktemp)"
-    new="$(mktemp)"
-    if [ -n "$fs" ]; then
-        fs="$(basename -a -- $fs)"
-    else
-        fs="$(ls)"
-    fi
-    printf '%s\n' "$fs" > "$old"
-    printf '%s\n' "$fs" > "$new"
-    $EDITOR "$new"
-    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
-    paste "$old" "$new" | while IFS= read -r names; do
-        src="$(printf '%s' "$names" | cut -f1)"
-        dst="$(printf '%s' "$names" | cut -f2)"
-        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
-            continue
-        fi
-        mv -- "$src" "$dst"
-    done
-    rm -- "$old" "$new"
-    lf -remote "send $id unselect"
-}}
-
-cmd extract ${{
-    set -f
-    case "$f" in
-        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf "$f";;
-        *.tar.gz|*.tgz) tar xzvf "$f";;
-        *.tar.xz|*.txz) tar xJvf "$f";;
-        *.tar.lz) lzip -dc "$f" | tar xv ;;
-        *.zip) unzip "$f";;
-        *.7z) 7z x "$f";;
-        *) exit 1 ;;
-    esac
-}}
-
-cmd viewimage ${{
-    setsid -f nsxiv -t -b "$(pwd)"
-}}
+# Source
+source "~/.config/lf/shortcutrc"
+source "~/.config/lf/commandrc"
 
 # Basic Settings
 set shell sh
@@ -53,8 +16,8 @@ set autoquit true
 
 # Un-map some keys
 map i
-map c
 map w
+map c
 map p
 map n
 
@@ -62,12 +25,12 @@ map n
 map T viewimage
 map E extract
 map R bulk-rename
+map ad push :lf-mkdir<space>
+map af push :lf-touch<space>
+map cp yank-path
+map cc yank-content
 
 map e $open_file $f
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
-map cp $readlink -f "$f" | xclip -sel c
-
-# Source Bookmarks
-source "~/.config/lf/shortcutrc"

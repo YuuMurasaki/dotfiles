@@ -8,6 +8,6 @@ do
     case "$1" in
         "y") xclip -selection clipboard -target image/png "$file" ;;
         "w") wallpaper "$file" ;;
-        "d") trash-put -f -- "$file" ;;
+        "d") rm -f -- "$file" ;;
     esac
 done
