@@ -27,11 +27,11 @@ alias cleanpkg="doas xbps-remove -Oo"
 alias searchpkg="xbps-query -Rs"
 
 # Git
-alias gg="git status --short"
-alias ga="git add"
-alias gap="git add --patch"
-alias gp="git push"
-alias gc="git commit --verbose"
+alias ggg="git status --short"
+alias gga="git add"
+alias ggp="git push"
+alias ggc="git commit --verbose"
+alias ggd="git diff"
 
 # Commands
 playmp3() {
@@ -41,7 +41,7 @@ playmp3() {
             --no-terminal -- ./*.mp3
 }
 
-gs() {
+ggs() {
     local hash=$(git log --oneline | fzf | cut -d ' ' -f1)
     [ -n "$hash" ] && git show "$hash"
 }
