@@ -14,12 +14,14 @@ set drawbox true
 set scrolloff 10
 set autoquit true
 
-# Un-map some keys
-map i
+# Un-map
+map i       # disable $PAGER
 map w
 map c
-map p
+map p       # disable paste
 map n
+map m       # disable mark
+map t       # disable tag
 
 # Mapping
 map T viewimage
@@ -30,8 +32,8 @@ map af push :lf-touch<space>
 map am push :lf-chmod<space>
 map cp yank-path
 map cc yank-content
-
 map e open_file
+
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
