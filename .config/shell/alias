@@ -50,3 +50,8 @@ removepkg() {
     local package=$(xbps-query -l | cut -d ' ' -f2 | fzf)
     [ -n "$package" ] && doas xbps-remove "$package"
 }
+
+conf() {
+    local CONFIG=$(find ~/.config/ ~/.local/bin/ -type f | fzf)
+    [ -n "$CONFIG" ] && ${EDITOR:-vi} "$CONFIG"
+}

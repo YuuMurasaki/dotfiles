@@ -27,6 +27,7 @@ map E extract
 map R bulk-rename
 map ad push :lf-mkdir<space>
 map af push :lf-touch<space>
+map am push :lf-chmod<space>
 map cp yank-path
 map cc yank-content
 
