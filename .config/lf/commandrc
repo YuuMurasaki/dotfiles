@@ -28,15 +28,13 @@ cmd extract ${{
         *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf "$f";;
         *.tar.gz|*.tgz) tar xzvf "$f";;
         *.tar.xz|*.txz) tar xJvf "$f";;
-        *.tar.lz) lzip -dc "$f" | tar xv ;;
         *.zip) unzip "$f";;
-        *.7z) 7z x "$f";;
         *) exit 1 ;;
     esac
 }}
 
 cmd viewimage ${{
-    setsid -f nsxiv -t -b "$(pwd)"
+    setsid -f nsxiv -tbpf "$(pwd)"
 }}
 
 cmd lf-mkdir %{{
@@ -57,4 +55,19 @@ cmd yank-path &{{
 
 cmd yank-content &{{
     xclip -i -selection clipboard < "$f"
+}}
+
+cmd open_file ${{
+    case $f in
+        *.jpg|*.jpeg|*.png|*.gif|*.bmp|*.tiff|*.webp)
+            setsid -f nsxiv -abpf -- "$f" >/dev/null 2>&1 ;;
+        *.mp3|*.wav|*.flac|*.aac|*.ogg|*.m4a)
+            mpv --audio-display=no --loop -- "$f" ;;
+        *.mp4|*.mkv|*.avi|*.mov|*.wmv|*.flv|*.webm)
+            setsid -f mpv -quiet --fs --loop -- "$f" >/dev/null 2>&1 ;;
+        *.pdf)
+            setsid -f zathura -- "$f" >/dev/null 2>&1 ;;
+        *)
+            ${EDITOR:-vi} -- "$f" ;;
+    esac
 }}

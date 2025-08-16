@@ -30,7 +30,7 @@ map af push :lf-touch<space>
 map cp yank-path
 map cc yank-content
 
-map e $open_file $f
+map e open_file
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .
 map d %mv -i -- $fs .
