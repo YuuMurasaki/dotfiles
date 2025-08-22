@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Manage volume using Pipewire through WirePlumber
+
+set_volume() {
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ "$1"
+}
+
+case $1 in
+    up)   set_volume "5%+" ;;
+    down) set_volume "5%-" ;;
+    mute) wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ;;
+    *) exit 1 ;;
+esac

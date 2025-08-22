@@ -1,0 +1,39 @@
+# Source
+source "~/.config/lf/shortcutrc"
+source "~/.config/lf/commandrc"
+
+# Basic Settings
+set shell sh
+set shellopts '-eu'
+set ifs "\n"
+set cursorpreviewfmt ""
+set ignorecase true
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set period 1
+set drawbox true
+set scrolloff 10
+set autoquit true
+
+# Un-map
+map i       # disable $PAGER
+map w
+map c
+map p       # disable paste
+map n
+map m       # disable mark
+map t       # disable tag
+
+# Mapping
+map T viewimage
+map E extract
+map R bulk-rename
+map ad push :lf-mkdir<space>
+map af push :lf-touch<space>
+map am push :lf-chmod<space>
+map cp yank-path
+map cc yank-content
+map e open_file
+
+map D %rm -rf -- $fx
+map y %cp -ri -- $fs .
+map d %mv -i -- $fs .

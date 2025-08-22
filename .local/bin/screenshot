@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Screenshot script using shotgun and slop
+
+full() {
+    shotgun -f pam -s "$DIR/full_$TIME.pam"
+}
+
+crop() {
+    SELECT=$(slop -f "-i %i -g %g") && [ -n "$SELECT" ] || exit 1
+    shotgun -f pam $SELECT "$DIR/crop_$TIME.pam"
+}
+
+DIR="$HOME/pictures/screenshots"
+mkdir -p "$DIR"
+
+TIME=$(date "+%Y-%m-%d_%H-%M-%S")
+
+case "$1" in
+    "full") full ;;
+    "crop") crop ;;
+    *) exit 1    ;;
+esac

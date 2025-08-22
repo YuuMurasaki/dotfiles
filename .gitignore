@@ -1,0 +1,8 @@
+.config/QtProject.conf
+.config/git/gitconfig
+.config/glib-2.0/
+.config/keepassxc/
+.config/pulse/
+
+.local/share
+.local/state

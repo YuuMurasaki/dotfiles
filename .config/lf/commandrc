@@ -1,0 +1,84 @@
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a -- $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" > "$old"
+    printf '%s\n' "$fs" > "$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+cmd extract ${{
+    set -f
+    case "$f" in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf "$f";;
+        *.tar.gz|*.tgz) tar xzvf "$f";;
+        *.tar.xz|*.txz) tar xJvf "$f";;
+        *.zip) unzip "$f";;
+        *) exit 1 ;;
+    esac
+}}
+
+cmd viewimage ${{
+    setsid -f nsxiv -tbpf "$(pwd)"
+}}
+
+cmd lf-mkdir %{{
+    IFS=" "
+    file="$*"
+    mkdir -p -- "$file"
+}}
+
+cmd lf-touch %{{
+    IFS=" "
+    file="$*"
+    touch -- "$file"
+}}
+
+cmd lf-chmod %{{
+    mode="$1"
+
+    for file in "$fx"
+    do
+        chmod "$mode" "$file"
+    done
+
+    lf -remote 'send reload'
+}}
+
+cmd yank-path &{{
+    readlink -f "$f" | xclip -i -selection clipboard
+}}
+
+cmd yank-content &{{
+    xclip -i -selection clipboard < "$f"
+}}
+
+cmd open_file ${{
+    case $f in
+        *.jpg|*.jpeg|*.png|*.gif|*.pam|*.bmp|*.tiff|*.webp)
+            setsid -f nsxiv -abpf -- "$f" >/dev/null 2>&1 ;;
+        *.mp3|*.wav|*.flac|*.aac|*.ogg|*.m4a)
+            mpv --audio-display=no --loop -- "$f" ;;
+        *.mp4|*.mkv|*.avi|*.mov|*.wmv|*.flv|*.webm)
+            setsid -f mpv -quiet --fs --loop -- "$f" >/dev/null 2>&1 ;;
+        *.pdf)
+            setsid -f zathura --mode=fullscreen -- "$f" >/dev/null 2>&1 ;;
+        *)
+            ${EDITOR:-vi} -- "$f" ;;
+    esac
+}}

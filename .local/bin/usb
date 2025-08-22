@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Mounts and unmounts USB drives
+
+# Edit "doas.conf" to run this script from outside the terminal:
+# permit nopass :wheel cmd mount
+# permit nopass :wheel cmd umount
+
+mount_drive() {
+    drive=$(lsblk -l | grep -v -e "part /" -e "SWAP" | grep -o "sd[a-z][0-9]" | dmenu -p "Mount:" -l 10)
+    [ -z "$drive" ] && exit 1
+
+    temp="/tmp/nyan.$drive" # nyan because I like cat
+    mkdir -p "$temp" || exit 1
+
+    doas mount "/dev/$drive" "$temp" >/dev/null 2>&1
+}
+
+umount_drive() {
+    drive=$(mount | grep "/tmp/nyan" | grep -o "sd[a-z][0-9]" | sort -u | dmenu -p "Unmount:" -l 10)
+    [ -z "$drive" ] && exit 1
+
+    doas umount "/dev/$drive" >/dev/null 2>&1
+    rmdir "/tmp/nyan.$drive"
+}
+
+case "$(printf "Mount\nUmount\n" | dmenu -p "Mount/Umount:" -i -l 2)" in
+    "Mount") mount_drive ;;
+    "Umount") umount_drive ;;
+    *) exit 1 ;;
+esac

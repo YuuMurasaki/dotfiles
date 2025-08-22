@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# Custom alias and commands
+
+# Core Utilities
+alias df="df -hT"
+alias du="du -hs"
+alias cp="cp -riv"
+alias mv="mv -iv"
+alias rm="rm -rv"
+alias ip="ip -c -h"
+alias free="free -hw"
+alias grep="grep --color=auto"
+alias ping="ping -c 3"
+alias ls="ls --color=auto --group-directories-first -AF"
+alias ll="ls --color=auto -lhAF"
+
+# Better cd
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Packages manager
+alias updatepkg="doas xbps-install -Syu"
+alias installpkg="doas xbps-install -S"
+alias cleanpkg="doas xbps-remove -Oo"
+alias searchpkg="xbps-query -Rs"
+
+# Git
+alias ggg="git status --short"
+alias gga="git add"
+alias ggp="git push"
+alias ggc="git commit --verbose"
+alias ggd="git diff"
+
+# Commands
+playmp3() {
+    setsid -f \
+        mpv --player-operation-mode=pseudo-gui \
+            --shuffle --af=lavfi="acompressor" \
+            --no-terminal -- ./*.mp3
+}
+
+ggs() {
+    local hash=$(git log --oneline | fzf | cut -d ' ' -f1)
+    [ -n "$hash" ] && git show "$hash"
+}
+
+removepkg() {
+    local package=$(xbps-query -l | cut -d ' ' -f2 | fzf)
+    [ -n "$package" ] && doas xbps-remove "$package"
+}
+
+conf() {
+    local CONFIG=$(find ~/.config/ ~/.local/bin/ -type f | fzf)
+    [ -n "$CONFIG" ] && ${EDITOR:-vi} "$CONFIG"
+}

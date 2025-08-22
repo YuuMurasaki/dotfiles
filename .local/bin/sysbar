@@ -1,0 +1,37 @@
+#!/bin/sh
+
+show_volume() {
+    volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
+    printf "%s%%\n" " $volume"
+}
+
+wifi() {
+    wifiicon=""
+
+    [ "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" = 'up' ] && wifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+
+    printf "%s" "$wifiicon"
+}
+
+ethernet() {
+    ethericon=""
+
+    [ "$(cat /sys/class/net/e*/operstate 2>/dev/null)" = 'up' ] && ethericon=""
+
+    printf "%s" "$ethericon"
+}
+
+clock() {
+    timeee=$(date +"%H:%M")
+    printf "%s" " $timeee"
+}
+
+calendar() {
+    todayyy=$(date +"%d %b %Y")
+    printf "%s" " $todayyy"
+}
+
+while true; do
+    xsetroot -name "$(show_volume) | $(wifi) | $(ethernet) | $(clock) | $(calendar)"
+    sleep 2
+done
