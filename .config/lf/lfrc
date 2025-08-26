@@ -27,12 +27,11 @@ map t       # disable tag
 map T viewimage
 map E extract
 map R bulk-rename
+map e open_file
 map ad push :lf-mkdir<space>
 map af push :lf-touch<space>
-map am push :lf-chmod<space>
 map cp yank-path
 map cc yank-content
-map e open_file
 
 map D %rm -rf -- $fx
 map y %cp -ri -- $fs .

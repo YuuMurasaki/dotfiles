@@ -8,7 +8,7 @@
 HISTCONTROL=erasedups:ignoredups:ignorespace
 HISTSIZE=10000
 HISTFILESIZE=2000
-HISTIGNORE="clear:exit:ls:ll:cd:pwd:history:lsblk:ggg:ggp:nvim:lf:tmux"
+HISTIGNORE="clear:exit:ls:ll:cd:pwd:history:lsblk:nvim:lf:tmux"
 
 shopt -s histappend
 shopt -s globstar

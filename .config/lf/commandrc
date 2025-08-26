@@ -49,17 +49,6 @@ cmd lf-touch %{{
     touch -- "$file"
 }}
 
-cmd lf-chmod %{{
-    mode="$1"
-
-    for file in "$fx"
-    do
-        chmod "$mode" "$file"
-    done
-
-    lf -remote 'send reload'
-}}
-
 cmd yank-path &{{
     readlink -f "$f" | xclip -i -selection clipboard
 }}
@@ -69,7 +58,7 @@ cmd yank-content &{{
 }}
 
 cmd open_file ${{
-    case $f in
+    case "$f" in
         *.jpg|*.jpeg|*.png|*.gif|*.pam|*.bmp|*.tiff|*.webp)
             setsid -f nsxiv -abpf -- "$f" >/dev/null 2>&1 ;;
         *.mp3|*.wav|*.flac|*.aac|*.ogg|*.m4a)
