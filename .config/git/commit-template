@@ -1,4 +1,5 @@
 #feat: A new feature
+#rmv: Remove feature
 #fix: A bug fix
 #docs: Documentation only changes
 #style: Changes that do not affect the meaning of the code (white-space, formatting, etc.)
