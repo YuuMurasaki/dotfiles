@@ -1,7 +1,7 @@
 map gt cd /tmp
-map gc cd ~/.config
-map gb cd ~/.local/bin
+map ge cd /etc
+map gu cd /usr
+
 map gw cd ~/workspace
-map gd cd ~/documents
-map gD cd ~/downloads
-map gp cd ~/pictures
+map gs cd ~/sync_folder
+map gm cd ~/sync_folder/music
