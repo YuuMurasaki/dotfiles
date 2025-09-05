@@ -37,6 +37,11 @@ cmd viewimage ${{
     setsid -f nsxiv -tbpf "$(pwd)"
 }}
 
+cmd playmusic ${{
+    setsid -f \
+        mpv --shuffle --no-terminal --af=lavfi="acompressor" "$(pwd)"
+}}
+
 cmd lf-mkdir %{{
     IFS=" "
     file="$*"

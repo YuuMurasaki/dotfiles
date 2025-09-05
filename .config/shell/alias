@@ -28,19 +28,13 @@ alias searchpkg="xbps-query -Rs"
 
 # Git
 alias ggg="git status --short"
+alias ggc="git commit --verbose"
+alias ggl="git log --graph --oneline --decorate --all"
 alias gga="git add"
 alias ggp="git push"
-alias ggc="git commit --verbose"
 alias ggd="git diff"
 
 # Commands
-playmp3() {
-    setsid -f \
-        mpv --player-operation-mode=pseudo-gui \
-            --shuffle --af=lavfi="acompressor" \
-            --no-terminal -- ./*.mp3
-}
-
 ggs() {
     local hash=$(git log --oneline | fzf | cut -d ' ' -f1)
     [ -n "$hash" ] && git show "$hash"

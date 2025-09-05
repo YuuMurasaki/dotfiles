@@ -6,8 +6,9 @@
 # permit nopass :wheel cmd poweroff
 # permit nopass :wheel cmd reboot
 
-case "$(printf "Shutdown\nReboot\n" | dmenu -l 2 -i -p "System:")" in
+case "$(printf "Shutdown\nReboot\nDisplay\n" | dmenu -l 5 -i -p "System:")" in
     "Shutdown") doas poweroff ;;
-    "Reboot") doas reboot ;;
+    "Reboot")   doas reboot ;;
+    "Display")  xset dpms force off ;;
     *) exit 1 ;;
 esac

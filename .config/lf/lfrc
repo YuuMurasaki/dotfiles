@@ -25,6 +25,7 @@ map t       # disable tag
 
 # Mapping
 map T viewimage
+map P playmusic
 map E extract
 map R bulk-rename
 map e open_file
