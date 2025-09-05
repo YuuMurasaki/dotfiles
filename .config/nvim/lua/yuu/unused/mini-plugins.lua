@@ -29,14 +29,6 @@ return {
         end,
     },
     {
-        "echasnovski/mini.statusline",
-        version = false,
-
-        config = function()
-            require("mini.statusline").setup()
-        end,
-    },
-    {
         "echasnovski/mini.indentscope",
         event = { "BufReadPre", "BufNewFile" },
         version = false,

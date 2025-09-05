@@ -9,24 +9,18 @@
                 "language": [
                     "plaintext",
                     "markdown",
-                    "tex",
-                    "html",
                     "global",
                     "all"
                 ],
                 "path": "./global.json"
             },
             {
-                "language": "cpp",
-                "path": "./cpp.json"
+                "language": "sh",
+                "path": "./shell.json"
             },
             {
-                "language": "cpp",
-                "path": "./functions.json"
-            },
-            {
-                "language": "cpp",
-                "path": "./cppdoc.json"
+                "language": "markdown",
+                "path": "./markdown.json"
             }
         ]
     }
