@@ -23,8 +23,8 @@ return {
             }
         })
 
-        vim.keymap.set('n', '<leader>f', function() 
-            require("mini.pick").builtin.files({ tool = 'rg' }) 
+        vim.keymap.set('n', '<leader>f', function()
+            require("mini.pick").builtin.files({ tool = 'rg' })
         end)
     end
 }

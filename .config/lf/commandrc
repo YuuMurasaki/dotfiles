@@ -33,15 +33,6 @@ cmd extract ${{
     esac
 }}
 
-cmd viewimage ${{
-    setsid -f nsxiv -tbpf "$(pwd)"
-}}
-
-cmd playmusic ${{
-    setsid -f \
-        mpv --shuffle --no-terminal --af=lavfi="acompressor" "$(pwd)"
-}}
-
 cmd lf-mkdir %{{
     IFS=" "
     file="$*"
@@ -60,6 +51,15 @@ cmd yank-path &{{
 
 cmd yank-content &{{
     xclip -i -selection clipboard < "$f"
+}}
+
+cmd viewimage ${{
+    setsid -f nsxiv -tbpf "$PWD"
+}}
+
+cmd playmusic ${{
+    setsid -f \
+        mpv --shuffle --no-terminal --af=lavfi="acompressor" "$PWD"
 }}
 
 cmd open_file ${{
