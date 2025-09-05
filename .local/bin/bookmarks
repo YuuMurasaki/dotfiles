@@ -3,4 +3,4 @@
 CHOOSE=$(dmenu -i -l 20 -p "Links:" < ~/workspace/repos/sites/links | cut -d " " -f1)
 [ -z "$CHOOSE" ] && exit 1
 
-xdotool type --clearmodifiers "$CHOOSE"
+setsid -f firefox "$CHOOSE"
