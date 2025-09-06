@@ -1,6 +1,5 @@
 -- Self-Explanation
 vim.keymap.set("n", "<leader>a", "ggVG0", { desc = "Select whole buffer" })
-vim.keymap.set("n", "<leader>z", "1z=", { desc = "Grammar fix" })
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
