@@ -5,13 +5,14 @@
 # Core Utilities
 alias df="df -hT"
 alias du="du -hs"
-alias cp="cp -riv"
+alias cp="cp -iv"
 alias mv="mv -iv"
-alias rm="rm -rv"
+alias rm="rm -v"
 alias ip="ip -c -h"
 alias free="free -hw"
 alias grep="grep --color=auto"
 alias ping="ping -c 3"
+alias lsblk="lsblk -o NAME,RM,SIZE,FSTYPE,MOUNTPOINTS,LABEL,UUID"
 alias ls="ls --color=auto --group-directories-first -AF"
 alias ll="ls --color=auto -lhAF"
 
