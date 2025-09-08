@@ -22,7 +22,6 @@ return {
                 "bash",
                 "lua",
                 "vim",
-                "cpp",
                 "c",
             },
         }
