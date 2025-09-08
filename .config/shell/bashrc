@@ -1,5 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+[[ -z "$PS1" ]] && return
 
 # Load aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
