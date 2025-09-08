@@ -2,13 +2,12 @@
 
 # Script for system states
 
-# Edit "doas.conf" to run this script from outside the terminal:
-# permit nopass :wheel cmd poweroff
-# permit nopass :wheel cmd reboot
+# Edit "doas.conf" to run this script:
+# permit nopass :wheel cmd shutdown
 
 case "$(printf "Shutdown\nReboot\nDisplay\n" | dmenu -l 5 -i -p "System:")" in
-    "Shutdown") doas poweroff ;;
-    "Reboot")   doas reboot ;;
+    "Shutdown") doas shutdown -h now ;;
+    "Reboot")   doas shutdown -r now ;;
     "Display")  xset dpms force off ;;
     *) exit 1 ;;
 esac
