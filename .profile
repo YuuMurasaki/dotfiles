@@ -1,1 +1,1 @@
-source "/home/yuu/.config/shell/profile"
+builtin source "/home/yuu/.config/shell/profile"

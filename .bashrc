@@ -1,1 +1,1 @@
-source "/home/yuu/.config/shell/bashrc"
+builtin source "/home/yuu/.config/shell/bashrc"

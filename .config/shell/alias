@@ -22,18 +22,20 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Packages manager
-alias updatepkg="doas xbps-install -Syu"
 alias installpkg="doas xbps-install -S"
-alias cleanpkg="doas xbps-remove -Oo"
+alias cleanpkg="doas xbps-remove -Ooy"
 alias searchpkg="xbps-query -Rs"
 
 # Git
-alias ggg="git status --short"
-alias ggc="git commit --verbose"
-alias ggl="git log --graph --oneline --decorate --all"
-alias gga="git add"
-alias ggp="git push"
-alias ggd="git diff"
+alias ggg='git status --short'
+alias ggl='git log --oneline --decorate --all --date=short'
+alias ggrv='git remote --verbose'
+alias gga='git add'
+alias ggc='git commit --verbose'
+alias ggac='git add --all && git commit --verbose'
+alias ggr='git restore'
+alias ggp='git push'
+alias ggd='git diff'
 
 # Commands
 ggs() {

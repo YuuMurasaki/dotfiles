@@ -3,7 +3,7 @@
 [[ -z "$PS1" ]] && return
 
 # Load aliases
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias" ] && builtin source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias"
 
 # History control
 HISTCONTROL=erasedups:ignoredups:ignorespace
