@@ -3,18 +3,18 @@
 # Custom alias and commands
 
 # Core Utilities
-alias df="df -hT"
-alias du="du -hs"
-alias cp="cp -iv"
-alias mv="mv -iv"
-alias rm="rm -v"
-alias ip="ip -c -h"
-alias free="free -hw"
-alias grep="grep --color=auto"
-alias ping="ping -c 3"
-alias ls="ls --color=auto --group-directories-first -AF"
-alias ll="ls --color=auto -lhAF"
-alias lsblk="lsblk -o NAME,RM,SIZE,FSTYPE,MOUNTPOINTS,LABEL,UUID"
+alias df='df -hT'
+alias du='du -hs'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -v'
+alias ip='ip -c -h'
+alias free='free -hw'
+alias grep='grep --color=auto'
+alias ping='ping -c 3'
+alias ls='ls --color=auto --group-directories-first -AF'
+alias ll='ls --color=auto -lhAF'
+alias lsblk='lsblk -o NAME,RM,SIZE,FSTYPE,MOUNTPOINTS,LABEL,UUID'
 
 # Better cd
 alias ..='cd ..'
@@ -22,13 +22,13 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Packages manager
-alias installpkg="doas xbps-install -S"
-alias cleanpkg="doas xbps-remove -Ooy"
-alias searchpkg="xbps-query -Rs"
+alias installpkg='doas xbps-install -S'
+alias cleanpkg='doas xbps-remove -Ooy'
+alias searchpkg='xbps-query -Rs'
 
 # Git
 alias ggg='git status --short'
-alias ggl='git log --oneline --decorate --all --date=short'
+alias ggl='git log --oneline --decorate --all'
 alias ggrv='git remote --verbose'
 alias gga='git add'
 alias ggc='git commit --verbose'
@@ -39,13 +39,13 @@ alias ggd='git diff'
 
 # Commands
 ggs() {
-    local hash=$(git log --oneline | fzf | cut -d ' ' -f1)
-    [ -n "$hash" ] && git show "$hash"
+    local HASH=$(git log --oneline | fzf | cut -d ' ' -f1)
+    [ -n "$HASH" ] && git show "$HASH"
 }
 
 removepkg() {
-    local package=$(xbps-query -l | cut -d ' ' -f2 | fzf)
-    [ -n "$package" ] && doas xbps-remove "$package"
+    local PACKAGE=$(xbps-query -l | cut -d ' ' -f2 | fzf)
+    [ -n "$PACKAGE" ] && doas xbps-remove "$PACKAGE"
 }
 
 conf() {

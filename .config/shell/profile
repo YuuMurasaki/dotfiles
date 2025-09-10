@@ -8,6 +8,8 @@
 # Default programs
 export EDITOR="nvim"
 export PAGER="less"
+export BROWSER="firefox"
+export TERMINAL="st"
 
 # Clean up $HOME
 export XDG_CONFIG_HOME="$HOME/.config"
