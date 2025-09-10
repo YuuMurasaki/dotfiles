@@ -4,7 +4,7 @@
 # Add programs which you want to run in the backgroup
 
 # Use xrandr to set screen resolution
-xrandr --output "LVDS-1" --mode "1366x768" &
+#xrandr --output "LVDS-1" --mode "1366x768" &
 
 # Set wallpaper
 xwallpaper --zoom "$HOME/.local/share/wallpaper/wallpaper.png" &
@@ -16,7 +16,7 @@ pidof -sx xcompmgr || xcompmgr &
 pidof -sx pipewire || pipewire &
 
 # Hide mouse cursor
-pidof -sx unclutter || unclutter &
+#pidof -sx unclutter || unclutter &
 
 # Start dwm bar
 sh $HOME/.local/bin/sysbar &
